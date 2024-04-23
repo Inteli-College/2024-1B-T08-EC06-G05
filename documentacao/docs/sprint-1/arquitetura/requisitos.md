@@ -11,8 +11,8 @@ Os requisitos de um sistema são essenciais para definir suas funcionalidades e 
 
 | Código do Requisito | Título               | Detalhes                | Método de Teste        |
 |----------------------|----------------------|-------------------------|------------------------|
-| RF-01                | Locomoção do robô | Pela interface criada, o robô deve ser capaz de mover | Por meio da interface, o robô se move. Caso ele não se mova em alguma direção, o teste falhou. |
-| RF-02                | Verificação da limpeza | Pela interface criada, o usuário deve ser capaz de orndenar o robô, por meio da câmera, identificar se um tubo está sujo ou não. | Por meio da interface, o robô ativa a câmera e identifica se o tubo está sujo ou não. Caso a câmera não ative ou a câmera não reconheça se está limpo ou não, o teste falhou.  |
+| RF-01                | Locomoção do robô. | Pela interface criada, o robô deve ser capaz de mover. | Por meio da interface, o robô se move. Caso ele não se mova em alguma direção, o teste falhou. |
+| RF-02                | Verificação da limpeza. | Pela interface criada, o usuário deve ser capaz de orndenar o robô, por meio da câmera, identificar se um tubo está sujo ou não. | Por meio da interface, o robô ativa a câmera e identifica se o tubo está sujo ou não. Caso a câmera não ative ou a câmera não reconheça se está limpo ou não, o teste falhou.  |
 | RF-03                | Registro de logs. | Deve haver APIs para mandar as informações de logs de funcionamento do robô, como quantos e quais tubos estão sujos. | Caso as informações não sejam guardadas corretamente ou não serem mandadas corretamente pela API, o teste falhou. |
 
 **Fonte:** Elaborado pela equipe SugarZ3ro
