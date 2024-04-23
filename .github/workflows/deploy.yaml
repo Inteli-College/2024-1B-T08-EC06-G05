@@ -15,7 +15,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Material
+        working-directory: ./docs
     steps:
       - uses: actions/checkout@v4
         with:
