@@ -44,9 +44,9 @@ Nas usinas de bioenergia, um desafio significativo é a manutenção e limpeza d
 
 ## Solução
 
-O projeto visa implementar um sistema de limpeza robótico que automatiza o processo de remoção de incrustações nos reboilers. Esta solução traz a promessa de aumentar a eficiência, reduzir o tempo de inatividade dos equipamentos e, o mais importante, melhorar a segurança dos trabalhadores. O sistema robótico utilizará sensores avançados para identificar áreas que necessitam de limpeza, e realizará a limpeza de maneira precisa e eficaz, sem a necessidade de interação manual direta.
+O projeto visa implementar um sistema de limpeza robótico que automatiza o processo de remoção de incrustações nos reboilers. Esta solução traz a promessa de aumentar a eficiência, reduzir o tempo de inatividade dos equipamentos e, o mais importante, melhorar a segurança dos trabalhadores. O sistema robótico utilizará sensores avançados para identificar áreas que necessitam de limpeza.
 
-O robô será projetado para navegar pelos canos dos reboilers, aplicando jatos de água de alta pressão onde necessário. Isso não apenas garantirá que cada cano seja limpo, mas também permitirá que a limpeza seja realizada de forma mais rápida e frequente, se necessário, sem interromper a operação da usina.
+O robô será projetado para navegar pelos canos dos reboilers, visualizando quais canos estão ou não entupidos. Isso não apenas garantirá que cada cano seja limpo, mas também permitirá que a limpeza seja realizada de forma mais rápida e frequente, se necessário, sem interromper a operação da usina.
 
 A implementação deste sistema não só proporcionará uma melhoria significativa na manutenção operacional, mas também representará um passo adiante nas práticas de trabalho seguras e sustentáveis na indústria de bioenergia.
 
