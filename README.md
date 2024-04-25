@@ -12,7 +12,7 @@ Repositório do grupo 2024-1B-T08-EC06-G05
 ## :student: Integrantes:
 
 - <a href="https://www.linkedin.com/in/isabelle-beatriz-vasquez-oliveira-55a19626a/">Isabelle Beatriz Vasquez</a>
-- <a href="https://www.linkedin.com/in/raideoliveira/">Rai de Oliveira</a>
+- <a href="https://www.linkedin.com/in/raideoliveira/">Raí de Oliveira</a>
 - <a href="https://www.linkedin.com/in/m%C3%A1rio-ventura-medeiros-123682291/">Mário Ventura Medeiros</a>
 - <a href="https://www.linkedin.com/in/gustavo-machado-esteves-453b81248/">Gustavo Machado Esteves</a>
 - <a href="https://www.linkedin.com/in/gustavo-gouveia-583185271//">Gustavo Gouveia</a>
