@@ -27,4 +27,4 @@ O BMC é composto por nove blocos básicos que refletem os principais elementos 
 
 Abaixo, uma representação visual do Business Model Canvas oferece uma maneira rápida de entender a estrutura e os elementos fundamentais que compõem um modelo de negócios, neste caso, aplicado à empresa Atvos.
 
-![Business Model Canvas da Atvos](../static/img/Business_Model_Canvas.jpg)
+![Business Model Canvas da Atvos](/img/Business_Model_Canvas.jpg)
