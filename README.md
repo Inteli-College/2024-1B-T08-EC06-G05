@@ -50,7 +50,7 @@ O projeto visa implementar um sistema de robô teleoperado capaz de identificar 
 
 Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G05/). Para inicializar a documentação do projeto localmente, siga os passos abaixo:
 
-### Pré-requisitis
+### Pré-requisitos
 
 - Node.js instalado
 - Git instalado e com chave SSH configurada
