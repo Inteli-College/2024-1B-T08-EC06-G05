@@ -12,7 +12,7 @@ sidebar_position: 2
 
 ![Proposta inicial de arquitetura da solução](../../../static/img/sprint-1/proposta_arquitetura.png)
 
-<p style={{textAlign: 'center'}}>Elaborado pela equipe SugarZ3ro</p>
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
 &emsp;&emsp;Como se observa na imagem, existem dois principais módulos na arquitetura. O primeiro refere-se ao hardware da solução e contempla tanto o robô TurtleBot quanto a câmera que é acoplada a este para uso de visão computacional. O segundo módulo, por sua vez, contempla o software envolvido na solução, o qual consiste em uma aplicação web com interface de frontend e backend integrados a um banco de dados. A comunicação entre esses dois módulos acontecerá por meio de wi-fi ou, mais precisamente, por meio de ROS, que é um conjunto de bibliotecas e ferramentas baseado em Linux para desenvolvimento de sistemas robóticos.
 
