@@ -40,7 +40,7 @@
 
 Nas usinas da Atvos, existem estruturas cuja funcionalidade é superaquecer o caldo extraído da cana para torná-lo mais concentrado e prosseguir com o processo de fabricação de açúcar. Essas estruturas, denominadas "reboilers" são máquinas de formato cilíndrico vertical com cerca de 2.000 tubos em seu interior, os quais conduzem o caldo extraído durante o período de funcionamento e, como efeito indesejado, têm seu interior obstruído por impurezas. 
 
-Essa obstrução prejudica a produtividade dos reboilers e só é remediada através de um processo de limpeza realizado por funcionários do setor operacional da Atvos, o qual é feito com o auxílio de uma máquina que trabalha com níveis de pressão potencialmente nocivos à integridade física destes. Além disso, essa limpeza ocorre de maneira demorada e indiferente: cada um dos tubos de cada reboiler é limpo, independentemente de seu estado, haja em vista que, atualmente, não é possível verificar qual cano está obstruído ou não.
+Essa obstrução prejudica a produtividade dos reboilers e só é remediada através de um processo de limpeza realizado por funcionários do setor operacional da Atvos, o qual é feito com o auxílio de uma máquina que trabalha com níveis de pressão potencialmente nocivos à integridade física destes. Além disso, essa limpeza ocorre de maneira demorada e indiferente: cada tubo de cada reboiler é limpo independentemente de seu estado, já que atualmente não é possível verificar quais canos estão obstruídos.
 
 ## Solução
 
