@@ -7,7 +7,7 @@ Nessa seção será abordado os testes mapeados para verificar as funcionalidade
 
 Existem diversas formas de testar um projeto. Neste caso, optou-se pelo Teste de Usabilidade do Sistema (SUS) devido à sua capacidade de fornecer avaliações rápidas e confiáveis sobre a usabilidade. O SUS é composto por um questionário conciso que pode ser adaptado a diversos tipos de produtos, o que o torna especialmente versátil. Sua popularidade também se deve ao fato de ser uma metodologia bem validada, facilitando a interpretação dos resultados e a implementação de melhorias no design de interfaces. Com isso em mente, foram formulados os testes a seguir:
 
-<p style={{textAlign: 'center'}}>Tabela 1 - Testes usando o modelo SUS</p>|
+<p style={{textAlign: 'center'}}>Tabela 1 - Testes usando o modelo SUS</p>
 
  Código do Teste | Título      | Detalhes   | Requisitos Testados |
 |-----------------|-------------|------------|---------------------|
