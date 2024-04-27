@@ -1,13 +1,10 @@
-# 2024-1B-T08-EC06-G05
-Repositório do grupo 2024-1B-T08-EC06-G05
-
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
 <a href= "https://www.inteli.edu.br/"><img src="docs/static/img/inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# SugarZ3ro
+# Grupo: SugarZ3ro
 
 ## :student: Integrantes:
 
@@ -35,23 +32,41 @@ Repositório do grupo 2024-1B-T08-EC06-G05
 - <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAA3eu-MB2hs-oNjNOaeqmk3WnmUFdylsrUw&keywords=andré%20leal&origin=RICH_QUERY_SUGGESTION&position=1&searchId=837ec508-a4ef-43aa-b397-27b91464c193&sid=Ea%40&spellCorrectionEnabled=false">André Leal</a>
 
 
-## :memo: Descrição
-# Automação e Otimização do processo de limpagem Reboilers
+## :memo: Descrição do projeto
+
+### Robô teleoperado com visão computacional aplicada
 
 ## Problema
 
-Nas usinas de bioenergia, um desafio significativo é a manutenção e limpeza dos reboilers, equipamentos críticos no processo de produção de etanol. Durante o ciclo de produção, que geralmente dura 9 meses, o melaço e o açúcar podem causar incrustações nos reboilers, afetando a eficiência e exigindo manutenção regular. Tradicionalmente, este processo de limpeza é feito manualmente por trabalhadores que, expostos a vapor de água quente e condições adversas, realizam um trabalho árduo e arriscado. A limpeza manual não só representa um risco à segurança dos trabalhadores, como também é um processo que consome muito tempo, podendo levar a períodos prolongados de inatividade dos equipamentos.
+Nas usinas da Atvos, existem estruturas cuja funcionalidade é superaquecer o caldo extraído da cana para torná-lo mais concentrado e prosseguir com o processo de fabricação de açúcar. Essas estruturas, denominadas "reboilers" são máquinas de formato cilíndrico vertical com cerca de 2.000 tubos em seu interior, os quais conduzem o caldo extraído durante o período de funcionamento e, como efeito indesejado, têm seu interior obstruído por impurezas. 
+
+Essa obstrução prejudica a produtividade dos reboilers e só é remediada através de um processo de limpeza realizado por funcionários do setor operacional da Atvos, o qual é feito com o auxílio de uma máquina que trabalha com níveis de pressão potencialmente nocivos à integridade física destes. Além disso, essa limpeza ocorre de maneira demorada e indiferente: cada tubo de cada reboiler é limpo independentemente de seu estado, já que atualmente não é possível verificar quais canos estão obstruídos.
 
 ## Solução
 
-O projeto visa implementar um sistema de limpeza robótico que automatiza o processo de remoção de incrustações nos reboilers. Esta solução traz a promessa de aumentar a eficiência, reduzir o tempo de inatividade dos equipamentos e, o mais importante, melhorar a segurança dos trabalhadores. O sistema robótico utilizará sensores avançados para identificar áreas que necessitam de limpeza.
+O projeto visa implementar um sistema de robô teleoperado capaz de identificar quais canos estão obstruídos ou não. A princípio, o robô atuará com as máquinas em período fora de funcionamento e após o processo de limpeza já existente nas usinas. Desse modo, a solução terá valor agregado devido ao fato de poder confirmar, através de visão computacional, quais tubos dos reboilers estão realmente limpos ou não.
 
-O robô será projetado para navegar pelos canos dos reboilers, visualizando quais canos estão ou não entupidos. Isso não apenas garantirá que cada cano seja limpo, mas também permitirá que a limpeza seja realizada de forma mais rápida e frequente, se necessário, sem interromper a operação da usina.
+## Inicialização
 
-A implementação deste sistema não só proporcionará uma melhoria significativa na manutenção operacional, mas também representará um passo adiante nas práticas de trabalho seguras e sustentáveis na indústria de bioenergia.
+Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G05/). Para inicializar a documentação do projeto localmente, siga os passos abaixo:
 
+### Pré-requisitos
 
+- Node.js instalado
+- Git instalado e com chave SSH configurada
 
-# Acesso ao desenvolvimento da Sprint 1
+### Instruções
 
-Por meio do repositório do Github é possível ter acesso aos arquivos referentes ao projeto e a Sprint 1. Ao abrir a pasta, siga o caminho: ..\2024-1B-T08-EC06-G05\docs\docs e execute `npm start` no terminal. Essa ação permitirá acessar o que foi realizado na documentação referente a Sprint 1.
+1. Através de uma janela de terminal, clone este repositório no seu diretório de preferência através do seguinte comando:
+
+```git clone git@github.com:Inteli-College/2024-1B-T08-EC06-G05.git```
+
+2. Na mesma janela de terminal, digite os seguintes comandos de maneira respectiva:
+
+```cd 2024-1B-T08-EC06-G05/docs```
+
+```npm i```
+
+```npm start```
+
+3. Acesse a URL que será exibida na janela do terminal.
