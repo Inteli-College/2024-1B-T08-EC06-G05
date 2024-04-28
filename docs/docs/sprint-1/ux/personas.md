@@ -9,13 +9,13 @@ No contexto do design centrado no usuário, as personas emergem como uma ferrame
 
 Como parte do projeto desenvolvido pelos alunos de Engenharia da Computação no Inteli, foram criadas duas personas principais que serão as mais impactadas pela solução. Foram analisadas as necessidades, dores, desejos e tecnologias conhecidas de cada uma dessas personas para uma melhor representação visual do público-alvo durante o desenvolvimento do projeto. Essas personas são Carlos e Liz, cujas representações visuais podem ser encontradas nas imagens a seguir:
 
-<p style={{textAlign: 'center'}}>Figura x - Persona - Carlos</p>
+<p style={{textAlign: 'center'}}>Figura 1 - Persona - Carlos</p>
 
 ![Persona](../../../static/img/sprint-1/carlos.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
-<p style={{textAlign: 'center'}}>Figura x - Persona - Liz</p>
+<p style={{textAlign: 'center'}}>Figura 2 - Persona - Liz</p>
 
 ![Persona](../../../static/img/sprint-1/liz.png)
 
