@@ -23,7 +23,7 @@ Aqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
 - **Monitoramento e Revisão:** A matriz de riscos não é uma ferramenta estática; ela deve ser revisada e atualizada regularmente à medida que novas informações surgem e o ambiente muda. Isso ajuda a manter o gerenciamento de riscos relevante e eficaz ao longo do tempo.
 
 
-![Matriz de Riscos](/img/Matriz_de_Riscos.jpg)
+![Matriz de Riscos](../../../static/img/sprint-1/Matriz_de_Riscos.jpg)
 
 
 #### Legenda de Cores
