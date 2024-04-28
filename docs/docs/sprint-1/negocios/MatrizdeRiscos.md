@@ -3,7 +3,7 @@
 A Matriz de Riscos é uma ferramenta essencial para o gerenciamento proativo de riscos do projeto. Ela permite a identificação, análise e priorização dos riscos com base em sua probabilidade de ocorrência e impacto no projeto.
 
 
-AAqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
+Aqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
 
 - **Identificação de Riscos:**  A matriz de riscos ajuda a identificar os riscos potenciais em um projeto ou operação. Isso envolve considerar tudo que pode dar errado, o que é fundamental para a preparação e planejamento eficazes.
 
@@ -32,29 +32,56 @@ AAqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
 
 ## Ameaças
 
-- **Muito Alta Probabilidade e Impacto (90% / Muito Alto):**
-        Insuficiência de dados para treinamento.
+### 1. Insuficiência de dados para treinamento
+- **Probabilidade:** Muito Alta (90%)
+- **Impacto:** Muito Alto
+- **Ação Preventiva:** Avaliação das fontes de dados e parcerias para aquisição.
+- **Plano de Contingência:** Técnicas de data augmentation e métodos de aprendizado semi-supervisionado.
 
-- **Alta Probabilidade e Impacto (70% / Muito Alto):**
-        Perda de conexão do robô durante a execução.
+### 2. Perda de conexão do robô durante a execução
+- **Probabilidade:** Alta (70%)
+- **Impacto:** Muito Alto
+- **Ação Preventiva:** Testes de estabilidade de conexão e protocolo de reconexão automática.
+- **Plano de Contingência:** Implementação de controle autônomo de contingência.
 
-- **Moderada Probabilidade e Impacto (50% / Alto):**
-        Rodas do robô aderem melado.
+### 3. Rodas do robô aderem melado
+- **Probabilidade:** Moderada (50%)
+- **Impacto:** Alto
+- **Ação Preventiva:** Revestimento antiaderente e sistema de limpeza para rodas.
+- **Plano de Contingência:** Manutenção periódica e inspeção das rodas.
 
-- **Baixa Probabilidade e Alto Impacto (30% / Muito Alto):**
-        Robô derrete durante o processo.
+### 4. Robô derrete durante o processo
+- **Probabilidade:** Baixa (30%)
+- **Impacto:** Muito Alto
+- **Ação Preventiva:** Seleção de materiais resistentes ao calor e monitoramento de temperatura.
+- **Plano de Contingência:** Sistema de refrigeração ativa ou rotas de fuga.
 
--   **Muito Baixa Probabilidade e Impacto (10% / Moderado)**
-        Roda do robô furar durante a execução.
+### 5. Roda do robô furar durante a execução
+- **Probabilidade:** Muito Baixa (10%)
+- **Impacto:** Moderado
+- **Ação Preventiva:** Uso de materiais de alta durabilidade e testes de resistência.
+- **Plano de Contingência:** Kits de reparo rápido e rodas sobressalentes disponíveis.
 
 ## Oportunidades
 
--   **Moderada Probabilidade e Baixo Impacto (50% / Baixo):**
-Aumento da produção de melaço e redução do uso de água.
+### 1. Aumento da produção de melaço e redução do uso de água
+- **Probabilidade:** Moderada (50%)
+- **Impacto:** Baixo
+- **Ação:** Otimização do processo produtivo e estratégias de conservação de água.
+- **Monitoramento:** Análise regular dos indicadores de produção e consumo de água.
 
--   **Baixa Probabilidade e Impacto Moderado (30% / Moderado):**
-        Expansão do projeto de TRL3 para TRL5
+### 2. Expansão do projeto de TRL3 para TRL5
+- **Probabilidade:** Baixa (30%)
+- **Impacto:** Moderado
+- **Ação:** Planejamento detalhado para atingir os requisitos de TRL5.
+- **Monitoramento:** Revisões periódicas do progresso em relação aos marcos estabelecidos.
 
--   **Muito Baixa Probabilidade e Impacto (10% / Muito Baixo):**
-        Redução dos custos de eletrônica e a identificação de 100% das impurezas presentes no reboilers.
+### 3. Redução dos custos de eletrônica e identificação de 100% das impurezas
+- **Probabilidade:** Muito Baixa (10%)
+- **Impacto:** Muito Baixo
+- **Ação:** Pesquisa por tecnologias custo-efetivas e aprimoramento de sensores.
+- **Monitoramento:** Avaliação contínua do mercado e testes de desempenho dos sensores.
+
+---
+
 
