@@ -11,8 +11,8 @@ sidebar_position: 1
 
 <p style={{textAlign: 'center'}}>Figura 1 - Diagrama de contexto</p>
 
-![Diagrama de contexto](../../../static/img/sprint-1/proposta_arquitetura.png)
+![Diagrama de contexto](../../../static/img/sprint-1/diagrama_de_contexto.png)
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
-&emsp;&emsp;Em conformidade
+&emsp;&emsp;Conforme descrito visualmente na figura 1, a aplicação web funcina como intermediária para todas as informações trocadas entre entidades na solução. 
