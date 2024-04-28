@@ -1,3 +1,8 @@
+---
+title:  Matriz de Riscos
+sidebar_position: 2
+---
+
 # Matriz de Riscos: Uma Visão Abrangente
 
 A Matriz de Riscos é uma ferramenta essencial para o gerenciamento proativo de riscos do projeto. Ela permite a identificação, análise e priorização dos riscos com base em sua probabilidade de ocorrência e impacto no projeto.
@@ -70,10 +75,10 @@ Aqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
 - **Ação:** Otimização do processo produtivo e estratégias de conservação de água.
 - **Monitoramento:** Análise regular dos indicadores de produção e consumo de água.
 
-### 2. Expansão do projeto de TRL3 para TRL5
+### 2. Expansão do projeto de TRL3 para TRL7
 - **Probabilidade:** Baixa (30%)
 - **Impacto:** Moderado
-- **Ação:** Planejamento detalhado para atingir os requisitos de TRL5.
+- **Ação:** Planejamento detalhado para atingir os requisitos de TRL7.
 - **Monitoramento:** Revisões periódicas do progresso em relação aos marcos estabelecidos.
 
 ### 3. Redução dos custos de eletrônica e identificação de 100% das impurezas

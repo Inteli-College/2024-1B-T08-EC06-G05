@@ -1,3 +1,8 @@
+---
+title: Business Model Canvas
+sidebar_position: 1
+---
+
 # Business Model Canvas: Uma Visão Abrangente
 
 O Business Model Canvas (BMC) é uma ferramenta de gestão estratégica que permite a empresas de todos os tamanhos desenvolver e esboçar modelos de negócios novos ou existentes. Criado por Alexander Osterwalder, o BMC é visual e intuitivo, proporcionando uma visão clara e concisa de como uma organização cria, entrega e captura valor.
