@@ -28,7 +28,7 @@ Dada a sua importância, o diagrama de sequência do projeto SugarZ3ro foi desen
 ---
 
 
-![Diagrama de Sequência SugarZ3ro](/img/diagrama_de_sequencia.jpeg)
+![Diagrama de Sequência SugarZ3ro](../../../static/img/sprint-1/diagrama_de_sequencia.jpeg)
 
 
 ## Descrição das Interações
@@ -64,5 +64,5 @@ Este diagrama de sequência é crucial para entender o funcionamento do projeto 
 
 ---
 
-Este documento deve se manter atualizado para refletir quaisquer mudanças no processo ou na arquitetura do sistema.
+Este documento foi desenvolvido em um periodo inicial e essa arquitetura pode sofrer alterações conforme o desenvolvimento do projeto.
 
