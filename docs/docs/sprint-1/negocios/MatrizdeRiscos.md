@@ -3,7 +3,7 @@ title:  Matriz de Riscos
 sidebar_position: 2
 ---
 
-# Matriz de Riscos: Uma Visão Abrangente
+# Matriz de Riscos
 
 A Matriz de Riscos é uma ferramenta essencial para o gerenciamento proativo de riscos do projeto. Ela permite a identificação, análise e priorização dos riscos com base em sua probabilidade de ocorrência e impacto no projeto.
 

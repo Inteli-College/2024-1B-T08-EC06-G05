@@ -4,7 +4,7 @@ sidebar_position: 3
 ---
 
 
-# Diagrama de Sequência: Uma Visão Abrangente
+# Diagrama de Sequência
 
 Os diagramas de sequência são uma parte integral da modelagem de sistemas e do desenvolvimento de software. Eles são usados para representar a interação entre os diferentes componentes de um sistema ao longo do tempo, oferecendo uma visão clara do fluxo de operações e do comportamento do sistema. No contexto do desenvolvimento do projeto SugarZ3ro para a empresa Atvos, um diagrama de sequência é particularmente valioso pelas seguintes razões:
 
