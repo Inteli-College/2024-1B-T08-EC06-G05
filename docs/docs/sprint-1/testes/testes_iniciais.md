@@ -3,9 +3,9 @@ title: Métodos de teste
 sidebar_position: 2
 ---
 
-Nessa seção será abordado os testes mapeados para verificar as funcionalidades da solução. Testes desempenham um papel crucial no desenvolvimento de produtos e na avaliação de serviços, servindo como ferramentas essenciais para garantir a qualidade, usabilidade e eficácia. Eles fornecem insights valiosos sobre o desempenho de um sistema em condições controladas, possibilitando a identificação e correção de falhas antes do lançamento ao público. Além disso, testes bem planejados contribuem significativamente para a confiabilidade do projeto.
+&emsp;&emsp;Nessa seção será abordado os testes mapeados para verificar as funcionalidades da solução. Testes desempenham um papel crucial no desenvolvimento de produtos e na avaliação de serviços, servindo como ferramentas essenciais para garantir a qualidade, usabilidade e eficácia. Eles fornecem insights valiosos sobre o desempenho de um sistema em condições controladas, possibilitando a identificação e correção de falhas antes do lançamento ao público. Além disso, testes bem planejados contribuem significativamente para a confiabilidade do projeto.
 
-Existem diversas formas de testar um projeto. Neste caso, optou-se pelo Teste de Usabilidade do Sistema (SUS) devido à sua capacidade de fornecer avaliações rápidas e confiáveis sobre a usabilidade. O SUS é composto por um questionário conciso que pode ser adaptado a diversos tipos de produtos, o que o torna especialmente versátil. Sua popularidade também se deve ao fato de ser uma metodologia bem validada, facilitando a interpretação dos resultados e a implementação de melhorias no design de interfaces. Com isso em mente, foram formulados os testes a seguir:
+&emsp;&emsp;Existem diversas formas de testar um projeto. Neste caso, optou-se pelo Teste de Usabilidade do Sistema (SUS) devido à sua capacidade de fornecer avaliações rápidas e confiáveis sobre a usabilidade. O SUS é composto por um questionário conciso que pode ser adaptado a diversos tipos de produtos, o que o torna especialmente versátil. Sua popularidade também se deve ao fato de ser uma metodologia bem validada, facilitando a interpretação dos resultados e a implementação de melhorias no design de interfaces. Com isso em mente, foram formulados os testes a seguir:
 
 <p style={{textAlign: 'center'}}>Tabela 1 - Testes usando o modelo SUS</p>
 
@@ -17,9 +17,9 @@ Existem diversas formas de testar um projeto. Neste caso, optou-se pelo Teste de
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
-Note que, para o teste do SUS fornecer dados reais e valiosos, o teste deve ser conduzido com a menor influência externa possível, assim conseguindo verificar de verdade se a pessoa que está testando consegue navegar e utilizar a solução. Sendo assim, os testes individuais não seram expostos para quem testará, mas cada teste será avaliado separadamente.
+&emsp;&emsp;Note que, para o teste do SUS fornecer dados reais e valiosos, o teste deve ser conduzido com a menor influência externa possível, assim conseguindo verificar de verdade se a pessoa que está testando consegue navegar e utilizar a solução. Sendo assim, os testes individuais não seram expostos para quem testará, mas cada teste será avaliado separadamente.
 
-Porém, do jeito que o teste SUS é conduzido, é dificil mensurar coisas como tempo de resposta e de funcionamento. Visando suprir essa lacuna, criamos outros testes que serão realizados dentro da equipe para verificar os pontos citados, que podem ser visualisados na tabela abaixo:
+&emsp;&emsp;Porém, do jeito que o teste SUS é conduzido, é dificil mensurar coisas como tempo de resposta e de funcionamento. Visando suprir essa lacuna, criamos outros testes que serão realizados dentro da equipe para verificar os pontos citados, que podem ser visualisados na tabela abaixo:
 
 <p style={{textAlign: 'center'}}>Tabela 2 - Testes de validação do tempo de funcionamento e resposta</p>
 

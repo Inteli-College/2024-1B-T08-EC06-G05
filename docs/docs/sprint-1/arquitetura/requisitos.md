@@ -3,7 +3,7 @@ title: Definição de requisitos
 sidebar_position: 1
 ---
 
-Nesta seção serão abordados os requisitos funcionais e não funcionais criados. Esses requisitos são fundamentais para definir as funcionalidades e guiar a execução do projeto. Os requisitos de um sistema são essenciais para definir suas funcionalidades e guiar a execução do projeto. Os requisitos funcionais delineiam as ações fundamentais para o funcionamento do produto, enquanto os requisitos não funcionais complementam essas funcionalidades, incluindo aspectos como segurança e desempenho. Eles formam a base que orienta o desenvolvimento, garantindo uma compreensão clara do que será realizado e como as etapas do projeto serão conduzidas. Sendo assim, foram desenvolvidos os seguintes requisitos:
+&emsp;&emsp;Nesta seção serão abordados os requisitos funcionais e não funcionais criados. Esses requisitos são fundamentais para definir as funcionalidades e guiar a execução do projeto. Os requisitos de um sistema são essenciais para definir suas funcionalidades e guiar a execução do projeto. Os requisitos funcionais delineiam as ações fundamentais para o funcionamento do produto, enquanto os requisitos não funcionais complementam essas funcionalidades, incluindo aspectos como segurança e desempenho. Eles formam a base que orienta o desenvolvimento, garantindo uma compreensão clara do que será realizado e como as etapas do projeto serão conduzidas. Sendo assim, foram desenvolvidos os seguintes requisitos:
 
 **1. Tabela de Requisitos Funcionais (RF) - Turtlebot para verificar limpeza:**
 
@@ -33,4 +33,4 @@ Nesta seção serão abordados os requisitos funcionais e não funcionais criado
 
 **Fonte:** Elaborado pela equipe SugarZ3ro
 
-Estas tabelas apresentam os requisitos funcionais (RF) e não funcionais (RNF) relacionados ao uso do robô (Turtlebot) na usina da Atvos, bem como a interface que o controla. Nota-se que para teleoperar o Turtlebot, o teleoperador deve estar conectado à mesma internet que o robô.
+&emsp;&emsp;Estas tabelas apresentam os requisitos funcionais (RF) e não funcionais (RNF) relacionados ao uso do robô (Turtlebot) na usina da Atvos, bem como a interface que o controla. Nota-se que para teleoperar o Turtlebot, o teleoperador deve estar conectado à mesma internet que o robô.
