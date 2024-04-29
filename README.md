@@ -13,7 +13,7 @@
 - <a href="https://www.linkedin.com/in/m%C3%A1rio-ventura-medeiros-123682291/">Mário Ventura Medeiros</a>
 - <a href="https://www.linkedin.com/in/gustavo-machado-esteves-453b81248/">Gustavo Machado Esteves</a>
 - <a href="https://www.linkedin.com/in/gustavo-gouveia-583185271//">Gustavo Gouveia</a>
-- <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAEHeo4kBjhiblXY7EhuLEPzDFSqlZSoI79k&keywords=lucas%20de%20luccas&origin=RICH_QUERY_SUGGESTION&position=0&searchId=1812ff95-6724-4b55-b41d-fd4530966e32&sid=VAK&spellCorrectionEnabled=false">Lucas de Luccas</a>
+- <a href="https://www.linkedin.com/in/lucasdeluccas/">Lucas de Luccas</a>
 
 ## :teacher: Professores:
 
