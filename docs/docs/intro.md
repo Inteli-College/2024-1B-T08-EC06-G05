@@ -6,7 +6,7 @@ slug: /
 
 # Introdução
 
-&emsp;&emsp;Este site contém a documentação do projeto desenvolvido pela equipe SugarZ3ro, grupo 5 do módulo 6 de 2024 dos alunos do 2º ano de graduação em engenharia da computação no Inteli (Instituto de Tecnologia e Lderança). A documentação está dividada de modo a conter uma seção para cada uma das 5 sprints que houveram no período de desenvolvimento do projeto. Em cada uma dessas seções, há uma subseção sobre um conteúdo específico a respeito do que foi desenvolvido na respectiva sprint.
+&emsp;&emsp;Este site contém a documentação do projeto desenvolvido pela equipe SugarZ3ro, grupo 5 do módulo 6 de 2024 dos alunos do 2º ano de graduação em engenharia da computação no Inteli (Instituto de Tecnologia e Liderança). A documentação está dividida de modo a conter uma seção para cada uma das 5 sprints que houveram no período de desenvolvimento do projeto. Em cada uma dessas seções, existem subseções sobre conteúdos específicos a respeito do que foi desenvolvido na respectiva sprint.
 
 ## Empresa parceira
 
