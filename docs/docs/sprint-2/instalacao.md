@@ -7,6 +7,8 @@ sidebar_position: 2
 
 Para realizar a instalação do TinyDB, é sugerido o uso de um ambiente virtual pelos seguintes comandos:
 
+`Verifique se você está na raiz do projeto`
+
 - python3 -m venv venv
 
 Este comando vai criar um ambiente virtual na pasta `venv`

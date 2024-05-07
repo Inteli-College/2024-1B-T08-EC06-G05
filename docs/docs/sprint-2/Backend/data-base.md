@@ -12,10 +12,10 @@ sidebar_position: 1
 &emsp;&emsp;Dado o fato de que o TinyDB não trabalha com o sistema de tabelas, pode ser necessário criar novos arquivos JSON para armazenar informações. Atualmente, nosso projeto conta apenas com um arquivo chamado pipes.json, que armazena os dados dos canos dos reboilers. Este arquivo contém as seguintes informações:
 
 - **id**: identificador do cano
-- **status**: boleano para identificar se está limpo ou sujo (basedo na futura analise de visão computacional)
+- **status**: boleano para identificar se está limpo (True) ou sujo (False), basedo na análise de visão computacional.
 - **id-boiler**: identificador do reboiler
-- **dirty-grade**: nota de sujeira
-- **datetime**: data e horario que as informações foram coletadas
+- **dirty-grade**: porcentagem de sujeira
+- **datetime**: data e horário que as informações foram coletadas
 
 O formato dos dados de um cano é o seguinte:
 
@@ -29,9 +29,9 @@ O formato dos dados de um cano é o seguinte:
 }
 ```
 
-&emsp;&emsp;O arquivo pipes.json armazena dados sobre o cano, incluindo seu identificador próprio, o status (limpo ou sujo de acordo com a análise computacional), o identificador do reboiler onde o cano está, a nota definida pelo sistema de análise computacional em relação à sujeira do cano e a data e horário em que essas informações foram enviadas para o banco de dados.
+&emsp;&emsp;A escolha das informações contidas nesta base de dados foi pensada com base nas necessidades atuais. Como o projeto foi inicialmente projetado para apenas guardar se os canos estão sujos ou não e uma identificação deles, foi decidido que somente haveria informações básicas de identificação dos canos para monitoramento, quais já foram analisados, o resultado da análise, o identificador do boiler e a data e horário em que essa informação foi salva no banco de dados. No momento, não é preciso de outras informações sobre os boilers nem informações sobre o usuário do sistema, seguindo os pedidos e observações do cliente em relação às necessidades do sistema.
 
-&emsp;&emsp;Esta é a primeira versão da base de dados do projeto e pode sofrer alterações conforme novas necessidades. Já realizamos testes para verificar se os dados estavam sendo corretamente enviados para o arquivo JSON, utilizando dados para "dirty-grade" gerados aleatoriamente e definindo um máximo de 30% de sujeira para que o cano seja considerado limpo.
+&emsp;&emsp;Esta é a primeira versão da base de dados do projeto e pode sofrer alterações conforme novas necessidades. Já realizamos testes para verificar se os dados estavam sendo corretamente enviados para o arquivo JSON, utilizando dados para "dirty-grade" gerados aleatoriamente e definindo um máximo de 30% de sujeira para que o cano seja considerado limpo. A utilização do método `random` foi exclusiva para o primeiro teste, o que significa que ele não será utilizado na versão final do banco de dados. Quando tivermos dados gerados pela análise computacional, eles serão inseridos no lugar dos atuais valores gerados pelo `random`. O percentual de 30% foi escolhido apenas para teste no momento atual. No futuro, decidiremos junto ao parceiro o que ele considera um cano sujo ou limpo. A versão do banco de dados atual está adaptada para testes e não é a versão final do banco de dados principal.
 
 
 
