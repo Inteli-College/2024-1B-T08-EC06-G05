@@ -1,38 +1,52 @@
-import curses
+import os
+import sys
 
-def main(stdscr):
-    # Configurações iniciais da tela
-    curses.curs_set(0)
-    stdscr.nodelay(1)
-    stdscr.timeout(100)  # Tempo de espera por entrada do teclado (100ms)
+# Função para capturar a entrada do teclado
+def getch():
+    if os.name == 'nt':  # Para Windows
+        import msvcrt
+        return msvcrt.getch().decode()
+    else:  # Para sistemas baseados em POSIX (Linux, macOS, etc.)
+        import tty
+        import termios
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        try:
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        return ch
 
-    # Posição inicial do cursor
-    y, x = 3, 50
+def main():
+    # Posição inicial do 'X'
+    x, y = 0, 0
 
     while True:
         # Limpa a tela
-        stdscr.clear()
+        os.system('clear' if os.name == 'posix' else 'cls')
 
-        # Desenha o cursor na posição atual
-        stdscr.addstr(y, x, "X")
-
-        # Atualiza a tela
-        stdscr.refresh()
+        # Desenha o 'X' na posição atual
+        for i in range(y):
+            print()
+        for i in range(x):
+            print(' ', end='')
+        print('X')
 
         # Captura a entrada do teclado
-        key = stdscr.getch()
+        key = getch()
 
-        # Processa a entrada do teclado
-        if key == ord('w'):
-            y -= 1
-        elif key == ord('s'):
+        # Verifica a entrada do teclado e move o 'X' de acordo
+        if key == 'w':
+            y = max(0, y - 1)
+        elif key == 's':
             y += 1
-        elif key == ord('a'):
-            x -= 1
-        elif key == ord('d'):
+        elif key == 'a':
+            x = max(0, x - 1)
+        elif key == 'd':
             x += 1
-        elif key == ord('q'):
-            break  # Sai do loop se a tecla 'q' for pressionada
+        elif key == 'q':
+            break
 
 if __name__ == "__main__":
-    curses.wrapper(main)
+    main()
