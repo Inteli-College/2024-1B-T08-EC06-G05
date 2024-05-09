@@ -4,7 +4,7 @@ sidebar_position: 3
 ---
 
 ## Introdução
-Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo como um esboço visual preliminar. Eles ajudam a planejar a disposição dos elementos interativos antes da implementação final, permitindo a identificação e correção de problemas de usabilidade de forma eficaz. Essa prática melhora a comunicação dentro das equipes de desenvolvimento e com os stakeholders.
+&emsp;&emsp;Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo como um esboço visual preliminar. Eles ajudam a planejar a disposição dos elementos interativos antes da implementação final, permitindo a identificação e correção de problemas de usabilidade de forma eficaz. Essa prática melhora a comunicação dentro das equipes de desenvolvimento e com os stakeholders.
 
 
 ## Wireframe Detalhado
@@ -35,17 +35,15 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
   - Interface central que agrupa todos os controles do robô:
     - Desligamento
     - Movimentação
-    - Controle da Câmera
     - Ativação da IA
     - Botão de Emergência
 - **Botões**:
   - Desligamento: Esse botão tem a função de desligar o robô e enviar o usuário de volta à tela inicial.
-  - Botão de Emergência: Esse botão faz com que o carrinho pare imediatamente.
   - Movimentação: São utilizadas as setas para movimentar o robô.
   - Ativação da IA: Usuário pode ativar esta função para análise de imagem em tempo real.
-  - Controle da Câmera: Utilizado para direcionar a câmera da forma desejada. 
+  - Botão de Emergência: Esse botão faz com que o carrinho pare imediatamente.
 
-### Tela 7: Confirmação de Desligamento
+### PopUp: Confirmação de Desligamento
 
 ![Desligamento](../../static/img/sprint-2/turnoff.png)
 
