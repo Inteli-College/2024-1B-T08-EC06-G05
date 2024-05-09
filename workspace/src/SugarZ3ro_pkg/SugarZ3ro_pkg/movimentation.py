@@ -14,7 +14,7 @@ LIN_VEL_STEP_SIZE = 0.1
 ANG_VEL_STEP_SIZE = 0.5
 
 msg = """
-Controle o nosso querido robô SugarZ3ro
+Controle o robô SugarZ3ro
 ---------------------------
 Controles:
         w
@@ -22,7 +22,7 @@ Controles:
 w : mova para frente
 a/d : mova para a direita/esquerda
 s : pare de andar
-Q para sair do programa
+Q : sair do programa
 """
 
 class Teleop(Node):
