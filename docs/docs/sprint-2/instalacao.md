@@ -1,7 +1,9 @@
 ---
-title: Instalação de Dependências
+title: Instalação e execução
 sidebar_position: 2
 ---
+
+# Instalação e execução
 
 ## Como instalar o TinyDB
 

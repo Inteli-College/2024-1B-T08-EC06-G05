@@ -11,13 +11,23 @@ sidebar_position: 1
 
 &emsp;&emsp;Para tornar prático o desenvolvimento e a execução da movimentação remota do robô, a equipe optou por utilizar organização de diretórios padrão em projetos envolvendos ROS 2. Desse modo, a estrutura de pastas do projeto conta com um workspace em ```~/app/workspace```, diretório no qual há um pacote ROS ```SugarZ3ro_pkg``` criado pela equipe SugarZ3ro localizado em ```~/app/workspace/src/SugarZ3ro_pkg```.
 
-&emsp;&emsp;Tal pacote apresenta uma estrutura comum a pacotes ROS padrões, a qual é minuciosamente descrita na [documentação oficial do ROS](https://docs.ros.org/en/dashing/Tutorials/Creating-Your-First-ROS2-Package.html). Consequentemente, o script com o código para a movimentação remota do robô se encontra em ```~/app/workspace/src/SugarZ3ro_pkg/SugarZ3r0_pkg/movimentation.py``` e pode ser executada por meio de um comando pré-definido graças ao arquivo ```setup.py``` contido no diretório principal do pacote. 
-
-## Funcionamento
-
-&emsp;&emsp;
+&emsp;&emsp;Tal pacote apresenta uma estrutura comum a pacotes ROS padrões, a qual é minuciosamente descrita na [documentação oficial do ROS](https://docs.ros.org/en/dashing/Tutorials/Creating-Your-First-ROS2-Package.html). Consequentemente, o script com o código para a movimentação remota do robô se encontra em ```./SugarZ3r0_pkg/movimentation.py``` e pode ser executada por meio de um comando pré-definido graças ao arquivo ```setup.py``` contido no diretório principal do pacote. 
 
 ## Execução
+
+&emsp;&emsp;Para executar o controle da movimentação remota do robô, confira a [respectiva seção](../instalacao.md).
+
+## Funcionamento (CLI) 
+
+&emsp;&emsp;Após seguir o passo a passo de execução, o usuário terá acesso a uma CLI (Command Line Interface) que o permitirá movimentar o robô usando as teclas ```A```, ```W```, ```D``` e ```S```.
+
+| **Tecla** | **Ação**                                                   |
+|-----------|------------------------------------------------------------|
+| W         | Aumenta velocidade linear do robô                          |
+| A         | Aumenta velocidade angular do robô em sentido anti-horário |
+| D         | Aumenta velocidade angular do robô em sentido horário      |
+| S         | Iguala a velocidade (linear e/ou angular) do robô a 0      |
+| Q         | Interrompe a execução do código de movimentação do robô    |
 
 ### Pré-requisitos
 
