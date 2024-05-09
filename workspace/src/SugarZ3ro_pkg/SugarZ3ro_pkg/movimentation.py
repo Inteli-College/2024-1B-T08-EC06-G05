@@ -22,7 +22,7 @@ Controles:
 w : mova para frente
 a/d : mova para a direita/esquerda
 s : pare de andar
-Q : sair do programa
+Q : botão de emergência (interromper o programa)
 """
 
 class Teleop(Node):
