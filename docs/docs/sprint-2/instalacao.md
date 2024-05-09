@@ -1,9 +1,32 @@
 ---
 title: Instalação e execução
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Instalação e execução
+
+## Movimentação do robô
+
+### Pré-requisitos
+
+- ROS2 instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+
+- [Pacote ROS do Turtlebot 3](https://github.com/ROBOTIS-GIT/turtlebot3/tree/master) instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+
+- Turtlebot 3 e computador usado para teleoperá-lo conectados na mesma rede wi-fi
+
+### Comunicação via rede local
+
+Passo a passo
+
+1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para ativar a  
+
+Para executar o script em questão, deve-se seguir os seguintes passos:
+
+
+### Comunicação via SSH
+
+
 
 ## Como instalar o TinyDB
 
