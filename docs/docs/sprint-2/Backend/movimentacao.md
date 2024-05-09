@@ -13,16 +13,25 @@ sidebar_position: 1
 
 &emsp;&emsp;Tal pacote apresenta uma estrutura comum a pacotes ROS padrões, a qual é minuciosamente descrita na [documentação oficial do ROS](https://docs.ros.org/en/dashing/Tutorials/Creating-Your-First-ROS2-Package.html). Consequentemente, o script com o código para a movimentação remota do robô se encontra em ```~/app/workspace/src/SugarZ3ro_pkg/SugarZ3r0_pkg/movimentation.py``` e pode ser executada por meio de um comando pré-definido graças ao arquivo ```setup.py``` contido no diretório principal do pacote. 
 
+## Funcionamento
+
+&emsp;&emsp;
+
 ## Execução
 
 ### Pré-requisitos
 
-- ROS2 instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e  
+- ROS2 instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+
+- [Pacote ROS do Turtlebot 3](https://github.com/ROBOTIS-GIT/turtlebot3/tree/master) instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+
+- Turtlebot 3 e computador usado para teleoperá-lo conectados na mesma rede wi-fi
+
+### Passo a passo
+
+1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para ativar a  
 
 Para executar o script em questão, deve-se seguir os seguintes passos:
-
-1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado,
-
 &emsp;&emsp;
 
 introducao

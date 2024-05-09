@@ -1,6 +1,6 @@
 ---
-title: WireFrame
-sidebar_position: 1
+title: Wireframe
+sidebar_position: 3
 ---
 
 ## Introdução
@@ -8,8 +8,8 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
 
 
 ## Wireframe Detalhado
-![Página Inicial](../../../static/img/sprint-2/paginainicial.png)
-![Página de Informações](../../../static/img/sprint-2/info.png)
+![Página Inicial](../../static/img/sprint-2/paginainicial.png)
+![Página de Informações](../../static/img/sprint-2/info.png)
 ### Tela 1: Página Inicial e Informações
 
 - **Elementos**:
@@ -46,7 +46,7 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
 
 ### Tela 6: Controle Principal do Robô
 
-![Central de Controle](../../../static/img/sprint-2/centraldecontrole.png)
+![Central de Controle](../../static/img/sprint-2/centraldecontrole.png)
 
 - **Descrição**:
   - Interface central que agrupa todos os controles do robô:
@@ -58,7 +58,7 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
 
 ### Tela 7: Confirmação de Desligamento
 
-![Desligamento](../../../static/img/sprint-2/turnoff.png)
+![Desligamento](../../static/img/sprint-2/turnoff.png)
 
 - **Descrição**:
   - Mensagem de confirmação ao tentar desligar o robô.
