@@ -10,42 +10,25 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
 ## Wireframe Detalhado
 ![Página Inicial](../../static/img/sprint-2/paginainicial.png)
 ![Página de Informações](../../static/img/sprint-2/info.png)
-### Tela 1: Página Inicial e Informações
+### Tela 1: Página Inicial
 
 - **Elementos**:
   - Ícone de informações ("i")
   - Botão "START"
 
 - **Funcionalidades**:
-  - Clicar em "START" direciona o usuário para a interface de controle do robô.
+  - Clicar em "Start" direciona o usuário para a interface de controle do robô.
   - O ícone de informações leva ao detalhamento das funcionalidades dos botões.
 
-### Tela 2: Desligamento do Robô
-
+### Tela 2: Informações
+- **Elementos**:
+  - Botão de voltar
+  - Caixa de instruções
 - **Descrição**:
-  - Explicação do botão de desligamento do robô.
-  - Botão "Voltar" para retornar à página inicial.
+  - Autoexplicativo, o botão retorna à página inicial.
+  - A caixa de instruções contém os botões exibidos na tela durante o controle do robô e tem o objetivo de esclarecer o devido funcionamento de cada botão.
 
-### Tela 3: Ativação da IA de Reconhecimento de Sujeira
-
-- **Descrição**:
-  - Detalhes sobre o botão que ativa a inteligência artificial para reconhecimento de sujeira.
-  - Usuário pode ativar esta função para análise de imagem em tempo real.
-
-### Tela 4: Movimentação do Robô
-
-- **Descrição**:
-  - Controles direcionais para mover o robô para a posição desejada.
-  - Crucial para operações que exigem precisão de movimentação.
-
-### Tela 5: Movimentação da Câmera
-
-- **Descrição**:
-  - Uso do joystick para ajustar o ângulo da câmera.
-  - Permite capturar imagens específicas, útil em monitoramento ou inspeções detalhadas.
-
-### Tela 6: Controle Principal do Robô
-
+### Tela 3: Tela de Controle
 ![Central de Controle](../../static/img/sprint-2/centraldecontrole.png)
 
 - **Descrição**:
@@ -55,6 +38,12 @@ Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo 
     - Controle da Câmera
     - Ativação da IA
     - Botão de Emergência
+- **Botões**:
+  - Desligamento: Esse botão tem a função de desligar o robô e enviar o usuário de volta à tela inicial.
+  - Botão de Emergência: Esse botão faz com que o carrinho pare imediatamente.
+  - Movimentação: São utilizadas as setas para movimentar o robô.
+  - Ativação da IA: Usuário pode ativar esta função para análise de imagem em tempo real.
+  - Controle da Câmera: Utilizado para direcionar a câmera da forma desejada. 
 
 ### Tela 7: Confirmação de Desligamento
 
