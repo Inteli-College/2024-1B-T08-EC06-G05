@@ -1,6 +1,6 @@
 ---
 title: Banco de Dados
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Banco de Dados em TinyDB
