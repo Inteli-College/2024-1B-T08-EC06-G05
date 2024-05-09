@@ -14,15 +14,15 @@ LIN_VEL_STEP_SIZE = 0.1
 ANG_VEL_STEP_SIZE = 0.5
 
 msg = """
-Control Your TurtleBot3!
+Controle o nosso querido robô SugarZ3ro
 ---------------------------
-Moving around:
+Controles:
         w
    a    s    d
-w : increase linear velocity (Burger : ~ 0.2)
-a/d : increase/decrease angular velocity (Burger : ~ 2.5)
-s : force stop
-CTRL-C to quit
+w : mova para frente
+a/d : mova para a direita/esquerda
+s : pare de andar
+Q para sair do programa
 """
 
 class Teleop(Node):
