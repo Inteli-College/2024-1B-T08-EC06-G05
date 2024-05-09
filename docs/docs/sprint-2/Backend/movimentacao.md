@@ -33,6 +33,8 @@ sidebar_position: 1
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
+&emsp;&emsp;Por aumento de velocidade linear, entende-se que o robô segue em linha reta. Já pelo aumento da velocidade angular em sentido anti-horário e sentido horário, entende-se que o robô vira, respectivamente, para a esquerda e para a direita em relação ao seu próprio eixo. Por fim, por igualar a velocidade do robô a 0, entende-se que o robô fica imóvel. 
+
 ## Sistema de segurança
 
 

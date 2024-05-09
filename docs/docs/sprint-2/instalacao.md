@@ -15,12 +15,16 @@ sidebar_position: 3
 
 - Turtlebot 3 e computador usado para teleoperá-lo conectados na mesma rede wi-fi
 
-### Comunicação via Passo a passo
+### Comunicação via rede local
+
+Passo a passo
 
 1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para ativar a  
 
 Para executar o script em questão, deve-se seguir os seguintes passos:
 
+
+### Comunicação via SSH
 
 
 
