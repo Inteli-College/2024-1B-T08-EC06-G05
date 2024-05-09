@@ -8,10 +8,10 @@ import tty, termios, time
 if os.name == 'nt':
     import msvcrt
 
-BURGER_MAX_LIN_VEL = 0.15
+BURGER_MAX_LIN_VEL = 0.20
 BURGER_MAX_ANG_VEL = 2.5
-LIN_VEL_STEP_SIZE = 0.01
-ANG_VEL_STEP_SIZE = 0.1
+LIN_VEL_STEP_SIZE = 0.1
+ANG_VEL_STEP_SIZE = 0.5
 
 msg = """
 Control Your TurtleBot3!
@@ -19,7 +19,7 @@ Control Your TurtleBot3!
 Moving around:
         w
    a    s    d
-w : increase linear velocity (Burger : ~ 0.15)
+w : increase linear velocity (Burger : ~ 0.2)
 a/d : increase/decrease angular velocity (Burger : ~ 2.5)
 s : force stop
 CTRL-C to quit
@@ -31,14 +31,16 @@ class Teleop(Node):
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         self.key_pressed = None
         self.last_key_pressed = None
+        self.running = True  # To control thread lifecycle
         self.lock = threading.Lock()
+        self.mensagem = True
 
     def key_poll(self):
         old_attr = termios.tcgetattr(sys.stdin)
         tty.setcbreak(sys.stdin.fileno())
         try:
-            while True:
-                if select.select([sys.stdin], [], [], 0.1)[0]:  # Wait for input for up to 0.1 seconds
+            while self.running:  # Check if still supposed to run
+                if select.select([sys.stdin], [], [], 0.1)[0]:
                     with self.lock:
                         self.key_pressed = sys.stdin.read(1)
                 else:
@@ -60,6 +62,11 @@ class Teleop(Node):
                     key = self.key_pressed
                     last_key = self.last_key_pressed
 
+                if key == 'q':
+                    print("Foi bom te conhecer...")
+                    self.running = False  # Signal thread to stop
+                    break  # Exit the loop to stop the node
+
                 # Reset speeds if necessary when switching keys
                 if key != last_key:
                     if key in ['w', 's', None]:
@@ -68,12 +75,24 @@ class Teleop(Node):
                         target_linear_vel = 0.0
 
                 if key == 'w':
+                    if self.mensagem:
+                        print("Andando para frente")
+                    self.mensagem = False
                     target_linear_vel = min(target_linear_vel + LIN_VEL_STEP_SIZE, BURGER_MAX_LIN_VEL)
                 elif key == 'a':
+                    if self.mensagem:
+                        print("Andando para frente")
+                    self.mensagem = False
                     target_angular_vel = min(target_angular_vel + ANG_VEL_STEP_SIZE, BURGER_MAX_ANG_VEL)
                 elif key == 'd':
+                    if self.mensagem:
+                        print("Andando para frente")
+                    self.mensagem = False
                     target_angular_vel = max(target_angular_vel - ANG_VEL_STEP_SIZE, -BURGER_MAX_ANG_VEL)
                 elif key == 's' or key is None:
+                    if not self.mensagem:
+                        print("Parando")
+                    self.mensagem = True
                     target_linear_vel = 0.0
                     target_angular_vel = 0.0
 
@@ -81,9 +100,11 @@ class Teleop(Node):
 
                 twist = Twist()
                 twist.linear.x = float(target_linear_vel)
+                print(target_linear_vel)
                 twist.angular.z = float(target_angular_vel)
+                print(target_angular_vel)
                 self.publisher_.publish(twist)
-                time.sleep(0.1)  # Adjust sleep time if needed
+                time.sleep(0.1)
 
         except KeyboardInterrupt:
             pass
@@ -92,6 +113,7 @@ class Teleop(Node):
             twist.linear.x = 0.0
             twist.angular.z = 0.0
             self.publisher_.publish(twist)
+            self.running = False
             key_thread.join()
 
 def main(args=None):
