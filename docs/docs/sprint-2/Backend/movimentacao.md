@@ -5,9 +5,11 @@ sidebar_position: 1
 
 # Movimentação do robô
 
+## Introdução
+
 &emsp;&emsp;Durante a segunda sprint do projeto, a equipe SugarZ3ro focou no desenvolvimento de uma forma de movimentação do robô de maneira remota. Para isso, conforme descrito na [proposta inicial de arquitetura](../../sprint-1/arquitetura/arquitetura.md) do projeto, a equipe utilizou ROS 2 (Robot Operating System) através do sistema operacional Linux Ubuntu, que foi instalado tanto na Raspberry contida no Turtlebot quanto no computador utilizado para controlar a movimentação do robô.
 
-## Estrutura de diretórios e arquivos
+## Estrutura de pastas/arquivos
 
 &emsp;&emsp;Para tornar prático o desenvolvimento e a execução da movimentação remota do robô, a equipe optou por utilizar organização de diretórios padrão em projetos envolvendos ROS 2. Desse modo, a estrutura de pastas do projeto conta com um workspace em ```~/app/workspace```, diretório no qual há um pacote ROS ```SugarZ3ro_pkg``` criado pela equipe SugarZ3ro.
 
@@ -19,7 +21,15 @@ sidebar_position: 1
 
 ## CLI (Command Line Interface)
 
-&emsp;&emsp;Após seguir o passo a passo de execução, o usuário terá acesso a uma CLI (Command Line Interface) que o permitirá movimentar o robô usando as teclas ```W```, ```A```, ```D```, ```S``` e ```Q```. Cada tecla executa uma ação diferente ao ser pressionada, conforme descição na tabela 1, a seguir.
+&emsp;&emsp;Após seguir o passo a passo de execução, o usuário terá acesso a uma CLI (Command Line Interface) que o permitirá movimentar o robô usando as teclas ```W```, ```A```, ```D```, ```S``` e ```Q```, como é apresentado na figura 1.
+
+<p style={{textAlign: 'center'}}>Figura 1 - CLI para controle da movimentação do robô</p>
+
+![Business Model Canvas da Atvos](../../../static/img/sprint-2/cli_main_menu.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;Cada uma das teclas mencionadas na captura de tela da figura 1 executa uma ação diferente ao ser pressionada, conforme a descrição na tabela 1, a seguir.
 
 <p style={{textAlign: 'center'}}>Tabela 1 - Relação entre teclas e ações executadas</p>
 

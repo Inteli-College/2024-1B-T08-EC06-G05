@@ -9,20 +9,51 @@ sidebar_position: 3
 
 ### Pré-requisitos
 
-- ROS2 instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+- ROS2 instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para operá-lo remotamente
 
-- [Pacote ROS do Turtlebot 3](https://github.com/ROBOTIS-GIT/turtlebot3/tree/master) instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para teleoperá-lo
+- [Pacote ROS do Turtlebot 3](https://github.com/ROBOTIS-GIT/turtlebot3/tree/master) instalado no sistema operacional (Linux Ubuntu) da Raspberry do Turtlebot 3 e do computador usado para operá-lo remotamente
 
-- Turtlebot 3 e computador usado para teleoperá-lo conectados na mesma rede wi-fi
+- Turtlebot 3 e computador usado para operá-lo remotamente conectados na mesma rede wi-fi
+
+- Git instalado no computador usado para operar o robô remotamente
 
 ### Comunicação via rede local
 
-Passo a passo
+#### Passo a passo
 
-1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para ativar a  
+1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para limitar a comunicação via ROS a um domínio com ID 5 dentro da rede:
 
-Para executar o script em questão, deve-se seguir os seguintes passos:
+`echo 'export ROS_DOMAIN_ID=5' >> ~/.bashrc`
 
+`source ~/.bashrc`
+
+2. Na mesma janela de terminal, digite o seguinte comando para iniciar a comunicação entre a Raspberry e o microcontrolador do robô, bem como torná-lo apto a receber comandos de movimentação remotamente:
+
+`ros2 launch turtlebot3_bringup robot.launch.py`
+
+3. No sistema operacional do computador que será utilizado para controlar o robô de maneira remota, abra uma janela de terminal no diretório de sua preferência e clone o repositório através do seguinte comando:
+
+`git clone https://github.com/Inteli-College/2024-1B-T08-EC06-G05.git`
+
+4. Na mesma janela de terminal, digite os seguintes comandos para iniciar o build do workspace:
+
+`cd 2024-1B-T08-EC06-G05/workspace`
+
+`colcon build`
+
+5. Na mesma janela de terminal, digite o seguinte comando para habilitar o uso do pacote criado pela equipe SugarZ3ro:
+
+`source install/local_setup.bash`
+
+6. Na mesma janela de terminal, digite os seguintes comandos para limitar a comunicação via ROS a um domínio com ID 5 dentro da rede:
+
+`echo 'export ROS_DOMAIN_ID=5' >> ~/.bashrc`
+
+`source ~/.bashrc`
+
+7. Por fim, na mesma janela de terminal, digite o seguinte comando para executar o script responsável por inicializar a CLI para controle de movimentação do robô:
+
+`ros2 run SugarZ3ro_pkg start_moving`
 
 ### Comunicação via SSH
 
