@@ -81,12 +81,12 @@ class Teleop(Node):
                     target_linear_vel = min(target_linear_vel + LIN_VEL_STEP_SIZE, BURGER_MAX_LIN_VEL)
                 elif key == 'a':
                     if self.mensagem:
-                        print("Andando para esquerda")
+                        print("Virando para esquerda")
                     self.mensagem = False
                     target_angular_vel = min(target_angular_vel + ANG_VEL_STEP_SIZE, BURGER_MAX_ANG_VEL)
                 elif key == 'd':
                     if self.mensagem:
-                        print("Andando para direita")
+                        print("Virando para direita")
                     self.mensagem = False
                     target_angular_vel = max(target_angular_vel - ANG_VEL_STEP_SIZE, -BURGER_MAX_ANG_VEL)
                 elif key == 's' or key is None:
