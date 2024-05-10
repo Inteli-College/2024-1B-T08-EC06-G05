@@ -30,6 +30,9 @@ sidebar_position: 2
 
 ### Tela 3: Tela de Controle
 ![Central de Controle](../../static/img/sprint-2/centraldecontrole.png)
+![Central de Controle com ruído](../../static/img/sprint-2/controle-com-ruido.png)
+
+&emsp;&emsp;Acima, temos duas imagens da tela de controle, uma com um fundo em branco e a outra com uma imagem de fundo. Neste caso, optamos por adicionar essa imagem para ver como nosso design interage com ruídos, buscando aprimorar a experiência do usuário.
 
 - **Descrição**:
   - Interface central que agrupa todos os controles do robô:
@@ -52,4 +55,4 @@ sidebar_position: 2
   - Opções para "Cancelar" ou "Desligar" garantem uma operação segura.
 
 ## Conclusão
-Este wireframe descreve detalhadamente cada interface do software de controle do robô, assegurando que o usuário tenha uma experiência intuitiva e eficaz, ao mesmo tempo que maximiza a funcionalidade e a usabilidade do sistema.
+&emsp;&emsp;Este wireframe descreve detalhadamente cada interface do software de controle do robô, assegurando que o usuário tenha uma experiência intuitiva e eficaz, ao mesmo tempo que maximiza a funcionalidade e a usabilidade do sistema.
