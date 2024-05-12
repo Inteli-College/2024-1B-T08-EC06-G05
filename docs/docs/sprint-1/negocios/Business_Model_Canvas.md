@@ -34,6 +34,6 @@ sidebar_position: 1
 
 <p style={{textAlign: 'center'}}>Figura 1 - Business Model Canvas da solução</p>
 
-![Business Model Canvas da Atvos](/img/Business_Model_Canvas.jpg)
+![Business Model Canvas da Atvos](/img/sprint-1/Business_Model_Canvas.jpg)
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
