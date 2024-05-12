@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "SugarZ3ro_pkg = SugarZ3ro_pkg.SugarZ3ro_pkg:main",
+            "start_moving = SugarZ3ro_pkg.movimentation:main",
         ],
     },
 )
