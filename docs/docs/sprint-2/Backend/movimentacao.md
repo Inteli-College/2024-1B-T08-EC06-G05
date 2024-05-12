@@ -47,4 +47,17 @@ sidebar_position: 1
 
 ## Sistema de segurança
 
+&emsp;&emsp;O sistema de segurança é uma característica crítica em muitos sistemas robóticos, especialmente naqueles operados remotamente ou em ambientes que podem apresentar riscos para seres humanos ou para o próprio equipamento. Esta funcionalidade foi projetada para garantir maior segurança ao robô e ao usuário responsável pela operação do mesmo, proporcionando mais confiança ao realizar seu trabalho, uma vez que muitos dos possíveis erros de operação podem ser evitados através desse sistema.
+
+&emsp;&emsp;A segurança deve ser de grande prioridade em sistemas robóticos interativos, trazendo varios beneficios como:
+
+- Prevenção de danos: Protege o robô e o ambiente ao redor de danos em caso de mal funcionamento ou comportamento inesperado.
+
+- Aumento da confiança do usuário: Permite que operadores humanos tenham controle final sobre ações robóticas, melhorando a confiança no uso de sistemas robóticos em ambientes complexos.
+
+- Cumprimento requisitos regulatórios: Em muitos casos, a presença de um sistema de parada de emergência é um requisito legal para a operação de sistemas automatizados e robóticos.
+
+&emsp;&emsp;Foram implementados dois sistemas de segurança com o objetivo de oferecer uma melhor usabilidade ao usuário, além de proporcionar mais segurança e confiança ao operar o robô. O primeiro está presente em todos os movimentos do robô, pois foi projetado para ser imediatamente parado quando as teclas de movimentação não estiverem ativadas, garantindo que, em caso de qualquer distração ou imprevisto durante a operação da solução, não ocorram acidentes e nenhum dano seja causado. O segundo sistema de segurança foi desenvolvido para que, em caso de qualquer condição anormal ou perigosa, o sistema de movimentação do robô possa ser encerrado imediatamente através da tecla```Q```.
+
+
 
