@@ -39,7 +39,7 @@ Nesta seção, você pode conferir as instruções para instalar e executar cada
 
 4. Na mesma janela de terminal, digite os seguintes comandos para iniciar o build do workspace:
 
-`cd 2024-1B-T08-EC06-G05/workspace`
+`cd 2024-1B-T08-EC06-G05/src/workspace`
 
 `colcon build`
 
@@ -67,7 +67,7 @@ Nesta seção, você pode conferir as instruções para instalar e executar cada
 
 `git clone https://github.com/Inteli-College/2024-1B-T08-EC06-G05.git`
 
-`cd 2024-1B-T08-EC06-G05/workspace`
+`cd 2024-1B-T08-EC06-G05/src/workspace`
 
 `colcon build`
 
@@ -99,7 +99,7 @@ No comando acima, `user` é o nome de usuário do sistema operacional da Raspber
 
 7. Por fim, adentre o diretório no qual você clonou o repositório do projeto (no passo 2) e digite os seguintes comandos para executar a CLI de movimentação do robô:
 
-`cd workspace`
+`cd src/workspace`
 
 `source install/local_setup.bash`
 
