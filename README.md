@@ -77,3 +77,9 @@ Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-col
 - Arquitetura inicial da solução
 - Entendimento de experiência do Usuário
 - Análise de negócios
+
+### Sprint 2
+
+- Script de movimentação do robô
+- CLI integrada à movimentação do robô
+- Sistema de segurança para movimentação do robô
