@@ -59,6 +59,8 @@ Nesta seção, você pode conferir as instruções para instalar e executar cada
 
 ### Comunicação via SSH
 
+#### Passo a passo
+
 1. Siga o [passo 1](./instalacao.md#comunicação-via-rede-local) do tutorial para comunicação via rede local.
 
 2. No sistema operacional da Raspberry do Turtlebot 3, abra uma janela de terminal e clone e dê build no repositório do projeto no diretório de sua preferência através dos comandos:
