@@ -8,8 +8,8 @@ sidebar_position: 2
 
 
 ## Wireframe Detalhado
-![Página Inicial](../../static/img/sprint-2/paginainicial.png)
-![Página de Informações](../../static/img/sprint-2/info.png)
+![Página Inicial](../../../static/img/sprint-2/paginainicial.png)
+![Página de Informações](../../../static/img/sprint-2/info.png)
 ### Tela 1: Página Inicial
 
 - **Elementos**:
@@ -29,8 +29,8 @@ sidebar_position: 2
   - A caixa de instruções contém os botões exibidos na tela durante o controle do robô e tem o objetivo de esclarecer o devido funcionamento de cada botão.
 
 ### Tela 3: Tela de Controle
-![Central de Controle](../../static/img/sprint-2/centraldecontrole.png)
-![Central de Controle com ruído](../../static/img/sprint-2/controle-com-ruido.png)
+![Central de Controle](../../../static/img/sprint-2/centraldecontrole.png)
+![Central de Controle com ruído](../../../static/img/sprint-2/controle-com-ruido.png)
 
 &emsp;&emsp;Acima, temos duas imagens da tela de controle, uma com um fundo em branco e a outra com uma imagem de fundo. Neste caso, optamos por adicionar essa imagem para ver como nosso design interage com ruídos, buscando aprimorar a experiência do usuário.
 
@@ -48,7 +48,7 @@ sidebar_position: 2
 
 ### PopUp: Confirmação de Desligamento
 
-![Desligamento](../../static/img/sprint-2/turnoff.png)
+![Desligamento](../../../static/img/sprint-2/turnoff.png)
 
 - **Descrição**:
   - Mensagem de confirmação ao tentar desligar o robô.

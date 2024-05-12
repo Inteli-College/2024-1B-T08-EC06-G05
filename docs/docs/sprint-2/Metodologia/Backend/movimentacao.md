@@ -17,7 +17,7 @@ sidebar_position: 1
 
 ## Execução
 
-&emsp;&emsp;Para executar o controle da movimentação remota do robô, confira a [respectiva seção](../instalacao.md).
+&emsp;&emsp;Para executar o controle da movimentação remota do robô, confira a [respectiva seção](../../instalacao.md).
 
 ## CLI (Command Line Interface)
 
@@ -25,7 +25,7 @@ sidebar_position: 1
 
 <p style={{textAlign: 'center'}}>Figura 1 - CLI para controle da movimentação do robô</p>
 
-![Business Model Canvas da Atvos](../../../static/img/sprint-2/cli_main_menu.png)
+![Business Model Canvas da Atvos](../../../../static/img/sprint-2/cli_main_menu.png)
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
@@ -58,6 +58,17 @@ sidebar_position: 1
 - Cumprimento requisitos regulatórios: Em muitos casos, a presença de um sistema de parada de emergência é um requisito legal para a operação de sistemas automatizados e robóticos.
 
 &emsp;&emsp;Foram implementados dois sistemas de segurança com o objetivo de oferecer uma melhor usabilidade ao usuário, além de proporcionar mais segurança e confiança ao operar o robô. O primeiro está presente em todos os movimentos do robô, pois foi projetado para ser imediatamente parado quando as teclas de movimentação não estiverem ativadas, garantindo que, em caso de qualquer distração ou imprevisto durante a operação da solução, não ocorram acidentes e nenhum dano seja causado. O segundo sistema de segurança foi desenvolvido para que, em caso de qualquer condição anormal ou perigosa, o sistema de movimentação do robô possa ser encerrado imediatamente através da tecla```Q```.
+
+## Vídeo de demonstração da solução
+
+&emsp;&emsp;Para demonstrar o funcionamento da solução desenvolvida até o momento, foi gravado um vídeo demonstrando a movimentação do robô, a interface de linha de comando (CLI) e o sistema de segurança implementado. O vídeo pode ser encontrado no link a seguir: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wLLeXSeqaAc?si=vfi_e0yc8g3TCSf2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Fonte: elaborado por SugarZ3ro
+
+&emsp;&emsp;Neste vídeo, é possível observar o robô realizando movimentos lineares e rotacionando conforme os comandos do usuário. Os dois sistemas de segurança também foram demonstrados, além da CLI fornecendo feedback imediato ao usuário sobre cada ação realizada.
+
 
 
 
