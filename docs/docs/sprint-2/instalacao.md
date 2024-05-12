@@ -1,6 +1,6 @@
 ---
 title: Instalação e execução
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Instalação e execução
@@ -61,7 +61,7 @@ Nesta seção, você pode conferir as instruções para instalar e executar cada
 
 #### Passo a passo
 
-1. Siga o [passo 1](./instalacao.md#comunicação-via-rede-local) do tutorial para comunicação via rede local.
+1. Siga o [passo 1](#passo-a-passo) do tutorial para comunicação via rede local.
 
 2. No sistema operacional da Raspberry do Turtlebot 3, abra uma janela de terminal e clone e dê build no repositório do projeto no diretório de sua preferência através dos comandos:
 
