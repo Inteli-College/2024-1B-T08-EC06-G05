@@ -3,7 +3,7 @@ import './mainMenu.css'
 function MainMenu() {
   return (
     <>
-      <h1>Menu principal</h1>
+      <h1>Menu principal- o Teste</h1>
     </>
   )
 }
