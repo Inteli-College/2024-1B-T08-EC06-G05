@@ -1,4 +1,4 @@
-import './teleopScreen.css'
+import './teleopScree.css'
 
 function TeleopScreen() {
   return (

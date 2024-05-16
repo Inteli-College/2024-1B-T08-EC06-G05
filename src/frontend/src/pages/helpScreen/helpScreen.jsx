@@ -1,4 +1,4 @@
-import './mainMenu.css'
+
 
 function HelpScreen() {
   return (
