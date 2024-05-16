@@ -1,5 +1,3 @@
-import './teleopScree.css'
-
 function TeleopScreen() {
   return (
     <>

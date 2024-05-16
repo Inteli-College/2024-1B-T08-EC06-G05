@@ -10,9 +10,16 @@ export default {
     "./src/components/movimentacao/tras.jsx",
     "./src/components/movimentacao/direita.jsx",
     "./src/components/movimentacao/esquerda.jsx",
+    "./src/pages/helpScreen.jsx",
+    "./src/pages/mainMenu.jsx",
+    "./src/pages/teleopScreen.jsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '-2': '-0.5rem',
+      },
+    },
   },
   plugins: [],
 }
