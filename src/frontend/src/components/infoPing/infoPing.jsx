@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './infoPing.css';
 
 function InfoPing() {
     const [ping, setPing] = useState(0);
@@ -15,11 +14,19 @@ function InfoPing() {
     }, []);
 
     return (
-        <div className="alignmentClass">
-            <div className="trianglePart"></div>
-            <div className="rectanglePart">
+        <div className="flex">
+            
+            <div className="w-0 h-0 
+  border-t-[3vh] border-t-customBlue
+  border-r-[3vh] border-r-customBlue
+  border-l-[3vh] border-l-transparent
+  border-b-[3vh] border-b-transparent">
+            </div>
+
+            <div className="h-5vh p-1 w-32 bg-customBlue flex items-center justify-end font-bold text-white text-xl font-sans">
                 Ping: {ping}ms
             </div>
+
         </div>
     );
 }
