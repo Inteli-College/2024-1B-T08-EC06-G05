@@ -4,6 +4,9 @@ import MovFrente from "../components/movimentacao/frente"
 import MovDireita from "../components/movimentacao/direita"
 import MovEsquerda from "../components/movimentacao/esquerda"
 import MovTras from "../components/movimentacao/tras"
+import WarningButton from "../components/warningButton/warning"
+import TurnOffButton from "../components/turnoffbutton/turnoff"
+import BtVoltarCinza from "../components/voltarButton/voltar"
 
 function TeleopScreen() {
   return (
@@ -11,7 +14,9 @@ function TeleopScreen() {
       <h1>Teleoperação</h1>
       <InfoPing />
       <AiButton />
-      <MovDireita />
+      <WarningButton />
+      <TurnOffButton />
+      <BtVoltarCinza />
     </>
   )
 }

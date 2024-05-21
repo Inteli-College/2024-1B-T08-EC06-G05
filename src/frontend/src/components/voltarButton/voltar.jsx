@@ -1,4 +1,4 @@
-function btVoltarCinza() {
+function BtVoltarCinza() {
     const onClick = () => {
         window.history.back();
     };
@@ -16,5 +16,5 @@ function btVoltarCinza() {
     );
   }
   
-  export default btVoltarCinza;
+  export default BtVoltarCinza;
   
