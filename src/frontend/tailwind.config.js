@@ -15,6 +15,9 @@ export default {
     "./src/pages/helpScreen.jsx",
     "./src/pages/mainMenu.jsx",
     "./src/pages/teleopScreen.jsx",
+    "./src/components/voltarButton/voltarButton.jsx",
+    "./src/components/turnoffButton/turnoff.jsx",
+    "./src/components/warningButton/warning.jsx",
   ],
   theme: {
     extend: {
