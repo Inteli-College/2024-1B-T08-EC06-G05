@@ -17,7 +17,7 @@ const VideoStream = () => {
 
     ros.on('error', (error) => {
       console.log('Error connecting to websocket server: ', error);
-    });
+    }); 
 
     ros.on('close', () => {
       console.log('Connection to websocket server closed.');
