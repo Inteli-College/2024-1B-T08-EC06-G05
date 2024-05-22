@@ -1,6 +1,6 @@
 // src/components/TurnoffButton.js
 import React from 'react';
-import TurnoffIcon from './turnoffbutton/Turnoff.svg';
+import TurnoffIcon from './Turnoff.svg';
 
 const TurnoffButton = ({ movementHandlers }) => {
   const handleClick = () => {

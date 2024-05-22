@@ -11,11 +11,12 @@ const StopButton = ({ movementHandlers }) => {
   return (
     <button
       onClick={handleClick}
-      className="bg-red-500 text-white p-2 rounded"
-    >
-      Stop
-    </button>
-  );
+      className="bg-white border border-black rounded p-2">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(90deg)' }}>
+      <polygon points="5,5 15,10 5,15" />
+    </svg>
+  </button>
+);
 };
 
 export default StopButton;

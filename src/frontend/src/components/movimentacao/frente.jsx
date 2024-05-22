@@ -13,7 +13,7 @@ const MoveForward = ({ movementHandlers }) => {
       movementHandlers.stop();
     }
   };
-
+  
   return (
     <button
       onMouseDown={handleMouseDown}
@@ -22,7 +22,7 @@ const MoveForward = ({ movementHandlers }) => {
       onTouchEnd={handleMouseUp}
       className="bg-white border border-black rounded p-2"
     >
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(90deg)' }}>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(-90deg)' }}>
         <polygon points="5,5 15,10 5,15" />
       </svg>
     </button>
