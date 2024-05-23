@@ -7,6 +7,7 @@ import MovTras from "../components/movimentacao/tras"
 import WarningButton from "../components/warningButton/warning"
 import TurnOffButton from "../components/turnoffbutton/turnoff"
 import BtVoltarCinza from "../components/voltarButton/voltar"
+import Modal from "../components/OverlayTurnOff/modal"
 
 function TeleopScreen() {
   return (
@@ -17,6 +18,7 @@ function TeleopScreen() {
       <WarningButton />
       <TurnOffButton />
       <BtVoltarCinza />
+      <Modal />
     </>
   )
 }
