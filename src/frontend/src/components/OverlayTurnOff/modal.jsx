@@ -12,7 +12,7 @@ const Modal = () => {
     }
     return (
       <>
-        <TurnOffButton onClick={console.log("teste")} />
+        <TurnOffButton onClick={() => setShowModal(true)} />
         {showModal ? (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute bg-white w-96 p-6 rounded-xl shadow-lg">

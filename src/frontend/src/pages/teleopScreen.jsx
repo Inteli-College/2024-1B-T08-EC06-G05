@@ -16,9 +16,8 @@ function TeleopScreen() {
       <InfoPing />
       <AiButton />
       <WarningButton />
-      <TurnOffButton />
-      <BtVoltarCinza />
       <Modal />
+      <BtVoltarCinza />
     </>
   )
 }
