@@ -4,6 +4,8 @@ from geometry_msgs.msg import Twist
 import threading
 import sys, select, os
 import tty, termios, time
+from std_msgs.msg import Bool
+
 
 if os.name == 'nt':
     import msvcrt
@@ -34,7 +36,19 @@ class Teleop(Node):
         self.running = True  # To control thread lifecycle
         self.lock = threading.Lock()
         self.mensagem = True
+        
+        self.obstacle_subscription = self.create_subscription(Bool, 'obstacle_detected', self.obstacle_callback, 10) 
+        self.detected_obstacle = None
 
+    def obstacle_callback(self, msg):
+        self.detected_obstacle = msg.data
+        if self.detected_obstacle:
+            self.get_logger().warn("OBSTÁCULO DETECTADO!\nParando o robô.")
+            twist = Twist()
+            twist.linear.x = 0.0
+            twist.angular.z = 0.0
+            self.publisher_.publish(twist)
+        
     def key_poll(self):
         old_attr = termios.tcgetattr(sys.stdin)
         tty.setcbreak(sys.stdin.fileno())
@@ -57,7 +71,8 @@ class Teleop(Node):
 
         try:
             print(msg)
-            while rclpy.ok():
+            while rclpy.ok() and self.running:
+                print(str(self.detected_obstacle))
                 with self.lock:
                     key = self.key_pressed
                     last_key = self.last_key_pressed
