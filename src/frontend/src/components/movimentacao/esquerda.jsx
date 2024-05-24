@@ -1,17 +1,20 @@
 // src/components/MoveLeft.js
 import React from 'react';
-import TurtleBotController from '../rosbridge_movement/rosbridge_movement';
-
 
 const MoveLeft = ({ movementhandlers }) => {
   const handleMouseDown = () => {
+    console.log('Left button pressed');
     if (movementhandlers && movementhandlers.left) {
+      console.log('Left button sent');
       movementhandlers.left();
+    } else {
+      console.log('movementhandlers.left is not defined');
     }
   };
 
   const handleMouseUp = () => {
     if (movementhandlers && movementhandlers.stop) {
+      console.log('Left button released');
       movementhandlers.stop();
     }
   };

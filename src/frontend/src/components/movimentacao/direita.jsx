@@ -1,10 +1,9 @@
 // src/components/MoveRight.js
 import React from 'react';
-import TurtleBotController from '../rosbridge_movement/rosbridge_movement';
-
 
 const MoveRight = ({ movementhandlers }) => {
   const handleMouseDown = () => {
+    console.log('Right button pressed');
     if (movementhandlers && movementhandlers.right) {
       movementhandlers.right();
     }

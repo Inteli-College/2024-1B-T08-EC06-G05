@@ -8,7 +8,7 @@ const VideoStream = () => {
   useEffect(() => {
     // Conectar ao servidor ROS
     const ros = new ROSLIB.Ros({
-      url: 'ws://10.128.0.31:9090'
+      url: 'ws://10.128.0.30:9090'
     });
 
     ros.on('connection', () => {
@@ -23,11 +23,11 @@ const VideoStream = () => {
       console.log('Connection to websocket server closed.');
     });
 
-    // Assinar ao tópico de vídeo
+    // Assinar ao tópico de vídeonsor_msgs/Compres
     const videoTopic = new ROSLIB.Topic({
       ros: ros,
       name: '/video_frames',
-      messageType: 'sensor_msgs/CompressedImage'
+      messageType: 'sesedImage'
     });
 
     // Função para lidar com os quadros de vídeo recebidos

@@ -1,9 +1,9 @@
 // src/components/MoveForward.js
 import React from 'react';
 
-
 const MoveForward = ({ movementhandlers }) => {
   const handleMouseDown = () => {
+    console.log('Forward button pressed');
     if (movementhandlers && movementhandlers.forward) {
       movementhandlers.forward();
     }
@@ -14,7 +14,7 @@ const MoveForward = ({ movementhandlers }) => {
       movementhandlers.stop();
     }
   };
-  
+
   return (
     <button
       onMouseDown={handleMouseDown}
