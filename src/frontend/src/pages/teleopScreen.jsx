@@ -1,25 +1,28 @@
-import InfoPing from "../components/infoPing/infoPing"
-import AiButton from "../components/aiButton/aiButton"
-import MovFrente from "../components/movimentacao/frente"
-import MovDireita from "../components/movimentacao/direita"
-import MovEsquerda from "../components/movimentacao/esquerda"
-import MovTras from "../components/movimentacao/tras"
-import WarningButton from "../components/warningButton/warning"
-import TurnOffButton from "../components/turnoffbutton/turnoff"
-import BtVoltarCinza from "../components/voltarButton/voltar"
-import Modal from "../components/OverlayTurnOff/modal"
+import React from 'react';
+import AiButton from '../components/aiButton/aiButton';
+import VideoStream from '../components/camera/camera';
+import TurtleBotController from '../components/rosbridge_movement/rosbridge_movement';
+import MoveRight from '../components/movimentacao/direita';
+import MoveLeft from '../components/movimentacao/esquerda';
+import MoveForward from '../components/movimentacao/frente';
+import StopButton from '../components/movimentacao/stop';
+import TurnoffButton from '../components/turnoffbutton/turnoff';
 
 function TeleopScreen() {
   return (
     <>
       <h1>Teleoperação</h1>
-      <InfoPing />
       <AiButton />
-      <WarningButton />
-      <Modal />
-      <BtVoltarCinza />
+      <VideoStream />
+      <TurtleBotController>
+            <MoveForward />
+            <MoveLeft />
+            <StopButton />
+            <MoveRight />
+            <TurnoffButton />
+      </TurtleBotController>
     </>
-  )
+  );
 }
 
-export default TeleopScreen
+export default TeleopScreen;

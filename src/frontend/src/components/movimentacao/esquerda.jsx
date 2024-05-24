@@ -1,13 +1,38 @@
+// src/components/MoveLeft.js
 import React from 'react';
 
-const MovEsquerda = () => {
+const MoveLeft = ({ movementhandlers }) => {
+  const handleMouseDown = () => {
+    console.log('Left button pressed');
+    console.log(movementhandlers)
+    if (movementhandlers && movementhandlers.left) {
+      console.log('Left button sent');
+      movementhandlers.left();
+    } else {
+      console.log('movementhandlers.left is not defined');
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (movementhandlers && movementhandlers.stop) {
+      console.log('Left button released');
+      movementhandlers.stop();
+    }
+  };
+
   return (
-    <button className="bg-white border border-black rounded p-2 rotate-180">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="black">
-        <polygon points="5,15 15,10 5,5"/>
+    <button
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
+      className="bg-white border border-black rounded p-2"
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(180deg)' }}>
+        <polygon points="5,5 15,10 5,15" />
       </svg>
     </button>
   );
 };
 
-export default MovEsquerda;
+export default MoveLeft;

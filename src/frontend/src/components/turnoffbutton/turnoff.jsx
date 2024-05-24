@@ -1,12 +1,23 @@
+// src/components/TurnoffButton.js
+import React from 'react';
+import TurnoffIcon from './Turnoff.svg';
 
-import TurnoffButton from './Turnoff.svg';
+const TurnoffButton = ({ movementhandlers }) => {
+  const handleClick = () => {
+    console.log('Turnoff button pressed');
+    if (movementhandlers && movementhandlers.turnoff) {
+      movementhandlers.turnoff();
+    }
+  };
 
-const TurnOffButton = ({onClick}) => {
   return (
-    <button onClick={onClick} className="bg-red-500 flex items-center justify-center p-2 rounded-full text-white hover:bg-red-600 focus:outline-none">
-      <img src={TurnoffButton} alt="Alert" className="h-4 w-4" />
+    <button
+      onClick={handleClick}
+      // className="bg-red-500 flex items-center justhover:bg-red-60ify-center p-2 rounded-full text-white 0 focus:outline-none">
+      className="bg-black border border-black rounded">
+      <img src={TurnoffIcon} alt="Alert" className="h-4 w-4" />
     </button>
   );
 };
 
-export default TurnOffButton;
+export default TurnoffButton;
