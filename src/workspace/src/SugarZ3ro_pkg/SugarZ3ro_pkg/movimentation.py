@@ -5,6 +5,7 @@ import threading
 import sys, select, os
 import tty, termios, time
 from std_msgs.msg import Bool
+from sensor_msgs.msg import LaserScan
 
 
 if os.name == 'nt':
@@ -30,24 +31,43 @@ Q : botão de emergência (interromper o programa)
 class Teleop(Node):
     def __init__(self):
         super().__init__('turtlebot3_teleop')
-        self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
+
+        self.publisher_ = self.create_publisher(
+            Twist,
+            'cmd_vel',
+            10)
         self.key_pressed = None
         self.last_key_pressed = None
         self.running = True  # To control thread lifecycle
         self.lock = threading.Lock()
         self.mensagem = True
         
-        self.obstacle_subscription = self.create_subscription(Bool, 'obstacle_detected', self.obstacle_callback, 10) 
-        self.detected_obstacle = None
+        self.scan_subscriber = self.create_subscription(
+            LaserScan,
+            'scan',
+            self.scan_callback,
+            10)
+        self.stop_distance = 0.3  # 30 cm
 
-    def obstacle_callback(self, msg):
-        self.detected_obstacle = msg.data
-        if self.detected_obstacle:
-            self.get_logger().warn("OBSTÁCULO DETECTADO!\nParando o robô.")
-            twist = Twist()
-            twist.linear.x = 0.0
-            twist.angular.z = 0.0
-            self.publisher_.publish(twist)
+
+
+    def scan_callback(self, msg):
+
+        ranges = [distance for distance in msg.ranges if not distance == float('inf')]
+
+        msg_parada = Twist()
+        msg_parada.angular.z = 0.0
+        msg_parada.linear.x = 0.0
+
+        if ranges:
+            min_distance = min(ranges)
+            self.get_logger().info(f"Menor distância: {min_distance}")
+
+            if min_distance <= self.stop_distance:
+                self.get_logger().warn("Obstáculo detectado a 30cm!")
+                self.vel_publisher.publish(msg_parada)
+                print("PARANDO O ROBÔ")
+
         
     def key_poll(self):
         old_attr = termios.tcgetattr(sys.stdin)
@@ -72,7 +92,6 @@ class Teleop(Node):
         try:
             print(msg)
             while rclpy.ok() and self.running:
-                print(str(self.detected_obstacle))
                 with self.lock:
                     key = self.key_pressed
                     last_key = self.last_key_pressed
