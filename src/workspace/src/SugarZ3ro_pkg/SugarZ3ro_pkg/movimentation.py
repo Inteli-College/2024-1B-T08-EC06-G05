@@ -66,6 +66,7 @@ class Teleop(Node):
             if min_distance <= self.stop_distance:
                 self.get_logger().warn("Obstáculo detectado a 30cm!")
                 self.vel_publisher.publish(msg_parada)
+                self.running = False
                 print("PARANDO O ROBÔ")
 
         
