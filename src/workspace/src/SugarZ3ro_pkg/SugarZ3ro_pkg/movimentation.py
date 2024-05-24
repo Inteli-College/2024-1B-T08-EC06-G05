@@ -7,7 +7,6 @@ import tty, termios, time
 from std_msgs.msg import Bool
 from sensor_msgs.msg import LaserScan
 
-
 if os.name == 'nt':
     import msvcrt
 
@@ -49,12 +48,10 @@ class Teleop(Node):
             10)
         self.stop_distance = 0.3  # 30 cm
 
-
-
     def scan_callback(self, msg):
 
         ranges = [distance for distance in msg.ranges if not distance == float('inf')]
-
+        
         msg_parada = Twist()
         msg_parada.angular.z = 0.0
         msg_parada.linear.x = 0.0
@@ -65,11 +62,10 @@ class Teleop(Node):
 
             if min_distance <= self.stop_distance:
                 self.get_logger().warn("Obstáculo detectado a 30cm!")
-                self.vel_publisher.publish(msg_parada)
+                self.publisher_.publish(msg_parada)
                 self.running = False
                 print("PARANDO O ROBÔ")
 
-        
     def key_poll(self):
         old_attr = termios.tcgetattr(sys.stdin)
         tty.setcbreak(sys.stdin.fileno())
