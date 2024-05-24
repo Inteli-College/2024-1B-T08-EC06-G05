@@ -18,10 +18,10 @@ const teleopPage = () => {
       <div className="mb-8">
         <img src={SugarZ3roLogo} alt="Logo SugarZ3ro" />
       </div>
-      <div className='flex flex-col items-center space-y-4 md:flex-row md:space-x-10 md:mt-28'>
+      <div className='flex flex-col items-center space-y-4 md:flex-row md:space-x-10 md:mt-10'>
         <button onClick={teleopPage} className="bg-white text-black py-3 px-10 rounded-full font-bold hover:bg-gray-400 mt-2 md:mt-0">Start</button>
         <button className="bg-transparent text-white border-none hover:text-slate-400 mt-4 md:mt-0" style={{ borderRadius: '100%', borderWidth: '2px'}}>
-            <FontAwesomeIcon onClick={() => infoPage()}icon={faCircleInfo} style={{ fontSize: '2.5rem'}}/>
+            <FontAwesomeIcon className='text-4xl mb-3' onClick={() => infoPage()}icon={faCircleInfo}/>
         </button>
       </div>
     </div>
