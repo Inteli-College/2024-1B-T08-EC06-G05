@@ -1,5 +1,5 @@
 
-import WarningIcon from './components/warningButton/warning.svg';
+import WarningIcon from './warning.svg';
 
 const WarningButton = () => {
   return (
