@@ -10,6 +10,7 @@ const TurtleBotController = ({ children }) => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
       url: 'ws://10.128.0.30:9090'
+      // url: 'ws://localhost:9090'
     });
 
     ros.current.on('connection', () => {
