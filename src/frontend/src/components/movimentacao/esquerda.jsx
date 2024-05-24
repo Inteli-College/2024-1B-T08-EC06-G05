@@ -4,6 +4,7 @@ import React from 'react';
 const MoveLeft = ({ movementhandlers }) => {
   const handleMouseDown = () => {
     console.log('Left button pressed');
+    console.log(movementhandlers)
     if (movementhandlers && movementhandlers.left) {
       console.log('Left button sent');
       movementhandlers.left();

@@ -15,20 +15,11 @@ function TeleopScreen() {
       <AiButton />
       <VideoStream />
       <TurtleBotController>
-        <div className="flex flex-col items-center">
-          <h2 className="text-xl mb-4">TurtleBot Controller</h2>
-          <div className="grid grid-cols-3 gap-4">
-            <div></div>
             <MoveForward />
-            <div></div>
             <MoveLeft />
             <StopButton />
             <MoveRight />
-            <div></div>
             <TurnoffButton />
-            <div></div>
-          </div>
-        </div>
       </TurtleBotController>
     </>
   );

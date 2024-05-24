@@ -66,7 +66,7 @@ const TurtleBotController = ({ children }) => {
 
   return React.Children.map(children, child => {
     if (React.isValidElement(child)) {
-      console.log('Passing movementhandlers to', child.type.name);
+      console.log('Passing movementhandlers to', child);
       return React.cloneElement(child, { movementhandlers });
     }
     return child;
