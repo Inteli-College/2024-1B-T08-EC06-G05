@@ -1,16 +1,18 @@
 // src/components/MoveRight.js
 import React from 'react';
+import TurtleBotController from '../rosbridge_movement/rosbridge_movement';
 
-const MoveRight = ({ movementHandlers }) => {
+
+const MoveRight = ({ movementhandlers }) => {
   const handleMouseDown = () => {
-    if (movementHandlers && movementHandlers.right) {
-      movementHandlers.right();
+    if (movementhandlers && movementhandlers.right) {
+      movementhandlers.right();
     }
   };
 
   const handleMouseUp = () => {
-    if (movementHandlers && movementHandlers.stop) {
-      movementHandlers.stop();
+    if (movementhandlers && movementhandlers.stop) {
+      movementhandlers.stop();
     }
   };
 

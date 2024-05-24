@@ -1,10 +1,11 @@
 // src/components/StopButton.js
 import React from 'react';
+import TurtleBotController from '../rosbridge_movement/rosbridge_movement';
 
-const StopButton = ({ movementHandlers }) => {
+const StopButton = ({ movementhandlers }) => {
   const handleClick = () => {
-    if (movementHandlers && movementHandlers.stop) {
-      movementHandlers.stop();
+    if (movementhandlers && movementhandlers.stop) {
+      movementhandlers.stop();
     }
   };
 

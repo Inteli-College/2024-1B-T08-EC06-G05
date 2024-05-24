@@ -1,16 +1,17 @@
 // src/components/MoveForward.js
 import React from 'react';
 
-const MoveForward = ({ movementHandlers }) => {
+
+const MoveForward = ({ movementhandlers }) => {
   const handleMouseDown = () => {
-    if (movementHandlers && movementHandlers.forward) {
-      movementHandlers.forward();
+    if (movementhandlers && movementhandlers.forward) {
+      movementhandlers.forward();
     }
   };
 
   const handleMouseUp = () => {
-    if (movementHandlers && movementHandlers.stop) {
-      movementHandlers.stop();
+    if (movementhandlers && movementhandlers.stop) {
+      movementhandlers.stop();
     }
   };
   

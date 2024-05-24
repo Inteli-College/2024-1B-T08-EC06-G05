@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import ROSLIB from 'roslib';
 
+
 const TurtleBotController = ({ children }) => {
   const ros = useRef(null);
   const cmdVel = useRef(null);
@@ -9,7 +10,7 @@ const TurtleBotController = ({ children }) => {
   useEffect(() => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
-      url: 'ws://10.128.0.30:9090'
+      url: 'ws://192.168.30.252:9090'
     });
 
     ros.current.on('connection', () => {
@@ -46,16 +47,16 @@ const TurtleBotController = ({ children }) => {
   };
 
   // Movement handlers
-  const handleForward = () => move(0.10, 0);
-  const handleLeft = () => move(0, 1.0);
-  const handleRight = () => move(0, -1.0);
+  const handleForward = () => move(0.2, 0);
+  const handleLeft = () => move(0, 0.5);
+  const handleRight = () => move(0, -0.5);
   const handleStop = () => move(0, 0);
   const handleTurnoff = () => {
     handleStop();
     ros.current.close();
   };
 
-  const movementHandlers = {
+  const movementhandlers = {
     forward: handleForward,
     left: handleLeft,
     right: handleRight,
@@ -64,7 +65,10 @@ const TurtleBotController = ({ children }) => {
   };
 
   return React.Children.map(children, child => {
-    return React.cloneElement(child, { movementHandlers });
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { movementhandlers });
+    }
+    return child;
   });
 };
 

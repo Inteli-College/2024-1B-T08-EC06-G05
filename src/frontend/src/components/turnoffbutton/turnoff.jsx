@@ -1,11 +1,13 @@
 // src/components/TurnoffButton.js
 import React from 'react';
 import TurnoffIcon from './Turnoff.svg';
+import TurtleBotController from '../rosbridge_movement/rosbridge_movement';
 
-const TurnoffButton = ({ movementHandlers }) => {
+
+const TurnoffButton = ({ movementhandlers }) => {
   const handleClick = () => {
-    if (movementHandlers && movementHandlers.turnoff) {
-      movementHandlers.turnoff();
+    if (movementhandlers && movementhandlers.turnoff) {
+      movementhandlers.turnoff();
     }
   };
 
