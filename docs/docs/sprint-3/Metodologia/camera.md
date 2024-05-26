@@ -10,21 +10,7 @@ sidebar_position: 1
 
 ***sender.py***
 
-Nesse bloco de codigo, foram feitas as importações necessarias para execução da clase e função:
-```
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import CompressedImage
-import cv2
-import numpy as np
-import threading
-```
-Definição das constantes da câmera:
-```
-IM_WIDTH = 1280
-IM_HEIGHT = 720
-```
-A classe a seguir é usada para capturar frames da webcam, comprimir esses frames como imagens JPEG e publicá-los em um tópico ROS (Robot Operating System).
+&emsp;&emsp;A classe a seguir é usada para capturar frames da webcam, comprimir esses frames como imagens JPEG e publicá-los em um tópico ROS (Robot Operating System).
 ```
 class WebcamPublisher(Node):
     def __init__(self):
@@ -68,12 +54,12 @@ class WebcamPublisher(Node):
 
 ```
 
-As imagens são publicadas a partir do seguinte comando:
+&emsp;&emsp;As imagens são publicadas a partir do seguinte comando:
 ```self.create_publisher(CompressedImage, '/video_frames', 10)```
 
-O método `latencia` tem a função de medir a latência entre frames e imprime no terminal os valores calculados.
+&emsp;&emsp;O método `latencia` tem a função de medir a latência entre frames e imprime no terminal os valores calculados.
 
-A função `def main`  inicializa e mantem o nó ROS que captura e publica frames de vídeo da webcam.
+&emsp;&emsp;A função `def main`  inicializa e mantem o nó ROS que captura e publica frames de vídeo da webcam.
 ```
 def main(args=None):
     rclpy.init(args=args)
@@ -84,21 +70,21 @@ def main(args=None):
 if __name__ == '__main__':
     main()
 ```
-A execução do código cria um nó ROS que continuamente publica frames da webcam e mede a latência entre eles, enquanto realiza a captura de vídeo em um thread separado.
+&emsp;&emsp;A execução do código cria um nó ROS que continuamente publica frames da webcam e mede a latência entre eles, enquanto realiza a captura de vídeo em um thread separado.
 
-O código apresentado deve ser executado pelo mesmo computador que iniciar a operação do robô. Para isso, é necessário ter o ROSBridge instalado. A instalação pode ser realizada a partir do seguinte comando:
+&emsp;&emsp;O código apresentado deve ser executado pelo mesmo computador que iniciar a operação do robô. Para isso, é necessário ter o ROSBridge instalado. A instalação pode ser realizada a partir do seguinte comando:
 `sudo apt install ros-humble-rosbridge-suite`
 
-O servidor websocket também deve ser iniciado nesse mesmo terminal pelo seguinte comando:
+&emsp;&emsp;O servidor websocket também deve ser iniciado nesse mesmo terminal pelo seguinte comando:
 `ros2 launch rosbridge_server rosbridge_websocket_launch.xml`
 
-Após iniciar o websocket, já é possível executar o arquivo `sender.py` na Raspberry Pi.
+&emsp;&emsp;Após iniciar o websocket, já é possível executar o arquivo `sender.py` na Raspberry Pi.
 
 ## Cálculo da Latência
 
-Durante o desenvolvimento foi realizada a implementação do cálculo da latência da webcam para analisar sua capacidade de realizar a tarefa de captura de imagens com maior demanda em tempo real. Latência de uma câmera é o atraso entre o momento em que a imagem é capturada pelo sensor da câmera e o momento em que essa imagem é exibida na tela ou processada. No caso da aplicação em desenvolvimento, saber o intervalo de tempo desse processo permite que os desenvolvedores tenham uma visão mais clara do tempo que a imagem leva para percorrer todo o caminho até a interface, onde o vídeo é apresentado, permitindo melhores análises em relação ao desenpenho da nova implementação. 
+&emsp;&emsp;Durante o desenvolvimento foi realizada a implementação do cálculo da latência da webcam para analisar sua capacidade de realizar a tarefa de captura de imagens com maior demanda em tempo real. Latência de uma câmera é o atraso entre o momento em que a imagem é capturada pelo sensor da câmera e o momento em que essa imagem é exibida na tela ou processada. No caso da aplicação em desenvolvimento, saber o intervalo de tempo desse processo permite que os desenvolvedores tenham uma visão mais clara do tempo que a imagem leva para percorrer todo o caminho até a interface, onde o vídeo é apresentado, permitindo melhores análises em relação ao desenpenho da nova implementação. 
 
-Essa funcionalidade foi implemetada no arquivo `sender.py` por meio do método `latencia` presente na classe `WebcamPublisher`. Como foi explicado anteriormente, o metodo calcula a latência entre frames e imprime no terminal os valores obtidos. 
+&emsp;&emsp;Essa funcionalidade foi implemetada no arquivo `sender.py` por meio do método `latencia` presente na classe `WebcamPublisher`. Como foi explicado anteriormente, o metodo calcula a latência entre frames e imprime no terminal os valores obtidos. 
 
 ```
 def latencia(self):
@@ -128,12 +114,9 @@ def latencia(self):
 
 ## Reprodução do video na interface
 
-Para reproduzir o vídeo da webcam, foi desenvolvido um componente para o frontend em React, encontrado no arquivo `camera.jsx`. Esse componente contém um script que recebe as imagens da câmera por meio da comunicação do ROSBridge via WebSocket. Utilizar o ROSBridge permite que as imagens sejam enviadas em tempo real e que seja possível acompanhar a movimentação do robô por meio do vídeo na interface do usuário.
+&emsp;&emsp;Para reproduzir o vídeo da webcam, foi desenvolvido um componente para o frontend em React, encontrado no arquivo `camera.jsx`. Esse componente contém um script que recebe as imagens da câmera por meio da comunicação do ROSBridge via WebSocket executada no arquivo `sender.py`. Utilizar o ROSBridge permite que as imagens sejam enviadas em tempo real e que seja possível acompanhar a movimentação do robô por meio do vídeo na interface do usuário.
 
 ```
-import React, { useEffect, useRef } from 'react';
-import ROSLIB from 'roslib';
-import EventEmitter2 from 'eventemitter2';
 
 const VideoStream = () => {
   const videoRef = useRef(null);
@@ -141,20 +124,14 @@ const VideoStream = () => {
   useEffect(() => {
     // Conectar ao servidor ROS
     const ros = new ROSLIB.Ros({
-      url: 'ws://localhost:9090'
+      url: 'ws://10.128.0.30:9090'
     });
 
     ros.on('connection', () => {
       console.log('Connected to websocket server.');
     });
 
-    ros.on('error', (error) => {
-      console.log('Error connecting to websocket server: ', error);
-    }); 
-
-    ros.on('close', () => {
-      console.log('Connection to websocket server closed.');
-    });
+    ...
 
     // Assinar ao tópico de vídeonsor_msgs/Compres
     const videoTopic = new ROSLIB.Topic({
@@ -188,4 +165,8 @@ const VideoStream = () => {
 export default VideoStream;
 ```
 
-Até o momento, o frontend está sendo executado apenas localmente, por isso é importante verificar se o IP do computador que está executando o frontend é o mesmo IP no arquivo ``camera.jsx``. Caso seja necessario alterar, o termo "localhost" deve ser substituido pelo IP do computador na seguinte linha do arquivo: `` url: 'ws://localhost:9090' `` 
+&emsp;&emsp;Até o momento, o frontend está sendo executado apenas localmente, por isso é importante verificar se o IP do computador que está executando o frontend é o mesmo IP no arquivo ``camera.jsx``. Caso seja necessario alterar, o IP atual deve ser substituido pelo IP do computador na seguinte linha do arquivo: `` url: 'ws://10.128.0.30:9090' `` 
+
+## Conclusão 
+
+&emsp;&emsp;Durante o desenvolvimento da sprint 3, a equipe SugarZ3ro implementou com sucesso uma webcam no robô, utilizando uma DOBOT Magician acoplada ao Turtlebot3. O codigo de comunicação permite a transmissão de imagens em tempo real por meio do ROSBridge e o cálculo da latência. A interface em React recebe essas imagens, permitindo o monitoramento contínuo do robô. Esta implementação foi testada, cumprindo os objetivos de monitoramento e análise de latência do sistema.
