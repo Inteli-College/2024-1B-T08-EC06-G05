@@ -21,7 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             "start_moving = SugarZ3ro_pkg.movimentation:main",
-            "start_detection = SugarZ3ro_pkg.obstacle_detection:main",
         ],
     },
 )

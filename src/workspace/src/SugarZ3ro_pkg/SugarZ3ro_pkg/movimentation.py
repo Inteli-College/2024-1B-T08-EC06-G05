@@ -4,8 +4,8 @@ from geometry_msgs.msg import Twist
 import threading
 import sys, select, os
 import tty, termios, time
-from std_msgs.msg import Bool
 from sensor_msgs.msg import LaserScan
+from rclpy.qos import qos_profile_sensor_data
 
 if os.name == 'nt':
     import msvcrt
@@ -40,31 +40,21 @@ class Teleop(Node):
         self.running = True  # To control thread lifecycle
         self.lock = threading.Lock()
         self.mensagem = True
-        
+
         self.scan_subscriber = self.create_subscription(
             LaserScan,
             'scan',
             self.scan_callback,
-            10)
+            qos_profile=qos_profile_sensor_data)
+        self.min_distance = 1
         self.stop_distance = 0.3  # 30 cm
-
+    
     def scan_callback(self, msg):
 
         ranges = [distance for distance in msg.ranges if not distance == float('inf')]
         
-        msg_parada = Twist()
-        msg_parada.angular.z = 0.0
-        msg_parada.linear.x = 0.0
-
         if ranges:
-            min_distance = min(ranges)
-            self.get_logger().info(f"Menor distância: {min_distance}")
-
-            if min_distance <= self.stop_distance:
-                self.get_logger().warn("Obstáculo detectado a 30cm!")
-                self.publisher_.publish(msg_parada)
-                self.running = False
-                print("PARANDO O ROBÔ")
+            self.min_distance = min(ranges)
 
     def key_poll(self):
         old_attr = termios.tcgetattr(sys.stdin)
@@ -89,6 +79,17 @@ class Teleop(Node):
         try:
             print(msg)
             while rclpy.ok() and self.running:
+                if self.min_distance <= self.stop_distance:
+                    print("OBSTÁCULO DETECTADO A 30cm!\nAfastando o robô do obstáculo...")
+                    while self.min_distance <= self.stop_distance:
+                        self.mensagem = True
+                        obstacle_twist = Twist()
+                        obstacle_twist.linear.x = float(target_linear_vel)
+                        self.publisher_.publish(obstacle_twist)
+                        target_linear_vel = -1.0
+                        target_angular_vel = 0.0
+                    print("O obstáculo não está mais a 30cm do robô.")
+
                 with self.lock:
                     key = self.key_pressed
                     last_key = self.last_key_pressed
@@ -148,8 +149,17 @@ class Teleop(Node):
 def main(args=None):
     rclpy.init(args=args)
     teleop = Teleop()
-    teleop.run()
-    rclpy.shutdown()
+
+    # Create a thread for spinning
+    spin_thread = threading.Thread(target=rclpy.spin, args=(teleop,))
+    spin_thread.start()
+
+    try:
+        teleop.run()
+    finally:
+        teleop.running = False  # Signal thread to stop
+        spin_thread.join()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
