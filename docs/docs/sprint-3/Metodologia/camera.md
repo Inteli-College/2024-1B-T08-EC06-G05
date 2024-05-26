@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ***sender.py***
 
-&emsp;&emsp;A classe a seguir é usada para capturar frames da webcam, comprimir esses frames como imagens JPEG e publicá-los em um tópico ROS (Robot Operating System).
+&emsp;&emsp;A classe a seguir é usada para capturar frames da webcam, comprimir esses frames como imagens JPEG e publicá-los no tópico ROS (Robot Operating System) `/video_frames`.
 ```
 class WebcamPublisher(Node):
     def __init__(self):
