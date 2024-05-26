@@ -9,7 +9,7 @@ const VideoStream = () => {
   useEffect(() => {
     // Conectar ao servidor ROS
     const ros = new ROSLIB.Ros({
-      url: 'ws://localhost:9090'
+      url: 'ws://10.128.0.30:9090'
     });
 
     ros.on('connection', () => {
