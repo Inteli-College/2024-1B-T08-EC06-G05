@@ -51,15 +51,19 @@ const TurtleBotController = ({ children }) => {
 
   const checkForObstacles = (message) => {
     const ranges = message.ranges;
-    const minDistance = 0.3; // Minimum distance to consider an obstacle (in meters)
+    const minDistance = 0.3; // Increase this value if necessary
 
     let isObstacleDetected = false;
+    let validReadings = 0;
 
     for (let i = 0; i < ranges.length; i++) {
-      if (ranges[i] < minDistance) {
-        isObstacleDetected = true;
-        console.log("OBSTÁCULO DETECTADO!");
-        break;
+      if (ranges[i] < minDistance && ranges[i] > 0) { // Ignore invalid readings (e.g., 0 values)
+        validReadings++;
+        if (validReadings > 5) { // Only consider it an obstacle if multiple valid readings are detected
+          isObstacleDetected = true;
+          console.log("OBSTÁCULO DETECTADO!");
+          break;
+        }
       }
     }
 

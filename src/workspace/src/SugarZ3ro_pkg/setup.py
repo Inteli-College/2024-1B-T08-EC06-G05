@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             "start_moving = SugarZ3ro_pkg.movimentation:main",
+            "start_image = SugarZ3ro_pkg.sender:main",
         ],
     },
 )
