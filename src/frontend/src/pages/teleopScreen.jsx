@@ -5,7 +5,7 @@ import TurtleBotController from '../components/rosbridge_movement/rosbridge_move
 import MoveRight from '../components/movimentacao/direita';
 import MoveLeft from '../components/movimentacao/esquerda';
 import MoveForward from '../components/movimentacao/frente';
-import StopButton from '../components/movimentacao/stop';
+import MoveBackward from '../components/movimentacao/tras';
 import TurnoffButton from '../components/turnoffbutton/turnoff';
 
 function TeleopScreen() {
@@ -17,7 +17,7 @@ function TeleopScreen() {
       <TurtleBotController>
             <MoveForward />
             <MoveLeft />
-            <StopButton />
+            <MoveBackward />
             <MoveRight />
             <TurnoffButton />
       </TurtleBotController>
