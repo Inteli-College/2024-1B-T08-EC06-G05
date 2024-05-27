@@ -56,6 +56,8 @@ Esta análise financeira detalha os custos e considerações econômicas para a 
 ## Conclusão
 Esta análise financeira detalha todos os custos associados à PoC, explorando também estratégias para a redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda da PoC foi estabelecido em R$ 79,711.52, garantindo sustentabilidade financeira e atratividade comercial do projeto.
 
+![Analise Financeira PoC](../../static/img/sprint-3/PoC.png) 
+
 Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1ohvIqpPskPQTBlAGAAXRG_8-kxxQ3L6i/view?usp=drivesdk)
 
 
@@ -136,5 +138,7 @@ Esta análise financeira detalha os custos e considerações econômicas para o 
 
 ## Conclusão
 Esta análise financeira detalha todos os custos associados ao desenvolvimento e operação do robô, explorando também estratégias para redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda do projeto foi estabelecido em R$ 1,215,717.59, garantindo sustentabilidade financeira e atratividade comercial do projeto.
+
+![Analise Financeira Final](../../static/img/sprint-3/final.png) 
 
 Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1izGuqWQmo8rYB6kJzXRndSjYP8oJsImH/view?usp=drivesdk)
