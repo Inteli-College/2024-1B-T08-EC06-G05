@@ -1,3 +1,8 @@
+---
+title: Análise Financeira do Projeto
+sidebar_position: 3
+---
+
 # Análise Financeira da Prova de Conceito (PoC)
 
 ## Introdução

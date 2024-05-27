@@ -2,6 +2,7 @@
 title: Software de transmissão de vídeo
 sidebar_position: 1
 ---
+
 ## Introdução
 &emsp;&emsp;Durante a terceira sprint do projeto, a equipe SugarZ3ro focou na implementação de uma webcam no robô que transmitisse imagens em tempo real para monitoramento do ambiente de movimentação do robô, além da implementação do cálculo da latência na transmissão das imagens. Para isso, foi utilizada uma webcam do modelo DOBOT Magician, acoplada ao Turtlebot3 por meio de um cabo USB.
 
