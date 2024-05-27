@@ -8,7 +8,11 @@
 
 ## Sistema de Segurança - Integração ao frontend
 
+&emsp;&emsp;Para tornar a utilização do robô mais segura e acessível para os usuários da solução, a equipe SugarZero implementou o sistema de segurança também na interface gráfica de movimentação do robô. O sistema de segurança consiste num sistema anti-colisão baseado no LiDAR que, ao detectar um obstáculo dentro de um raio de 10 cm, impede que o usuário aperte qualquer tecla de movimentação que não seja para trás. Dessa forma, evita-se que o robô colida com obstáculos à sua frente.
 
+[print da tela de teleop com aviso de obstaculo detectado]
+
+explicacao breve do print
 
 ## Sistema de Segurança - CLI
 
