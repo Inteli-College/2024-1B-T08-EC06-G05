@@ -31,11 +31,7 @@ Todos os botões foram construídos com o intuito de entender se o usuário est�
 
 ### Botões direcionais
 
-&emsp;&emsp;Os botões direcionais são os componentes visíveis criados para controle do robô, sendo eles setas com direção norte, leste e oeste. Todos os botões foram feitos com base em duas funções que identificam se o usuário apertou e soltou o componente, para assim o robô só andar enquanto o usuário estiver pressionando a tecla e parar quando o usuário soltar. 
-
-### Botão de parada
-
-&emsp;&emsp;O botão de parada é um componente visível criado para controle do robô, sendo ele uma seta com direção ao sul. Esse botão tem funcionalidade de parar os movimentos do robô, mas ainda manter a conexão. Assim, foi construído para no momento que for pressionado ele chame uma função que pare o robô. 
+&emsp;&emsp;Os botões direcionais são os componentes visíveis criados para controle do robô, sendo eles setas com direção norte, sul, leste e oeste. Todos os botões foram feitos com base em duas funções que identificam se o usuário apertou e soltou o componente, para assim o robô só andar enquanto o usuário estiver pressionando a tecla e parar quando o usuário soltar. 
 
 ### Botão de emergência
 
