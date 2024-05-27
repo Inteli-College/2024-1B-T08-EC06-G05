@@ -3,7 +3,7 @@ import React from 'react';
 const MoveBackward = ({ movementhandlers }) => {
   const handleMouseDown = () => {
     console.log('Backward button pressed');
-    if (movementhandlers && movementhandlers.stop) {
+    if (movementhandlers && movementhandlers.backward) {
       movementhandlers.backward();
     }
   };

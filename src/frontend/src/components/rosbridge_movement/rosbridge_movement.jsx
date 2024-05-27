@@ -58,7 +58,7 @@ const TurtleBotController = ({ children }) => {
     for (let i = 0; i < ranges.length; i++) {
       if (ranges[i] < minDistance) {
         isObstacleDetected = true;
-        console.log("OBSTÁCULO DETECTADO!")
+        console.log("OBSTÁCULO DETECTADO!");
         break;
       }
     }
@@ -85,7 +85,7 @@ const TurtleBotController = ({ children }) => {
   const handleForward = () => move(0.2, 0);
   const handleLeft = () => move(0, 0.5);
   const handleRight = () => move(0, -0.5);
-  const handleBackward = () => move(-0.2, 0)
+  const handleBackward = () => move(-0.2, 0);
   const handleStop = () => move(0, 0);
   const handleTurnoff = () => {
     handleStop();
@@ -101,13 +101,17 @@ const TurtleBotController = ({ children }) => {
     turnoff: handleTurnoff
   };
 
-  return React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      console.log('Passing movementhandlers and collision state to', child);
-      return React.cloneElement(child, { movementhandlers, collision });
-    }
-    return child;
-  });
+  return (
+    <>
+      {typeof children === 'function'
+        ? children({ movementhandlers, collision })
+        : React.Children.map(children, (child) =>
+            React.isValidElement(child)
+              ? React.cloneElement(child, { movementhandlers, collision })
+              : child
+          )}
+    </>
+  );
 };
 
 export default TurtleBotController;
