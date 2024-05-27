@@ -87,3 +87,13 @@ explicacao breve do print
 ## Conclusão
 
 &emsp;&emsp;O sistema de segurança é uma parte crucial para garantir que o robô opere de maneira segura, prevenindo colisões. Utiliza um sistema LiDAR para monitorar o ambiente e ajusta a velocidade do turtlebot automaticamente para evitar obstáculos. Este sistema é implementado de forma a ser contínuo e responsivo, garantindo que o turtlebot possa navegar de maneira autônoma sem risco de danos.
+
+## Vídeo de demonstração da solução
+
+&emsp;&emsp;Para demonstrar o funcionamento da solução desenvolvida até o momento, foi gravado um vídeo demonstrando a movimentação do robô, a interface web e o sistema de segurança utilizando o LiDAR e a webcam implementada. O vídeo pode ser encontrado no link a seguir: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_ec88jlOeUk?si=Mryja9VLimU2gOO5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Fonte: elaborado por SugarZ3ro
+
+&emsp;&emsp;Neste vídeo, é possível observar o robô realizando movimentos lineares e rotacionando conforme os comandos do usuário. Os o novo sistemas de segurança utilizando o sensor infravermelho também foi demonstrado, alem da vizualização em tempo real das imagens capturadas pela camera acoplada ao robo e da latencia dessas imagens. 
