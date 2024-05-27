@@ -28,7 +28,7 @@ Nesta seção, você pode conferir as instruções para instalar e executar cada
 
 #### Passo a passo
 
-1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para encontrar o IP do turtlebot3 dado pela rede:
+1. No sistema operacional da Raspberry contida no Turtlebot 3 a ser controlado, abra uma janela de terminal e digite os seguintes comandos para encontrar o IP do Turtlebot 3 dado pela rede:
 
 ```bash
     ip addr
@@ -106,7 +106,7 @@ Para mudar o IP, após realizar o comando nvim nos dois casos terá uma parte do
     python3 sender.py
 ```
 
-11. Em outra janela de terminal, desconectado do ssh, digite os seguintes comandos a partir da raiz do projeto para ir até a pasta do frontend e inciar a aplicação WEB:
+11. Em outra janela de terminal, desconectado do ssh, digite os seguintes comandos a partir da raiz do projeto para ir até a pasta do frontend e iniciar a aplicação WEB, que já contará com a movimentação do robô e o sistema de segurança integrados:
 
 ```bash
     cd 2024-1B-T08-EC06-G05/src/frontend
@@ -223,8 +223,8 @@ Para realizar a instalação do TinyDB, é sugerido o uso de um ambiente virtual
 
 Este comando vai criar um ambiente virtual na pasta `venv`
 
-É necessario ativar o ambiente virtual com o seguinte comando:
+É necessário ativar o ambiente virtual com o seguinte comando:
 
 - source venv/bin/activate
 
-Após a ativação do venv, deve-se intalar o TinyDB com o comando `pip install tinydb`
+Após a ativação do venv, deve-se instalar o TinyDB com o comando `pip install tinydb`
