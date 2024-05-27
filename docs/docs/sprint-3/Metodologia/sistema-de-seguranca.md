@@ -1,7 +1,7 @@
 ### Documentação do Sistema de Segurança
 
 #### Introdução
-O sistema de segurança implementado no código é responsável por detectar obstáculos na trajetória do robô e tomar medidas preventivas para evitar colisões. Utiliza dados de um sistema LiDAR (Laser Imaging Detection and Ranging) para monitorar a distância de objetos ao redor do turtlebot. Se um objeto for detectado a uma distância perigosa, o sistema ajusta a velocidade do robô para afastá-lo do obstáculo.
+Na sprint 2, foram apresentados dois sistemas de segurança pelo grupo SugarZ3ro, atrelados ao controle do turtlebot, onde o usuário teria mais precisão e a opção de acionar uma parada de emergência ao pressionar a tecla ```Q```. Agora, foram feitas mudanças significativas no sistema de segurança, implementando um código responsável por detectar obstáculos na trajetória do robô e tomar medidas preventivas para evitar colisões. O sistema utiliza dados de um LiDAR (Laser Imaging Detection and Ranging) para monitorar a distância de objetos ao redor do turtlebot. Se um objeto for detectado a uma distância perigosa, o sistema ajusta a velocidade do robô para afastá-lo do obstáculo.
 
 #### Componentes do Sistema de Segurança
 
@@ -43,13 +43,13 @@ O sistema de segurança implementado no código é responsável por detectar obs
             target_angular_vel = 0.0
         print("O obstáculo não está mais a 30cm do robô.")
     ```
-    - **Descrição**: Este bloco de código é responsável por detectar se o robô está próximo de um obstáculo e tomar ações para afastar o robô.
+    - **Descrição**: Este bloco de código é responsável por detectar se o turtlebot está próximo de um obstáculo e tomar ações para afastar o robô.
     - **Função**:
         - Verifica se a distância mínima (`min_distance`) é menor ou igual à distância de parada (`stop_distance`), que é definida como 0.3 metros (30 cm).
         - Se um obstáculo é detectado a 30 cm ou menos:
             - Imprime uma mensagem de alerta.
             - Enquanto o obstáculo estiver a 30 cm ou menos, ajusta a velocidade linear do robô para -1.0 (movimento para trás) e a velocidade angular para 0.0 (sem rotação).
-            - Publica esses comandos de velocidade no tópico `cmd_vel` para mover o robô para trás até que a distância do obstáculo seja segura.
+            - Publica esses comandos de velocidade no tópico `cmd_vel` para mover o turtlebot para trás até que a distância do obstáculo seja segura.
             - Após afastar-se do obstáculo, imprime uma mensagem indicando que o robô está seguro.
 
 4. **Parâmetros do Sistema de Segurança**
@@ -67,10 +67,10 @@ O sistema de segurança implementado no código é responsável por detectar obs
     - A cada iteração do loop, verifica-se se `min_distance` é menor ou igual a `stop_distance`.
     - Se `min_distance` ≤ `stop_distance`, o sistema imprime uma mensagem de alerta.
 4. **Ação Corretiva**: 
-    - Enquanto `min_distance` for ≤ `stop_distance`, ajusta-se a velocidade do robô para mover-se para trás.
+    - Enquanto `min_distance` for ≤ `stop_distance`, ajusta-se a velocidade do turtlebot para mover-se para trás.
     - Publica os comandos de velocidade ajustados para afastar o robô do obstáculo.
 5. **Segurança Restabelecida**: Quando `min_distance` > `stop_distance`, o sistema imprime uma mensagem de segurança e continua a operação normal.
 
 #### Conclusão
 
-O sistema de segurança é uma parte crucial para garantir que o robô opere de maneira segura, prevenindo colisões. Utiliza um sistema LiDAR para monitorar o ambiente e ajusta a velocidade do robô automaticamente para evitar obstáculos. Este sistema é implementado de forma a ser contínuo e responsivo, garantindo que o turtlebot possa navegar de maneira autônoma sem risco de danos.
+O sistema de segurança é uma parte crucial para garantir que o robô opere de maneira segura, prevenindo colisões. Utiliza um sistema LiDAR para monitorar o ambiente e ajusta a velocidade do turtlebot automaticamente para evitar obstáculos. Este sistema é implementado de forma a ser contínuo e responsivo, garantindo que o turtlebot possa navegar de maneira autônoma sem risco de danos.
