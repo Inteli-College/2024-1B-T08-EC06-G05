@@ -1,3 +1,4 @@
+// src/components/TeleopScreen.js
 import React from 'react';
 import AiButton from '../components/aiButton/aiButton';
 import VideoStream from '../components/camera/camera';
@@ -10,18 +11,21 @@ import TurnoffButton from '../components/turnoffbutton/turnoff';
 
 function TeleopScreen() {
   return (
-    <>
-      <h1>Teleoperação</h1>
-      <AiButton />
-      <VideoStream />
-      <TurtleBotController>
-            <MoveForward />
-            <MoveLeft />
-            <MoveBackward />
-            <MoveRight />
-            <TurnoffButton />
-      </TurtleBotController>
-    </>
+    <TurtleBotController>
+      {({ movementhandlers, collision }) => (
+        <>
+          <h1>Teleoperação</h1>
+          {collision && <div className="alert">OBSTÁCULO DETECTADO!</div>}
+          <AiButton />
+          <VideoStream />
+          <MoveForward movementhandlers={movementhandlers} collision={collision} />
+          <MoveLeft movementhandlers={movementhandlers} collision={collision} />
+          <MoveBackward movementhandlers={movementhandlers} collision={collision} />
+          <MoveRight movementhandlers={movementhandlers} collision={collision} />
+          <TurnoffButton movementhandlers={movementhandlers} />
+        </>
+      )}
+    </TurtleBotController>
   );
 }
 
