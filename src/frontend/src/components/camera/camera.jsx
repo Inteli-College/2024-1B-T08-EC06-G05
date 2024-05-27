@@ -9,7 +9,7 @@ const VideoStream = () => {
   useEffect(() => {
     // Connect to the ROS server
     const ros = new ROSLIB.Ros({
-      url: 'ws://localhost:9090'
+      url: 'ws://10.128.0.30:9090'
     });
 
     ros.on('connection', () => {
@@ -79,7 +79,7 @@ const VideoStream = () => {
       />
       <div className="flex mt-4">
         <div className="w-0 h-0 border-t-[3vh] border-t-customBlue border-r-[3vh] border-r-customBlue border-l-[3vh] border-l-transparent border-b-[3vh] border-b-transparent"></div>
-        <div className="h-5vh p-1 w-32 bg-customBlue flex items-center justify-end font-bold text-white text-xl font-sans">
+        <div className="h-5vh p-1 w-32 bg-customBlue flex items-center justify-end font-bold text-black text-xl font-sans">
           Latency: {latency} ms
         </div>
       </div>
