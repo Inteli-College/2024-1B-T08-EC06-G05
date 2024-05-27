@@ -36,9 +36,6 @@ Esta análise financeira detalha os custos e considerações econômicas para a 
 ## Cálculo do Novo Custo Total
 - **Custo Total com Reduções**: R$ 61,520 - R$ 400 = R$ 61,120
 
-### Cálculo do Novo Custo Total com Reduções
-- **Custo Total com Reduções**: R$ 61,120
-
 ## Margem de Lucro Desejada
 - Margem de Lucro (25%): R$ 15,280
 - **Subtotal**: R$ 61,120 + R$ 15,280 = R$ 76,400
