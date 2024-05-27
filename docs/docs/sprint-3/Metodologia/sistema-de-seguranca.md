@@ -13,7 +13,7 @@
 ![Tela de Teleoperação](https://github.com/Inteli-College/2024-1B-T08-EC06-G05/assets/123904558/29694c53-8e87-4216-ace6-8cfe1977dd1c)
 
 
-Na print, é vista a tela de teleoperações de nosso sistema. Ao detectar o obstáculo, o botão de movimentar-se para a frente é desativado, para impedir a colisão. Assim, o usuário tem somente a opção de mover-se para trás ou para os lados, evitando uma possível colisão.
+Na print, é vista a tela de teleoperações de nosso sistema. Ao detectar o obstáculo, os botões de movimentação, com excessão do de mover para trás, são desativados. Assim, o usuário tem somente a opção de mover-se para trás, afastando-se do objeto e evitando uma possível colisão.
 
 ## Sistema de Segurança - CLI
 
