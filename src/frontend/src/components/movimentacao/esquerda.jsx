@@ -1,11 +1,11 @@
 // src/components/MoveLeft.js
 import React from 'react';
 
-const MoveLeft = ({ movementhandlers }) => {
+const MoveLeft = ({ movementhandlers, collision }) => {
   const handleMouseDown = () => {
     console.log('Left button pressed');
     console.log(movementhandlers)
-    if (movementhandlers && movementhandlers.left) {
+    if (movementhandlers && movementhandlers.left && !collision) {
       console.log('Left button sent');
       movementhandlers.left();
     } else {
@@ -26,6 +26,7 @@ const MoveLeft = ({ movementhandlers }) => {
       onMouseUp={handleMouseUp}
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseUp}
+      disabled={collision}
       className="bg-white border border-black rounded p-2"
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(180deg)' }}>
