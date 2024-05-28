@@ -14,15 +14,18 @@ function TeleopScreen() {
     <TurtleBotController>
       {({ movementhandlers, collision }) => (
         <>
-          <h1>Teleoperação</h1>
           {collision && <div className="alert">OBSTÁCULO DETECTADO!</div>}
-          <AiButton />
           <VideoStream />
+          <AiButton />
+          <TurnoffButton movementhandlers={movementhandlers} />
+          <div className='mt-96 ml-10'>
+            <div className='ml-9'>
           <MoveForward movementhandlers={movementhandlers} collision={collision} />
+          </div>
           <MoveLeft movementhandlers={movementhandlers} collision={collision} />
           <MoveBackward movementhandlers={movementhandlers} collision={collision} />
           <MoveRight movementhandlers={movementhandlers} collision={collision} />
-          <TurnoffButton movementhandlers={movementhandlers} />
+          </div>
         </>
       )}
     </TurtleBotController>

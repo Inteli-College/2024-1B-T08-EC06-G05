@@ -9,7 +9,7 @@ const VideoStream = () => {
   useEffect(() => {
     // Connect to the ROS server
     const ros = new ROSLIB.Ros({
-      url: 'ws://10.128.0.30:9090'
+      url: 'ws://localhost:9090'
     });
 
     ros.on('connection', () => {
@@ -70,12 +70,11 @@ const VideoStream = () => {
 
   return (
     <div>
-      <h1>Real-time Video Stream from ROS2 Topic</h1>
       <img
         id="videoStream"
         ref={videoRef}
         alt="Video Stream"
-        style={{ width: '640px', height: '480px' }}
+        style={{ width: '1280px', height: '720px', position: 'fixed', zIndex:-50, marginTop: 0 }}
       />
       <div className="flex mt-4">
         <div className="w-0 h-0 border-t-[3vh] border-t-customBlue border-r-[3vh] border-r-customBlue border-l-[3vh] border-l-transparent border-b-[3vh] border-b-transparent"></div>
