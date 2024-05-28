@@ -83,3 +83,9 @@ Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-col
 - Script de movimentação do robô
 - CLI integrada à movimentação do robô
 - Sistema de segurança para movimentação do robô
+
+### Sprint 3
+
+- Aprimoramento do sistema de segurança
+- Interface de usuário gráfica (frontend)
+- Integração do frontend com a movimentação do robô e com o sistema de segurança

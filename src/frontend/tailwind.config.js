@@ -19,6 +19,7 @@ export default {
     "./src/components/turnoffButton/turnoff.jsx",
     "./src/components/warningButton/warning.jsx",
     "./src/components/OverlayTurnOff/modal.jsx",
+    "/src/components/VideoStream/videoStream.jsx",
   ],
   theme: {
     extend: {
