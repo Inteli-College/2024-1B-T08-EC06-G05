@@ -1,6 +1,6 @@
 ---
 title: Sugestão de Gráficos e Documentação da API
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Sugestão de Gráficos e Documentação da API

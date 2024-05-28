@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Documentação do Sistema de Segurança
 
 ## Introdução
