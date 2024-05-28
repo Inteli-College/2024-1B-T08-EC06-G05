@@ -10,10 +10,15 @@
 
 &emsp;&emsp;Para tornar a utilização do robô mais segura e acessível para os usuários da solução, a equipe SugarZero implementou o sistema de segurança também na interface gráfica de movimentação do robô. O sistema de segurança consiste num sistema anti-colisão baseado no LiDAR que, ao detectar um obstáculo dentro de um raio de 10 cm, impede que o usuário aperte qualquer tecla de movimentação que não seja para trás. Dessa forma, evita-se que o robô colida com obstáculos à sua frente.
 
-![Tela de Teleoperação](https://github.com/Inteli-College/2024-1B-T08-EC06-G05/assets/123904558/29694c53-8e87-4216-ace6-8cfe1977dd1c)
+<p style={{textAlign: 'center'}}>Figura 1 - Printscreen da tela de teleoperação</p>
 
+<div style={{textAlign: 'center'}}>
+    ![Tela de Teleoperação](https://github.com/Inteli-College/2024-1B-T08-EC06-G05/assets/123904558/29694c53-8e87-4216-ace6-8cfe1977dd1c)
+</div>
 
-Na print, é vista a tela de teleoperações de nosso sistema. Ao detectar o obstáculo, os botões de movimentação, com excessão do de mover para trás, são desativados. Assim, o usuário tem somente a opção de mover-se para trás, afastando-se do objeto e evitando uma possível colisão.
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;No print, é vista a tela de teleoperação do sistema. Ao detectar o obstáculo, um alerta aparece na parte superior da interface e os botões de movimentação, com excessão do botão de movimentação para trás, são desativados. Assim, o usuário tem somente a opção de mover-se para trás, afastando-se do objeto e evitando uma possível colisão.
 
 ## Sistema de Segurança - CLI
 

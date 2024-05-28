@@ -6,7 +6,7 @@ sidebar_position: 3
 # Análise Financeira da Prova de Conceito (PoC)
 
 ## Introdução
-Esta análise financeira detalha os custos e considerações econômicas para a Prova de Conceito (PoC) do robô customizado para inspeção de tubulações (reboilers). A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda.
+&emsp;&emsp;Esta análise financeira detalha os custos e considerações econômicas para a Prova de Conceito (PoC) do robô customizado para inspeção de tubulações (reboilers). A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda.
 
 ## Custos de Desenvolvimento da PoC
 
@@ -54,17 +54,23 @@ Esta análise financeira detalha os custos e considerações econômicas para a 
 - **CNAE**: 3329-8/00 - Instalação de máquinas e equipamentos industriais.
 
 ## Conclusão
-Esta análise financeira detalha todos os custos associados à PoC, explorando também estratégias para a redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda da PoC foi estabelecido em R$ 79,711.52, garantindo sustentabilidade financeira e atratividade comercial do projeto.
+&emsp;&emsp;Esta análise financeira detalha todos os custos associados à PoC, explorando também estratégias para a redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda da PoC foi estabelecido em R$ 79,711.52, garantindo sustentabilidade financeira e atratividade comercial do projeto.
 
-![Analise Financeira PoC](../../static/img/sprint-3/PoC.png) 
+<p style={{textAlign: 'center'}}>Figura 1 - Tabela de análise financeira da PoC</p>
 
-Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1ohvIqpPskPQTBlAGAAXRG_8-kxxQ3L6i/view?usp=drivesdk)
+<div style={{textAlign: 'center'}}>
+    ![Analise Financeira PoC](../../static/img/sprint-3/PoC.png) 
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1ohvIqpPskPQTBlAGAAXRG_8-kxxQ3L6i/view?usp=drivesdk)
 
 
 # Análise Financeira do Produto Final
 
 ## Introdução
-Esta análise financeira detalha os custos e considerações econômicas para o desenvolvimento e operação de um robô customizado para inspeção de tubulações (reboilers) em ambientes de alta temperatura, com um contrato de 12 meses. A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda. O objetivo é fornecer uma visão clara e detalhada dos custos envolvidos no projeto final.
+&emsp;&emsp;Esta análise financeira detalha os custos e considerações econômicas para o desenvolvimento e operação de um robô customizado para inspeção de tubulações (reboilers) em ambientes de alta temperatura, com um contrato de 12 meses. A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda. O objetivo é fornecer uma visão clara e detalhada dos custos envolvidos no projeto final.
 
 ## Custos de Desenvolvimento do Produto Final
 
@@ -137,8 +143,14 @@ Esta análise financeira detalha os custos e considerações econômicas para o 
 - **CNAE**: 3329-8/00 - Instalação de máquinas e equipamentos industriais.
 
 ## Conclusão
-Esta análise financeira detalha todos os custos associados ao desenvolvimento e operação do robô, explorando também estratégias para redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda do projeto foi estabelecido em R$ 1,215,717.59, garantindo sustentabilidade financeira e atratividade comercial do projeto.
+&emsp;&emsp;Esta análise financeira detalha todos os custos associados ao desenvolvimento e operação do robô, explorando também estratégias para redução de custos. Com base nessa avaliação e na estrutura fiscal aplicável, o preço mínimo para a venda do projeto foi estabelecido em R$ 1,215,717.59, garantindo sustentabilidade financeira e atratividade comercial do projeto.
 
-![Analise Financeira Final](../../static/img/sprint-3/final.png) 
+<p style={{textAlign: 'center'}}>Figura 2 - Tabela de análise financeira final</p>
 
-Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1izGuqWQmo8rYB6kJzXRndSjYP8oJsImH/view?usp=drivesdk)
+<div style={{textAlign: 'center'}}>
+    ![Tabela de análise Financeira Final](../../static/img/sprint-3/final.png) 
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;Para visualizar e alterar a tabela acesse o seguinte [link.](https://drive.google.com/file/d/1izGuqWQmo8rYB6kJzXRndSjYP8oJsImH/view?usp=drivesdk)
