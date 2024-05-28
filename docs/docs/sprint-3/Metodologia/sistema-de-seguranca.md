@@ -2,7 +2,7 @@
 
 ## Introdução
 
-&emsp;&emsp;Na sprint 2, foram apresentados dois sistemas de segurança pelo grupo SugarZ3ro, atrelados ao controle do turtlebot, onde o usuário teria mais precisão e a opção de acionar uma parada de emergência ao pressionar a tecla ```Q```. Agora, na sprint 3, foram feitas mudanças significativas no sistema de segurança, implementando um código responsável por detectar obstáculos na trajetória do robô e tomar medidas preventivas para **evitar colisões**.
+&emsp;&emsp;Na sprint 2, foram apresentados dois sistemas de segurança pelo grupo SugarZ3ro atrelados ao controle do Turtlebot, através dos quais o usuário teria mais precisão na movimentação e a opção de acionar uma parada de emergência ao pressionar a tecla ```Q```. Agora, na sprint 3, foram feitas mudanças significativas no sistema de segurança, implementando um código responsável por detectar obstáculos na trajetória do robô e tomar medidas preventivas para **evitar colisões**.
 
 &emsp;&emsp;O sistema de segurança utiliza dados de um LiDAR (Laser Imaging Detection and Ranging) para monitorar a distância de objetos ao redor do turtlebot. Se um objeto for detectado a uma distância pré-definida como perigosa, o sistema ajusta a velocidade do robô para que seja possível afastá-lo do obstáculo.
 
@@ -18,7 +18,9 @@
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
-&emsp;&emsp;No print, é vista a tela de teleoperação do sistema. Ao detectar o obstáculo, um alerta aparece na parte superior da interface e os botões de movimentação, com excessão do botão de movimentação para trás, são desativados. Assim, o usuário tem somente a opção de mover-se para trás, afastando-se do objeto e evitando uma possível colisão.
+&emsp;&emsp;No print, é vista a tela de teleoperação do sistema. Ao detectar o obstáculo, um alerta aparece na parte superior da interface e os botões de movimentação, com exceção do botão de movimentação para trás, são desativados. Assim, o usuário tem somente a opção de mover-se para trás, afastando-se do objeto e evitando uma possível colisão.
+
+&emsp;&emsp;Ademais, há um botão de desligamento/parada de emergência ao lado dos botões de movimentação, o qual interrompe a movimentação do robô. Com este botão, há uma segunda alternativa para evitar colisões com obstáculos ou evitar a movimentação do robô para locais indesejados. 
 
 ## Sistema de Segurança - CLI
 
