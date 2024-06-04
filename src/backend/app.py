@@ -1,14 +1,11 @@
 from flask import Flask, request, jsonify
 from tinydb import TinyDB, Query
-from tinydb.storages import JSONStorage
-from tinydb.middlewares import CachingMiddleware
 import os
 import random
 from datetime import datetime
 
 app = Flask(__name__)
 
-# Configuração do caminho para o arquivo JSON do TinyDB
 db_path = os.path.join(os.path.dirname(__file__), 'pipes.json')
 db = TinyDB(db_path)
 pipes_table = db.table('pipes')
@@ -32,14 +29,12 @@ def add_pipe():
     pipes_table.insert(new_pipe)
     return jsonify(new_pipe), 201
 
-@app.route('/pipes/<int:pipe_id>', methods=['PUT'])
+@app.route('/pipes/<int:pipe_id>', methods=['POST'])
 def update_pipe(pipe_id):
     updated_data = request.json
     pipes_table.update(updated_data, Pipes.id == pipe_id)
     updated_pipe = pipes_table.get(Pipes.id == pipe_id)
-    if updated_pipe:
-        return jsonify(updated_pipe), 200
-    return jsonify({"error": "Pipe not found"}), 404
+    return jsonify(updated_pipe), 201
 
 @app.route('/pipes/<int:pipe_id>', methods=['DELETE'])
 def delete_pipe(pipe_id):
