@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Configuração do caminho para o arquivo JSON do TinyDB
 db_path = os.path.join(os.path.dirname(__file__), 'pipes.json')
-db = TinyDB(db_path, storage=CachingMiddleware(JSONStorage))
+db = TinyDB(db_path)
 pipes_table = db.table('pipes')
 Pipes = Query()
 
