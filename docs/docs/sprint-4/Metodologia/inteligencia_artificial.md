@@ -23,7 +23,7 @@ sidebar-position: 1
 
 &emsp;&emsp;Como tinha sido definido que seria utilizado o modelo YOLO para construção da Inteligência Artificial, foi utilizado [esse site](https://public.roboflow.com) para achar uma database anóloga ao problema do projeto. Esse site foi escolhido por causa de apresentar databases de conteúdos diversos como open source e a disponibilidade para download no modo de arquivo que o YOLOv8 utiliza. 
 
-&emsp;&emsp;A database escolhida foi a 
+&emsp;&emsp;A database escolhida foi [essa databate](https://universe.roboflow.com/purdue-university-niruh/precision-ag-subterranean/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true), pois apresenta impurezas e obstáculos em canos que estão claros e escuros, além de conter imagens sem impurezas para mostrar ao modelo o que seria um cano limpo. Está sendo usado todas as 631 imagens presentes no dataset, dividas em 549 imagens de treinamento, 50 imagens de validação e 32 imagens de teste. Note que todas as imagens presentes tem dimensão de 640x640.
 
 &emsp;&emsp;
 
