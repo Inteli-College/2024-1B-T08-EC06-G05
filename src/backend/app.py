@@ -1,15 +1,34 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tinydb import TinyDB, Query
 import os
 import random
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas as rotas
 
 db_path = os.path.join(os.path.dirname(__file__), 'pipes.json')
 db = TinyDB(db_path)
 pipes_table = db.table('pipes')
 Pipes = Query()
+
+updated_data = {
+        'id': None,
+        'status': None,
+        'id-boiler': None,
+        'dirty-grade': None,
+        'datetime': None
+    }
+
+# rota apenas para receber o ID do reboiler atual inserido pelo usuário no frontend
+@app.route('/post_reboiler_id', methods=['POST', 'GET'])
+def post_reboiler_id():
+    data = request.get_json()
+    reboiler_id = data.get('reboilerID')
+    updated_data['id-boiler'] = reboiler_id
+    print(f"Id recebido para o reboiler atual: {updated_data['id-boiler']}")
+    return jsonify({"reboilerID": reboiler_id}), 200
 
 @app.route('/pipes', methods=['GET'])
 def get_pipes():
@@ -31,7 +50,6 @@ def add_pipe():
 
 @app.route('/pipes/<int:pipe_id>', methods=['POST', 'GET'])
 def update_pipe(pipe_id):
-    updated_data = {}
     updated_id = request.args.get('id')
     updated_status = request.args.get('status')
     updated_id_boiler = request.args.get('id-boiler')
@@ -56,7 +74,6 @@ def update_pipe(pipe_id):
     if updated_pipe:
         return jsonify(updated_pipe), 200
     return jsonify({"error": "Pipe not found"}), 404
-
 
 @app.route('/pipes/<int:pipe_id>', methods=['DELETE'])
 def delete_pipe(pipe_id):
