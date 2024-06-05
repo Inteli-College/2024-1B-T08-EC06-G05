@@ -29,12 +29,34 @@ def add_pipe():
     pipes_table.insert(new_pipe)
     return jsonify(new_pipe), 201
 
-@app.route('/pipes/<int:pipe_id>', methods=['POST'])
+@app.route('/pipes/<int:pipe_id>', methods=['POST', 'GET'])
 def update_pipe(pipe_id):
-    updated_data = request.json
-    pipes_table.update(updated_data, Pipes.id == pipe_id)
+    updated_data = {}
+    updated_id = request.args.get('id')
+    updated_status = request.args.get('status')
+    updated_id_boiler = request.args.get('id-boiler')
+    updated_dirty_grade = request.args.get('dirty-grade')
+    updated_datetime = request.args.get('datetime')
+
+    if updated_id:
+        updated_data['id'] = int(updated_id)
+    if updated_status:
+        updated_data['status'] = updated_status.lower() == 'true'
+    if updated_id_boiler:
+        updated_data['id-boiler'] = int(updated_id_boiler)
+    if updated_dirty_grade:
+        updated_data['dirty-grade'] = int(updated_dirty_grade)
+    if updated_datetime:
+        updated_data['datetime'] = updated_datetime
+
+    if updated_data:
+        pipes_table.update(updated_data, Pipes.id == pipe_id)
+    
     updated_pipe = pipes_table.get(Pipes.id == pipe_id)
-    return jsonify(updated_pipe), 201
+    if updated_pipe:
+        return jsonify(updated_pipe), 200
+    return jsonify({"error": "Pipe not found"}), 404
+
 
 @app.route('/pipes/<int:pipe_id>', methods=['DELETE'])
 def delete_pipe(pipe_id):
