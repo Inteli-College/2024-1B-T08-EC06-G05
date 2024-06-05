@@ -13,9 +13,8 @@ const TurnoffButton = ({ movementhandlers }) => {
   return (
     <button
       onClick={handleClick}
-      // className="bg-red-500 flex items-center justhover:bg-red-60ify-center p-2 rounded-full text-white 0 focus:outline-none">
-      className="bg-black border border-black rounded">
-      <img src={TurnoffIcon} alt="Alert" className="h-4 w-4" />
+      className="bg-red-500 flex items-center justhover:bg-red-60ify-center p-4 rounded-full text-white 0 focus:outline-none active:bg-red-600">
+      <img src={TurnoffIcon} alt="Alert" className="h-6 w-6" />
     </button>
   );
 };
