@@ -8,6 +8,7 @@ import MoveLeft from '../components/movimentacao/esquerda';
 import MoveForward from '../components/movimentacao/frente';
 import MoveBackward from '../components/movimentacao/tras';
 import TurnoffButton from '../components/turnoffbutton/turnoff';
+import WarningButton from '../components/warningButton/warning'
 
 function TeleopScreen() {
   return (
@@ -15,16 +16,25 @@ function TeleopScreen() {
       {({ movementhandlers, collision }) => (
         <>
           {collision && <div className="alert">OBSTÁCULO DETECTADO!</div>}
+          <div className='relative' style={{width: "1280px", height: "720px"}}>
           <VideoStream />
-          <AiButton />
+          <div className='absolute top-16 left-32'>
           <TurnoffButton movementhandlers={movementhandlers} />
-          <div className='mt-96 ml-10'>
-            <div className='ml-9'>
-          <MoveForward movementhandlers={movementhandlers} collision={collision} />
           </div>
-          <MoveLeft movementhandlers={movementhandlers} collision={collision} />
-          <MoveBackward movementhandlers={movementhandlers} collision={collision} />
-          <MoveRight movementhandlers={movementhandlers} collision={collision} />
+          <div className='absolute bottom-64 right-64'>
+              <WarningButton />
+            </div>
+          <div className='absolute bottom-32 right-32'>
+          <AiButton />
+          </div>
+          <div className='absolute bottom-32 left-28'>
+            <div className='absolute bottom-16 left-14'><MoveForward movementhandlers={movementhandlers} collision={collision} /></div>
+            <div className='flex'>
+            <div className='absolute bottom-1'><MoveLeft movementhandlers={movementhandlers} collision={collision} /></div>
+            <div className='absolute bottom-1 left-28'><MoveRight movementhandlers={movementhandlers} collision={collision} /></div>
+            </div>
+            <div className='absolute left-14'><MoveBackward movementhandlers={movementhandlers} collision={collision} /></div>
+          </div>
           </div>
         </>
       )}
