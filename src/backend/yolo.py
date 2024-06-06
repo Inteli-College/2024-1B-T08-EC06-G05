@@ -1,5 +1,12 @@
 from ultralytics import YOLO
+import cv2
 
-model = YOLO("yolov8s.pt")
+def main():
+    model = YOLO("yolov8n.pt")
 
-results = model.train(data="../data-base/data.yaml", epochs=10, imgsz=640)
+    model.train(data="../data-base/data.yaml", epochs=70, imgsz=640)
+    matrics = model.val()
+    print(matrics)
+
+if __name__ == "__main__":
+    main()
