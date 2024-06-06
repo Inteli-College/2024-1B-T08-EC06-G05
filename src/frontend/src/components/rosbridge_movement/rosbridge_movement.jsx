@@ -11,19 +11,19 @@ const TurtleBotController = ({ children }) => {
   useEffect(() => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
-      url: 'ws://10.128.0.30:9090'
+      url: 'ws://localhost:9090'
     });
 
     ros.current.on('connection', () => {
-      console.log('Connected to websocket server.');
+      console.log('Movement: Connected to websocket server.');
     });
 
     ros.current.on('error', (error) => {
-      console.log('Error connecting to websocket server: ', error);
+      console.log('Movement: Error connecting to websocket server: ', error);
     });
 
     ros.current.on('close', () => {
-      console.log('Connection to websocket server closed.');
+      console.log('Movement: Connection to websocket server closed.');
     });
 
     // Initialize the cmd_vel topic
