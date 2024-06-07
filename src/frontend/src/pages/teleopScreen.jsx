@@ -9,13 +9,14 @@ import MoveForward from '../components/movimentacao/frente';
 import MoveBackward from '../components/movimentacao/tras';
 import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning'
+import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
 
 function TeleopScreen() {
   return (
     <TurtleBotController>
       {({ movementhandlers, collision }) => (
         <>
-          {collision && <div className="alert">OBSTÁCULO DETECTADO!</div>}
+          {collision && <div className="alert absolute top-1 items-center justify-center"> <ObstaclePopUp /> </div>}
           <div className='relative' style={{width: "1280px", height: "720px"}}>
           <VideoStream />
           <div className='absolute top-16 left-32'>
