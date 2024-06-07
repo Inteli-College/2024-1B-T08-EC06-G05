@@ -11,7 +11,7 @@ const TurtleBotController = ({ children }) => {
   useEffect(() => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
-      url: 'ws://localhost:9090'
+      url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
     });
 
     ros.current.on('connection', () => {
@@ -74,6 +74,7 @@ const TurtleBotController = ({ children }) => {
   const move = (linear, angular) => {
     if (collision && linear > 0) {
       console.log('Collision detected! Stopping movement.');
+      handleStop()
       linear = 0; // Stop forward movement if collision is detected
     }
 

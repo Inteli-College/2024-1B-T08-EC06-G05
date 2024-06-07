@@ -1,12 +1,23 @@
 // src/components/TurnoffButton.js
 import React from 'react';
 import TurnoffIcon from './Turnoff.svg';
+import { useNavigate } from 'react-router-dom';
 
 const TurnoffButton = ({ movementhandlers }) => {
+
+  const navigate = useNavigate();
+
+  const mainMenu = () => {
+    navigate("/");
+  };
+
+
+
   const handleClick = () => {
     console.log('Turnoff button pressed');
     if (movementhandlers && movementhandlers.turnoff) {
       movementhandlers.turnoff();
+      mainMenu()
     }
   };
 
