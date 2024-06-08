@@ -27,7 +27,37 @@ sidebar-position: 1
 
 ## Criação e comparação dos modelos de IA
 
-&emsp;&emsp;Nessa seção será abordado as inteligências artificiais criadas, além de demonstrar os detalhes do modo de treinamento e seus resultados, baseados no modelo [MarioLembreDePerguntarAIsa]
+&emsp;&emsp;Nessa seção, será abordada a comparação dos diferentes modelos de Inteligência Artificial desenvolvidos, destacando os detalhes do modo de treinamento e seus resultados. Esta comparação é fundamental para escolher o modelo mais adequado para nosso projeto, que tem como objetivo a identificação de sujeira dentro de canos. A seguir, será inserida uma subseção que explicará em detalhes o que cada métrica representa, para que qualquer pessoa, mesmo sem background técnico, consiga entender a sua importância na avaliação do desempenho dos modelos.
+
+
+### Métricas do Modelo
+As métricas são indicadores utilizados para avaliar a performance do modelo de IA. A seguir, apresentamos as principais métricas: **Precisão**, **Recall**, **mAP50**, **mAP50-95**, e **Fitness**, explicando o que cada uma representa e sua importância para nosso projeto.
+
+### Precisão
+A precisão indica a porcentagem de verdadeiros positivos (detecções corretas) em relação ao total de detecções feitas pelo modelo. Uma alta precisão é importante porque demonstra a confiabilidade do modelo em identificar objetos sem muitos falsos alarmes. Para a identificação de sujeira dentro de canos, isso significa menos detecções erradas de sujeira onde não há.
+
+### Recall
+O recall mede a capacidade do modelo de identificar todos os objetos relevantes em uma imagem. Uma alta taxa de recall é crucial para garantir que o modelo não perca objetos importantes, ou seja, todas as áreas sujas dentro dos canos serão identificadas.
+
+### mAP50
+O mAP50 (mean Average Precision at 50% IoU) é a média das precisões para diferentes classes de objetos, considerando uma sobreposição mínima de 50% entre a detecção e o objeto real. Essa métrica é útil para avaliar a eficácia do modelo em detectar sujeira de forma geral, com uma exigência de sobreposição moderada.
+
+### mAP50-95
+O mAP50-95 é uma métrica mais rigorosa que calcula a média das precisões considerando sobreposições de 50% até 95%. Essa métrica oferece uma avaliação mais completa do desempenho do modelo, especialmente em situações que exigem alta precisão na localização da sujeira dentro dos canos.
+
+#### Diferença entre mAP50 e mAP50-95
+
+As métricas mAP50 e mAP50-95 diferem na forma como a precisão é calculada em relação à sobreposição entre as detecções do modelo e os objetos reais nas imagens.
+
+- **mAP50**: Foca em uma única sobreposição de 50%, oferecendo uma visão de como o modelo se comporta com uma exigência de sobreposição moderada.
+
+- **mAP50-95**: Foca em uma faixa de sobreposições, oferecendo uma avaliação mais rigorosa e abrangente do desempenho do modelo em diferentes níveis de precisão.
+
+Ambas as métricas são importantes, mas juntas elas fornecem uma visão mais completa da capacidade do modelo de detectar e localizar objetos em diferentes cenários.
+
+### Fitness
+A métrica de Fitness combina várias métricas para dar uma visão geral do desempenho do modelo. Um bom valor de fitness indica que o modelo tem um desempenho equilibrado, combinando precisão e recall de maneira eficiente. Para nosso projeto, isso significa que com base nos testes executados, o modelo é eficaz em identificar sujeira dentro dos canos de forma precisa e consistente.
+
 
 ## Modelo escolhido
 
