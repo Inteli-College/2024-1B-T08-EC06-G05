@@ -5,35 +5,38 @@ const VideoStream = () => {
   const videoRef = useRef(null);
   const [latency, setLatency] = useState(0);
   const [sentTime, setSentTime] = useState(null);
+  const ros = useRef(null); // Use ref to store ros instance
 
   useEffect(() => {
-    // Connect to the ROS server
-    const ros = new ROSLIB.Ros({
-      url: 'ws://10.128.0.30:9090'
-    });
+    // Create and connect to the ROS server if not already connected
+    if (!ros.current) {
+      ros.current = new ROSLIB.Ros({
+        url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+      });
 
-    ros.on('connection', () => {
-      console.log('Connected to websocket server.');
-    });
+      ros.current.on('connection', () => {
+        console.log('Camera: Connected to websocket server.');
+      });
 
-    ros.on('error', (error) => {
-      console.log('Error connecting to websocket server: ', error);
-    });
+      ros.current.on('error', (error) => {
+        console.log('Camera: Error connecting to websocket server: ', error);
+      });
 
-    ros.on('close', () => {
-      console.log('Connection to websocket server closed.');
-    });
+      ros.current.on('close', () => {
+        console.log('Connection to websocket server closed.');
+      });
+    }
 
     // Subscribe to the video frames topic
     const videoTopic = new ROSLIB.Topic({
-      ros: ros,
+      ros: ros.current,
       name: '/video_frames',
       messageType: 'sensor_msgs/CompressedImage'
     });
 
     // Subscribe to the latency topic
     const latencyTopic = new ROSLIB.Topic({
-      ros: ros,
+      ros: ros.current,
       name: '/latency',
       messageType: 'std_msgs/String'
     });
@@ -52,9 +55,6 @@ const VideoStream = () => {
         const currentTime = new Date();
         const latency = currentTime - sentTime; // latency in milliseconds
         setLatency(latency);
-        console.log('Current Time:', currentTime);
-        console.log('Sent Time:', sentTime);
-
         // Reset sentTime to null to avoid using the same sentTime for multiple images
         setSentTime(null);
       }
@@ -64,22 +64,19 @@ const VideoStream = () => {
     return () => {
       videoTopic.unsubscribe();
       latencyTopic.unsubscribe();
-      ros.close();
     };
   }, [sentTime]);
 
   return (
     <div>
-      <h1>Real-time Video Stream from ROS2 Topic</h1>
       <img
         id="videoStream"
         ref={videoRef}
         alt="Video Stream"
-        style={{ width: '640px', height: '480px' }}
+        style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50, marginTop: 0 }}
       />
       <div className="flex mt-4">
-        <div className="w-0 h-0 border-t-[3vh] border-t-customBlue border-r-[3vh] border-r-customBlue border-l-[3vh] border-l-transparent border-b-[3vh] border-b-transparent"></div>
-        <div className="h-5vh p-1 w-32 bg-customBlue flex items-center justify-end font-bold text-black text-xl font-sans">
+        <div className="h-5vh p-1 w-33 bg-opacity-70 bg-orange-400 flex items-center font-bold text-black text-xl font-sans absolute right-0">
           Latency: {latency} ms
         </div>
       </div>
