@@ -1,6 +1,7 @@
 {
     "position": 1,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "Nesta seção é descrita a metodologia utilizada para o desenvolvimento de cada uma das partes entregáveis do projeto na sprint 4."
     }
   }

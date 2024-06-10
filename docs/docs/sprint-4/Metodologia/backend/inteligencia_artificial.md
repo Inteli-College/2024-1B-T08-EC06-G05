@@ -1,6 +1,6 @@
 ---
 title: Implementação da Visão computacional
-sidebar-position: 1
+sidebar-position: 2
 ---
 
 # Introdução
