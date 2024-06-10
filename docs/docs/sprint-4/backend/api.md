@@ -1,6 +1,6 @@
 ---
 title: Documentação da API
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Documentação da API do projeto
