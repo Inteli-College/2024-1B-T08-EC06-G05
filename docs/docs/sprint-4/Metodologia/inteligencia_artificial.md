@@ -134,6 +134,6 @@ def process_image(image_path, output_dir="../data-base/imgs_results"):
 
 &emsp;&emsp;O código encontrado no arquivo `yoloVideo.py` utiliza a biblioteca OpenCV para capturar vídeo em tempo real da webcam, aplica um modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados no feed de vídeo, e, se o rastreamento estiver ativado, desenha as trajetórias dos objetos rastreados.
 
-&emsp;&emsp;O loop do codigo tem a função de captura frames da webcam, aplica o modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados e, se necessário, desenha as trajetórias dos objetos rastreados. A execução do loop continua até que a tecla 'q' seja pressionada.
+&emsp;&emsp;O loop do codigo tem a função de captura frames da webcam, aplica o modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados e, se necessário, desenha as trajetórias dos objetos rastreados. A execução do loop continua até que a tecla 'Q' seja pressionada.
 
 &emsp;&emsp;Esses códigos aplicam um modelo treinado YOLO para detecção e rastreamento de objetos, visualizar os resultados e desenhar as trajetórias dos objetos rastreados. Ele é útil para aplicação desenvolvida nesse projeto, e auxilia no monitoramento e análise de vídeo e de iamgens em tempo real. 
