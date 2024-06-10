@@ -67,4 +67,4 @@ sidebar-position: 1
 
 &emsp;&emsp;Nessa seção será comparado o resultado dos modelos criados, além de informar qual foi o modelo com o melhor resultado.
 
-&emsp;&emsp;O primeiro modelo criado 
+&emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP500, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP500, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
