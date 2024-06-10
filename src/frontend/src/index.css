@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+    .scrollbar-wide {
+        scrollbar-width: auto;
+        --webkit-scrollbar-width: 16px;
+        /* For modern browsers */
+    }
+
+    .scrollbar-wide::-webkit-scrollbar {
+        width: 16px;
+        /* For webkit browsers */
+    }
+
+    .scrollbar-wide::-webkit-scrollbar-thumb {
+        background-color: #4B5563;
+        /* Gray 600 */
+        border-radius: 10px;
+    }
+
+    .scrollbar-wide::-webkit-scrollbar-track {
+        background-color: #1F2937;
+        /* Gray 800 */
+    }
+
+    /* Hide scrollbar on small screens */
+    @media (max-width: 400px) {
+        .hide-scrollbar {
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, and Opera */
+        }
+    }
+}

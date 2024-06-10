@@ -5,6 +5,7 @@ import MainMenu from './pages/mainMenu.jsx';
 import TeleopScreen from './pages/teleopScreen.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HelpScreen from './pages/helpScreen.jsx';
+import EmergencyPopUp from './components/emergencyPopUp/emergencyPopUp.jsx';
 
 // Criação do roteador com as rotas definidas
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/helpScreen',
     element: <HelpScreen />
+  },
+  {
+    path: '/emergencyPopUp',
+    element: <EmergencyPopUp />
   }
 ]);
 

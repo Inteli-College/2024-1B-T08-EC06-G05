@@ -10,6 +10,7 @@ import MoveBackward from '../components/movimentacao/tras';
 import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning'
 import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
+import EmergencyPopUp from '../components/emergencyPopUp/emergencyPopUp';
 
 function TeleopScreen() {
   return (
@@ -23,7 +24,7 @@ function TeleopScreen() {
           <TurnoffButton movementhandlers={movementhandlers} />
           </div>
           <div className='absolute bottom-64 right-64'>
-              <WarningButton />
+              <WarningButton movementhandlers={movementhandlers}/>
             </div>
           <div className='absolute bottom-32 right-32'>
           <AiButton />
