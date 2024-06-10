@@ -11,7 +11,7 @@ sidebar-position: 1
 
 &emsp;&emsp;Nessa seção será descrito a tecnologia que foi escolhida para criar os modelos de inteligência artificial e o porquê dessa escolha.
 
-&emsp;&emsp;Esse projeto foi desenvolvido para identificar impurezas presentes em canos de um reboiler. Como falado anteriormente, o parceiro não disponibilizou uma base de dados para ser usada, logo houve a necessidade de escolher um modelo de treinamento de IA que fosse geral e identificasse multiplos objetos e formas diferentes. 
+&emsp;&emsp;Esse projeto foi desenvolvido para identificar impurezas presentes em canos de um reboiler. Como falado anteriormente, o parceiro não disponibilizou uma base de dados para ser usada, logo houve a necessidade de escolher um modelo de treinamento de IA que fosse gerérico e identificasse multiplos objetos e formas diferentes. 
 
 &emsp;&emsp;Assim, foi escolhido utilizar o YOLOv8 , que é uma versão avançada do algoritmo YOLO para detecção em tempo real de objetos em imagens e vídeos, assim servindo para o projeto que utiliza imagens para detecção de impurezas. Apesar de existir versões mais atualizadas da YOLO (v9 e v10), foi escolhida a YOLOv8 por sua facilidade e conformidade de uso, pois YOLOv10 foi lançado enquanto esse projeto estava sendo desenvolvido, sendo uma tecnologia muito nova e com falta de casos de uso. Além disso, o modo de utilização do YOLOv9 implica complicações no modo de instalar, já que é necessário clonar um repositório e lidar com várias dependências, especialmente considerando que estamos utilizando computadores externos para processar nosso modelo de IA e o TurtleBot3. Portanto, optamos pelo YOLOv8, que é mais fácil de instalar e atende bem às necessidades do nosso projeto.
 
@@ -59,17 +59,7 @@ sidebar-position: 1
 
 &emsp;&emsp;A métrica de Fitness combina várias métricas para dar uma visão geral do desempenho do modelo. Um bom valor de fitness indica que o modelo tem um desempenho equilibrado, combinando precisão e recall de maneira eficiente. Para nosso projeto, isso significa que com base nos testes executados, o modelo é eficaz em identificar sujeira dentro dos canos de forma precisa e consistente.
 
-### Método de criação dos modelos
-
-&emsp;&emsp;Nessa seção será indicado exatamente como foram criados os modelos utilizados.
-
-### Comparação dos modelos
-
-&emsp;&emsp;Nessa seção será comparado o resultado dos modelos criados, além de informar qual foi o modelo com o melhor resultado.
-
-&emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP50, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP50, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
-
-## Treinamento do modelo
+### Treinamento do modelo
 
 &emsp;&emsp;Para realizar o treinamento da IA, foi utilizada a biblioteca YOLO em um código que realiza tanto o treinamento quanto a validação da qualidade desse treinamento por meio das imagens de validação encontradas no banco de dados. No código encontrado no arquivo `yolo.py`, o modelo YOLO é inicializado usando os pesos pré-treinados do arquivo `yolov8n.pt` e treinado utilizando o conjunto de dados especificado no arquivo `data.yaml`. O treinamento ocorre pela quantidade de épocas escolhidas.
 
@@ -90,6 +80,12 @@ if __name__ == "__main__":
 ```
 
 &emsp;&emsp;Após o treinamento, o modelo é validado para avaliar seu desempenho. As métricas de validação são armazenadas na variável metrics. Para uma rápida avaliação do treinamento do modelo, foi decidido que seria útil imprimir as métricas de validação no console.
+
+### Comparação dos modelos
+
+&emsp;&emsp;Nessa seção será comparado o resultado dos modelos criados, além de informar qual foi o modelo com o melhor resultado.
+
+&emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP50, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP50, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
 
 ## Teste da IA com os aquivos de treinamento
 
