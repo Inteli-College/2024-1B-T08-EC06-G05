@@ -68,3 +68,75 @@ sidebar-position: 1
 &emsp;&emsp;Nessa seção será comparado o resultado dos modelos criados, além de informar qual foi o modelo com o melhor resultado.
 
 &emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP500, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP500, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
+
+## Treinamento do modelo
+
+&emsp;&emsp;Para realizar o treinamento da IA, foi utilizada a biblioteca YOLO em um código que realiza tanto o treinamento quanto a validação da qualidade desse treinamento por meio das imagens de validação encontradas no banco de dados. No código encontrado no arquivo `yolo.py`, o modelo YOLO é inicializado usando os pesos pré-treinados do arquivo `yolov8n.pt` e treinado utilizando o conjunto de dados especificado no arquivo `data.yaml`. O treinamento ocorre pela quantidade de épocas escolhidas.
+
+```
+from ultralytics import YOLO
+import cv2
+
+def main():
+    model = YOLO("yolov8n.pt")
+
+    model.train(data="../data-base/data.yaml", epochs=70, imgsz=640)
+    matrics = model.val()
+    print(matrics)
+
+if __name__ == "__main__":
+    main()
+    ```
+
+&emsp;&emsp;Após o treinamento, o modelo é validado para avaliar seu desempenho. As métricas de validação são armazenadas na variável metrics. Para uma rápida avaliação do treinamento do modelo, foi decidido que seria útil imprimir as métricas de validação no console.
+
+## Teste da IA com os aquivos de treinamento
+
+&emsp;&emsp;Após o treinamento e escolha do modelo, foi decidido que iriamos testar a funcionalidade da IA de duas formas, utilizando a IA para analizar imagens estaticas quando analise por meio de transmissão de video em tempo real.
+
+&emsp;&emsp;Para isso, foi desenvolvido dois codigos, uma para analise exclusiva de imagens salvas em um banco de dados (`yoloImagem.py`) e outro para analisar videos obtidos em tempo real por meio de uma webcam (`yoloVideo.py`). 
+
+&emsp;&emsp;O código encontrado no arquivo `yoloImagem.py` processa uma imagem usando um modelo YOLO para detecção de objetos, visualiza os resultados e salva a imagem processada em um diretório de saída. Para o processamento de imagem foi utilizada a função `process_image` usando o modelo YOLO e salva a imagem processada em um diretório de saída.
+
+```
+def process_image(image_path, output_dir="../data-base/imgs_results"):
+    
+    image_path = "../data-base/imgs/img2.png"
+    # Load the image
+    img = cv2.imread(image_path)
+
+    # Check if the image was loaded successfully
+    if img is None:
+        print(f"Error: Unable to load image at {image_path}")
+        return
+
+    # Load the YOLO model
+    model = YOLO("./home/grupo-05-t08/2024-1B-T08-EC06-G05/src/backend/runs/detect/train4/weights/best.pt")
+
+    # Process the image
+    results = model(img)
+
+    # Process results list
+    for result in results:
+        # Visualize the results on the frame
+        img = result.plot()
+
+    # Ensure the output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Create the output path
+    base_name = os.path.basename(image_path)
+    name, ext = os.path.splitext(base_name)
+    output_path = os.path.join(output_dir, f"{name}_result{ext}")
+
+    # Save the result image
+    cv2.imwrite(output_path, img)
+    print(f"Processed image saved as {output_path}")
+    
+    ```
+
+&emsp;&emsp;O código encontrado no arquivo `yoloVideo.py` utiliza a biblioteca OpenCV para capturar vídeo em tempo real da webcam, aplica um modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados no feed de vídeo, e, se o rastreamento estiver ativado, desenha as trajetórias dos objetos rastreados.
+
+&emsp;&emsp;O loop do codigo tem a função de captura frames da webcam, aplica o modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados e, se necessário, desenha as trajetórias dos objetos rastreados. A execução do loop continua até que a tecla 'q' seja pressionada.
+
+&emsp;&emsp;Esses códigos aplicam um modelo treinado YOLO para detecção e rastreamento de objetos, visualizar os resultados e desenhar as trajetórias dos objetos rastreados. Ele é útil para aplicação desenvolvida nesse projeto, e auxilia no monitoramento e análise de vídeo e de iamgens em tempo real. 
