@@ -11,19 +11,19 @@ const TurtleBotController = ({ children }) => {
   useEffect(() => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
-      url: 'ws://10.128.0.30:9090'
+      url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
     });
 
     ros.current.on('connection', () => {
-      console.log('Connected to websocket server.');
+      console.log('Movement: Connected to websocket server.');
     });
 
     ros.current.on('error', (error) => {
-      console.log('Error connecting to websocket server: ', error);
+      console.log('Movement: Error connecting to websocket server: ', error);
     });
 
     ros.current.on('close', () => {
-      console.log('Connection to websocket server closed.');
+      console.log('Movement: Connection to websocket server closed.');
     });
 
     // Initialize the cmd_vel topic
@@ -74,6 +74,7 @@ const TurtleBotController = ({ children }) => {
   const move = (linear, angular) => {
     if (collision && linear > 0) {
       console.log('Collision detected! Stopping movement.');
+      handleStop()
       linear = 0; // Stop forward movement if collision is detected
     }
 
