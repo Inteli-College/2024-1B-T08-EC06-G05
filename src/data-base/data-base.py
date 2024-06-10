@@ -6,6 +6,8 @@ db = TinyDB('pipes.json')
 Pipes = Query()
 pipes_table = db.table('pipes')
 
+i = 1
+
 def main():
     # Simulação de um dirty-grade aleatório para o exemplo
     dirty_grade = random.randint(1, 100)
@@ -18,9 +20,19 @@ def main():
     
     # Obtém a data e hora atual
     current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    status_dirt = OQUEPEGARDAIA
+
+    dirt_percentage = OQUEPEGARDAIA
+
+    id_boiler = OQUEPEGARDOFRONT
     
-    # Insere um registro no banco de dados com o status definido
-    db.insert({'id': 1, 'status': status, 'id-boiler': 1, 'dirty-grade': dirty_grade, 'datetime': current_datetime})
+    try:
+        
+        db.insert({'id': i, 'status': dirt_percentage, 'id-boiler': id_boiler, 'dirty-grade': dirty_grade, 'datetime': current_datetime})
+        i+=1
+    except:
+        print("Erro!")
     
     # Busca pelo registro inserido
     user = pipes_table.get(Pipes.id == 1)
