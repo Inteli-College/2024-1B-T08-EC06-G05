@@ -7,9 +7,15 @@ sidebar_position: 2
 
 ## 1. Introdução
 
-&emsp;&emsp;Esse documento descreve os testes realizados para validar a funcionalidade e os requisitos não funcionais do projeto Turtlebot de verificação de limpeza. Os testes incluem a verificação da teleoperação do robô, tempo de resposta, usabilidade da aplicação web e velocidade de locomoção do robô. Por questão de tempo, não foi testado a inteligência artificial, pois ainda não estava 
+&emsp;&emsp;Esse documento descreve os testes realizados para validar a funcionalidade e os requisitos não funcionais do projeto Turtlebot de verificação de limpeza. Os testes incluem a verificação da teleoperação do robô, tempo de resposta, usabilidade da aplicação web e velocidade de locomoção do robô.
 
-## 2. Teste de Funcionalidade
+## 2. Ambiente de teste
+
+&emsp;&emsp;Os testes ocorreram no laboratório do próprio Inteli, que é a instituição de ensino responsável pela execução do projeto em parceria com a Atvos. Os testes foram feitos com alunos da própria instituição e com uma funcionária desta. Antes do início dos testes, houve uma breve contextualização do projeto, da empresa parceira e da proposta da solução desenvolda pelo grupo, sem que o funcionamento desta fosse explicado de maneira específica.
+
+&emsp;&emsp;Durante os testes, dois membros da equipe SugarZ3ro estiveram presentes e foram responsáveis por guiar os testadores e anotar os resultados obtidos a cada etapa. Para cada etapa dos roteiros de testes, houve uma tarefa curta cujo enunciado foi repassado para os testadores, que tentaram executá-la sem nenhuma orientação extra em relação ao funcionamento do sistema. Os roteiros desses testes, bem como os resultados obtidos pelos usuários em cada uma das etapas dos testes, estão descritos a seguir.
+
+## 3. Teste de funcionalidade
 
 ### Objetivo
 &emsp;&emsp;Verificar a capacidade de teleoperação do Turtlebot para mover-se e apontar a câmera para lugares específicos.
@@ -38,7 +44,7 @@ sidebar_position: 2
   - **Apontar a câmera para pontos específicos**: Movimentou a câmera para diferentes tubos com precisão.
   - **Verificar a imagem transmitida**: Observou que a imagem transmitida estava correta, mas destacou que a latência era alta.
 
-#### Rafaela
+#### Rafaella Cavalvante
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Inicializar o ambiente de controle**: Foi para a página de informação, onde entendeu o conteúdo, logo depois foi para a tela de comandos do robô.
@@ -46,7 +52,7 @@ sidebar_position: 2
   - **Apontar a câmera para pontos específicos**: Movimentou a câmera para diferentes tubos com precisão.
   - **Verificar a imagem transmitida**: Observou que a imagem transmitida estava correta, mas destacou que a latência era alta.
 
-#### Andrea
+#### Ana Sena
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Inicializar o ambiente de controle**: Foi para a página de informação, onde não havia percebido que era possível descer a tela mas ainda sim entendeu o conteúdo.
@@ -54,7 +60,7 @@ sidebar_position: 2
   - **Apontar a câmera para pontos específicos**: Movimentou a câmera para diferentes tubos com precisão.
   - **Verificar a imagem transmitida**: Observou que a imagem transmitida estava correta, mas destacou que a latência era alta.
 
-## 3. Testes de Validação de Requisitos Não Funcionais (RNFs)
+## 4. Testes de Validação de Requisitos Não Funcionais (RNFs)
 
 ### RNF1: Tempo de Resposta
 
@@ -85,7 +91,7 @@ sidebar_position: 2
   - **Medir o tempo de resposta da câmera**: Mediu o tempo de resposta da câmera e encontrou latência negativa.
   - **Comparar resultados**: Observou que a latência da câmera precisava de ajustes.
 
-#### Rafaela
+#### Rafaella Cavalvante
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Enviar comandos de locomoção ao robô**: Enviou os comandos corretamente.
@@ -93,7 +99,7 @@ sidebar_position: 2
   - **Medir o tempo de resposta da câmera**: Mediu o tempo de resposta da câmera e encontrou latência positiva.
   - **Comparar resultados**: Ajustou a latência da câmera para um desempenho consideravelmente melhor.
 
-#### Andrea
+#### Ana Sena
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Enviar comandos de locomoção ao robô**: Enviou os comandos corretamente.
@@ -127,14 +133,14 @@ sidebar_position: 2
   - **Operar o robô seguindo um percurso**: Teve um pouco de dificuldade nas curvas, mas completou o percurso.
   - **Coletar feedback**: Sugeriu melhorias para facilitar a navegação em curvas.
 
-#### Rafaela
+#### Rafaella Cavalvante
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Introdução ao sistema**: Recebeu uma introdução detalhada do sistema.
   - **Operar o robô seguindo um percurso**: Teve um pouco de dificuldade nas curvas, mas completou o percurso.
   - **Coletar feedback**: Sugeriu melhorias para facilitar a navegação em curvas e na área de informações.
 
-#### Andrea
+#### Ana Sena
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Introdução ao sistema**: Recebeu uma introdução detalhada do sistema.
@@ -170,7 +176,7 @@ sidebar_position: 2
   - **Monitorar e registrar a velocidade**: Registrou a velocidade do robô em diferentes intervalos, confirmando a constância.
   - **Analisar os dados**: Analisou os dados e confirmou que a aceleração e a velocidade do robô eram constantes.
 
-#### Rafaela
+#### Rafaella Cavalvante
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Configurar o ambiente de teste**: Testou na própria interface de controle.
@@ -178,7 +184,7 @@ sidebar_position: 2
   - **Monitorar e registrar a velocidade**: Registrou a velocidade do robô em diferentes intervalos, confirmando a constância.
   - **Analisar os dados**: Analisou os dados e confirmou que a aceleração e a velocidade do robô eram constantes.
 
-#### Andrea
+#### Ana Sena
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Configurar o ambiente de teste**: Testou na própria interface de controle.
@@ -186,8 +192,8 @@ sidebar_position: 2
   - **Monitorar e registrar a velocidade**: Registrou a velocidade do robô em diferentes intervalos, confirmando a constância.
   - **Analisar os dados**: Analisou os dados e confirmou que a aceleração e a velocidade do robô eram constantes.
 
-## 4. Conclusão
+## 5. Conclusão
 
-&emsp;&emsp;O resultado do teste demonstrou algumas falhas de funcionalidades do produto, principlamente relacionadas à usabilidade do usuário. Fora relatado que a tela apresenta muitos botões chamativos, mas que não apresentam funcionalidade dentro do sistema, a câmera apresenta uma latência muito alta mas a movimentação é relativamente suave. Ainda assim, os _testers_ idenficaram rapidamente os botões essenciais e conseguiram realizar todas as tarefas, mesmo que as vezes tenha faltado feedback ao pressionar botões, como por exemplo o botão de emergência. 
+&emsp;&emsp;O resultado do teste demonstrou algumas falhas de funcionalidades do produto, principalmente relacionadas à usabilidade do usuário. Foi relatado que a tela apresenta muitos botões chamativos, mas que não apresentam funcionalidade dentro do sistema, a câmera apresenta uma latência muito alta mas a movimentação é relativamente suave. Ainda assim, os _testers_ identificaram rapidamente os botões essenciais e conseguiram realizar todas as tarefas, mesmo que as vezes tenha faltado feedback ao pressionar botões, como por exemplo o botão de emergência. 
 
 &emsp;&emsp;(Link para a tabela de testes)[https://docs.google.com/spreadsheets/d/1BIxLtNFbU7E4AKV3grvLv3TUp_qiBLQ4ps3oZy_a7gU/edit?usp=sharing]
