@@ -59,25 +59,25 @@ sidebar_position: 1
 
 <br/>
 
-<p style={{textAlign: 'center'}}>Figura 5 - Teste de método [GET] bem sucedido na rota /pipes/{{pipe_id}}</p>
+<p style={{textAlign: 'center'}}>Figura 5 - Teste de método [GET] bem sucedido na rota /pipes/[pipe_id]</p>
 
-![Teste bem sucedido da rota /pipes/{{int:pipe_id}}](../../../static/img/sprint-4/api/teste_rota_5.png)
-
-<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
-
-<br/>
-
-<p style={{textAlign: 'center'}}>Figura 6 - Teste de método [POST] bem sucedido na rota /pipes/{{pipe_id}}</p>
-
-![Teste bem sucedido da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_6.png)
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_5.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
 <br/>
 
-<p style={{textAlign: 'center'}}>Figura 7 - Teste de método [DELETE] bem sucedido na rota /pipes/{{pipe_id}}</p>
+<p style={{textAlign: 'center'}}>Figura 6 - Teste de método [POST] bem sucedido na rota /pipes/[pipe_id]</p>
 
-![Teste bem sucedido da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_7.png)
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_6.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 7 - Teste de método [DELETE] bem sucedido na rota /pipes/[pipe_id]</p>
+
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_7.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -111,9 +111,9 @@ sidebar_position: 1
 
 <br/>
 
-<p style={{textAlign: 'center'}}>Figura 11 - Testes automáticos da rota /pipes/{{pipe_id}}</p>
+<p style={{textAlign: 'center'}}>Figura 11 - Testes automáticos da rota /pipes/[pipe_id]</p>
 
-![Testes automáticos da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_a3.png)
+![Testes automáticos da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_a3.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
