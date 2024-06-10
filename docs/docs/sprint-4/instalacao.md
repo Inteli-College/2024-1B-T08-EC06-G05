@@ -234,3 +234,31 @@ Este comando vai criar um ambiente virtual na pasta `venv`
 - source venv/bin/activate
 
 Após a ativação do venv, deve-se instalar o TinyDB com o comando `pip install tinydb`
+
+## Como instalar o YOLOv8
+
+Para realizar a instalação do YOLOv8, é sugerido o uso de um ambiente virtual pelos comandos apresentados na seção de Como instalar o TinyDB. 
+
+Após garantir que o ambiente virtual está ativado,, deve-se instalar o Ultralytics com o seguinte comando:
+
+`pip install ultralytics`
+
+## Como treinar o modelo usando YOLOv8
+
+Para realizar o treinamento do modelo, é necessário que os parametros sejam ajustados de acordo com as necessidades do treinamento no arquivo `yolo.py`. Após os ajustes, execute o arquivo até que o treinamento seja finalizado, e então as métricas serão apresentadas no terminal.
+
+## Como utilizar o modelo treinado usando YOLOv8
+
+Para testar a eficiencia do modelo treinado usando YOLOv8, pode ser utilizado dois arquivos de codigo: `yoloVideo.py`(para teste com imagens capturadas por uma webcam em tempo real) e `yoloImagem.py`(para imagens salvas em uma base de dados)
+
+No arquivo yoloVideo.py, deve ser alterado o modelo que será usando no processo de teste de acordo com o desejado pelo desenvolvedor na seguinte linha:
+`model = YOLO("./home/grupo-05-t08/2024-1B-T08-EC06-G05/src/backend/runs/detect/train4/weights/best.pt")`
+
+No arquivo `yoloImagem.py`, a imagem à ser analisada é definida na seguinte linha:
+
+`image_path = "../data-base/imgs/img2.png"`
+
+Caso seja necessário analisar outra imagens, o "path" deve ser atualizado e a imagem deve ser adicionada na pasta `/data-base/imgs`
+
+
+
