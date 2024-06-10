@@ -67,7 +67,7 @@ sidebar-position: 1
 
 &emsp;&emsp;Nessa seção será comparado o resultado dos modelos criados, além de informar qual foi o modelo com o melhor resultado.
 
-&emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP500, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP500, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
+&emsp;&emsp;O primeiro modelo criado obteve resultados promissores, apresentando 91% de precisão, 87% de recall, 89% de mAP50, 68% de mAP50-95 e 0.70% de fitness. Com o aprimoramento do treinamento do modelo, foi possivel chegar até 95% de precisão, 91% de recall, 95% de mAP50, 71% de mAP50-95 e 0.71% de fitness, um resultado aprimorado comparado ao primeiro treinamento. Assim sendo, esse resultado é adequado ao projeto, já que a importância máxima é de identificar se há sujeiras presentes, então uma precisao e recall acima de 90% atendem o objetivo do projeto de forma satisfatória.
 
 ## Treinamento do modelo
 
@@ -86,7 +86,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-    ```
+    
+```
 
 &emsp;&emsp;Após o treinamento, o modelo é validado para avaliar seu desempenho. As métricas de validação são armazenadas na variável metrics. Para uma rápida avaliação do treinamento do modelo, foi decidido que seria útil imprimir as métricas de validação no console.
 
@@ -133,7 +134,7 @@ def process_image(image_path, output_dir="../data-base/imgs_results"):
     cv2.imwrite(output_path, img)
     print(f"Processed image saved as {output_path}")
     
-    ```
+```
 
 &emsp;&emsp;O código encontrado no arquivo `yoloVideo.py` utiliza a biblioteca OpenCV para capturar vídeo em tempo real da webcam, aplica um modelo YOLO para detecção e rastreamento de objetos, visualiza os resultados no feed de vídeo, e, se o rastreamento estiver ativado, desenha as trajetórias dos objetos rastreados.
 
