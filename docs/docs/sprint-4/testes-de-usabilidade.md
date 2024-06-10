@@ -1,24 +1,28 @@
+---
+title: Testes de Usabilidade
+sidebar_position: 2
+---
+
 # Documentação de Testes do Projeto Turtlebot
 
 ## 1. Introdução
 
-Este documento descreve os testes realizados para validar a funcionalidade e os requisitos não funcionais do projeto Turtlebot de verificação de limpeza. Os testes incluem a verificação da teleoperação do robô, tempo de resposta, usabilidade da aplicação web e velocidade de locomoção do robô.
+&emsp;&emsp;Esse documento descreve os testes realizados para validar a funcionalidade e os requisitos não funcionais do projeto Turtlebot de verificação de limpeza. Os testes incluem a verificação da teleoperação do robô, tempo de resposta, usabilidade da aplicação web e velocidade de locomoção do robô. Por questão de tempo, não foi testado a inteligência artificial, pois ainda não estava 
 
 ## 2. Teste de Funcionalidade
 
 ### Objetivo
-Verificar a capacidade de teleoperação do Turtlebot para mover-se e apontar a câmera para lugares específicos.
+&emsp;&emsp;Verificar a capacidade de teleoperação do Turtlebot para mover-se e apontar a câmera para lugares específicos.
 
 ### Roteiro de Teste
 1. Inicializar o ambiente de testes.
 2. Acessar a aplicação WEB e utilizar os botões de teleoperação para mover o Turtlebot.
 3. Apontar a câmera do robô para diferentes lugares específicos.
 4. Verificar se a imagem transmitida da câmera corresponde à visualização esperada.
-5. Repetir o teste com 4 usuários diferentes.
 
 ### Resultados
 
-#### Mauricio Azevedo
+#### Maurício Azevedo
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Inicializar o ambiente de controle**: Entendeu a página inicial e a página de informação.
@@ -55,7 +59,7 @@ Verificar a capacidade de teleoperação do Turtlebot para mover-se e apontar a 
 ### RNF1: Tempo de Resposta
 
 #### Objetivo
-Verificar o tempo de resposta da locomoção do robô e da câmera pela aplicação WEB.
+&emsp;&emsp;Verificar o tempo de resposta da locomoção do robô e da câmera pela aplicação WEB.
 
 #### Roteiro de Teste
 1. Enviar comandos de locomoção para o robô.
@@ -65,7 +69,7 @@ Verificar o tempo de resposta da locomoção do robô e da câmera pela aplicaç
 
 ### Resultados
 
-#### Mauricio Azevedo
+#### Maurício Azevedo
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Enviar comandos de locomoção ao robô**: Enviou os comandos corretamente.
@@ -100,7 +104,7 @@ Verificar o tempo de resposta da locomoção do robô e da câmera pela aplicaç
 ### RNF2: Usabilidade
 
 #### Objetivo
-Avaliar a facilidade de uso da aplicação WEB pelos usuários.
+&emsp;&emsp;Avaliar a facilidade de uso da aplicação WEB pelos usuários.
 
 #### Roteiro de Teste
 1. Fornecer uma breve introdução do sistema aos usuários.
@@ -109,7 +113,7 @@ Avaliar a facilidade de uso da aplicação WEB pelos usuários.
 
 ### Resultados
 
-#### Mauricio Azevedo
+#### Maurício Azevedo
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Introdução ao sistema**: Recebeu uma introdução detalhada do sistema.
@@ -140,7 +144,7 @@ Avaliar a facilidade de uso da aplicação WEB pelos usuários.
 ### RNF3: Velocidade de Locomoção
 
 #### Objetivo
-Verificar a aceleração e a velocidade máxima constante do Turtlebot durante seu funcionamento.
+&emsp;&emsp;Verificar a aceleração e a velocidade máxima constante do Turtlebot durante seu funcionamento.
 
 #### Roteiro de Teste
 1. Configurar o ambiente de teste.
@@ -150,7 +154,7 @@ Verificar a aceleração e a velocidade máxima constante do Turtlebot durante s
 
 ### Resultados
 
-#### Mauricio Azevedo
+#### Maurício Azevedo
 - **Resultado Geral**: Sucesso
 - **Etapas**:
   - **Configurar o ambiente de teste**: Testou na própria interface de controle.
@@ -184,6 +188,6 @@ Verificar a aceleração e a velocidade máxima constante do Turtlebot durante s
 
 ## 4. Conclusão
 
-Os testes realizados garantem uma avaliação completa da funcionalidade e da qualidade do sistema desenvolvido para o Turtlebot de verificação de limpeza. Com base nos resultados, melhorias foram propostas para otimizar a usabilidade, a resposta e o desempenho do sistema.
+&emsp;&emsp;O resultado do teste demonstrou algumas falhas de funcionalidades do produto, principlamente relacionadas à usabilidade do usuário. Fora relatado que a tela apresenta muitos botões chamativos, mas que não apresentam funcionalidade dentro do sistema, a câmera apresenta uma latência muito alta mas a movimentação é relativamente suave. Ainda assim, os _testers_ idenficaram rapidamente os botões essenciais e conseguiram realizar todas as tarefas, mesmo que as vezes tenha faltado feedback ao pressionar botões, como por exemplo o botão de emergência. 
 
-(Link para a tabela de testes)[https://docs.google.com/spreadsheets/d/1BIxLtNFbU7E4AKV3grvLv3TUp_qiBLQ4ps3oZy_a7gU/edit?usp=sharing]
+&emsp;&emsp;(Link para a tabela de testes)[https://docs.google.com/spreadsheets/d/1BIxLtNFbU7E4AKV3grvLv3TUp_qiBLQ4ps3oZy_a7gU/edit?usp=sharing]
