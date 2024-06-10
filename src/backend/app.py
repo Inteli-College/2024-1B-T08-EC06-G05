@@ -35,18 +35,18 @@ def get_pipes():
     pipes = pipes_table.all()
     return jsonify(pipes), 200
 
+@app.route('/pipes', methods=['POST'])
+def add_pipe():
+    new_pipe = request.json
+    pipes_table.insert(new_pipe)
+    return jsonify(new_pipe), 201
+
 @app.route('/pipes/<int:pipe_id>', methods=['GET'])
 def get_pipe(pipe_id):
     pipe = pipes_table.get(Pipes.id == pipe_id)
     if pipe:
         return jsonify(pipe), 200
     return jsonify({"error": "Pipe not found"}), 404
-
-@app.route('/pipes', methods=['POST'])
-def add_pipe():
-    new_pipe = request.json
-    pipes_table.insert(new_pipe)
-    return jsonify(new_pipe), 201
 
 @app.route('/pipes/<int:pipe_id>', methods=['POST', 'GET'])
 def update_pipe(pipe_id):
@@ -78,7 +78,7 @@ def update_pipe(pipe_id):
 @app.route('/pipes/<int:pipe_id>', methods=['DELETE'])
 def delete_pipe(pipe_id):
     pipes_table.remove(Pipes.id == pipe_id)
-    return jsonify({"message": "Pipe deleted"}), 200
+    return jsonify({"message": f"Pipe {pipe_id} deleted"}), 200
 
 @app.route('/pipes/simulate', methods=['POST'])
 def simulate_pipe():

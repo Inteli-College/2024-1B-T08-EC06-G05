@@ -26,3 +26,103 @@ sidebar_position: 1
 &emsp;&emsp;Os testes manuais consistiram na criação manual de requisições para cada uma das rotas existentes na API. Cada uma das requisições foi criada e executada junto à execução local do servidor em Flask com uma taxa de 100% de sucesso (nenhuma das requisições falhou).
 
 &emsp;&emsp;A seguir, há uma sequência de figuras com capturas de tela da testagem das rotas, mostrando qual rota foi testada, o corpo e parâmetros/argumentos passados para as requisições e o que foi retornado por elas, conforme descrito na documentação das rotas.
+
+<p style={{textAlign: 'center'}}>Figura 1 - Teste de método [GET] bem sucedido na rota /post_reboiler_id</p>
+
+![Teste bem sucedido da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_1.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 2 - Teste de método [POST] bem sucedido na rota /post_reboiler_id</p>
+
+![Teste bem sucedido da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_2.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 3 - Teste de método [GET] bem sucedido na rota /pipes</p>
+
+![Teste bem sucedido da rota /pipes](../../../static/img/sprint-4/api/teste_rota_3.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 4 - Teste de método [POST] bem sucedido na rota /pipes</p>
+
+![Teste bem sucedido da rota /pipes](../../../static/img/sprint-4/api/teste_rota_4.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 5 - Teste de método [GET] bem sucedido na rota /pipes/{{pipe_id}}</p>
+
+![Teste bem sucedido da rota /pipes/{{int:pipe_id}}](../../../static/img/sprint-4/api/teste_rota_5.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 6 - Teste de método [POST] bem sucedido na rota /pipes/{{pipe_id}}</p>
+
+![Teste bem sucedido da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_6.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 7 - Teste de método [DELETE] bem sucedido na rota /pipes/{{pipe_id}}</p>
+
+![Teste bem sucedido da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_7.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 8 - Teste de método [POST] bem sucedido na rota /pipes/simulate</p>
+
+![Teste bem sucedido da rota /pipes/simulate](../../../static/img/sprint-4/api/teste_rota_8.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+### Testes automáticos
+
+&emsp;&emsp;Os testes automáticos são testes criados automaticamente por uma funcionalidade de IA existente no Postman. Esses testes são criados com base na funcionalidade esperada de cada rota e levam em conta a testagem de aspectos mais específicos das requisições que são feitas para cada uma delas.
+
+&emsp;&emsp;A seguir, há uma sequência de figuras que apresenta diferentes tipos de testes automáticos realizados com o Postman para cada uma das rotas existentes na API do projeto.
+
+<p style={{textAlign: 'center'}}>Figura 9 - Testes automáticos da rota /post_reboiler_id</p>
+
+![Testes automáticos da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_a1.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 10 - Testes automáticos da rota /pipes</p>
+
+![Testes automáticos da rota /pipes/](../../../static/img/sprint-4/api/teste_rota_a2.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 11 - Testes automáticos da rota /pipes/{{pipe_id}}</p>
+
+![Testes automáticos da rota /pipes/{{pipe_id}}](../../../static/img/sprint-4/api/teste_rota_a3.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+<br/>
+
+<p style={{textAlign: 'center'}}>Figura 12 - Testes automáticos da rota /pipes/simulate</p>
+
+![Testes automáticos da rota /pipes/simulate](../../../static/img/sprint-4/api/teste_rota_a4.png)
+
+<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;Todos os testes automáticos foram bem sucedidos, com exceção dos que consistiram em verificar se as respostas de determinadas requisições iriam retornar o valor da chave `datetime` como um objeto datetime, o que não ocorre na prática. A API foi construída de modo a retornar os dados requisitados por meio do formato `json`, o que faz com que as datas (incluindo ano, mês, dia, hora, minutos e segundos) de registros de canos sejam salvas como `string` e não como um objeto específico do tipo `datetime`. Contudo, isso não afeta a funcionalidade da API ou o uso dela para futura criação de gráficos através de uma plataforma interna da empresa parceira.
