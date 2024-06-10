@@ -29,7 +29,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 1 - Teste de método [GET] bem sucedido na rota /post_reboiler_id</p>
 
-![Teste bem sucedido da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_1.png)
+![Teste bem sucedido da rota /post_reboiler_id](../../../../static/img/sprint-4/api/teste_rota_1.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -37,7 +37,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 2 - Teste de método [POST] bem sucedido na rota /post_reboiler_id</p>
 
-![Teste bem sucedido da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_2.png)
+![Teste bem sucedido da rota /post_reboiler_id](../../../../static/img/sprint-4/api/teste_rota_2.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -45,7 +45,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 3 - Teste de método [GET] bem sucedido na rota /pipes</p>
 
-![Teste bem sucedido da rota /pipes](../../../static/img/sprint-4/api/teste_rota_3.png)
+![Teste bem sucedido da rota /pipes](../../../../static/img/sprint-4/api/teste_rota_3.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -53,7 +53,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 4 - Teste de método [POST] bem sucedido na rota /pipes</p>
 
-![Teste bem sucedido da rota /pipes](../../../static/img/sprint-4/api/teste_rota_4.png)
+![Teste bem sucedido da rota /pipes](../../../../static/img/sprint-4/api/teste_rota_4.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -61,7 +61,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 5 - Teste de método [GET] bem sucedido na rota /pipes/[pipe_id]</p>
 
-![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_5.png)
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../../static/img/sprint-4/api/teste_rota_5.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -69,7 +69,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 6 - Teste de método [POST] bem sucedido na rota /pipes/[pipe_id]</p>
 
-![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_6.png)
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../../static/img/sprint-4/api/teste_rota_6.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -77,7 +77,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 7 - Teste de método [DELETE] bem sucedido na rota /pipes/[pipe_id]</p>
 
-![Teste bem sucedido da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_7.png)
+![Teste bem sucedido da rota /pipes/[pipe_id]](../../../../static/img/sprint-4/api/teste_rota_7.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -85,7 +85,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 8 - Teste de método [POST] bem sucedido na rota /pipes/simulate</p>
 
-![Teste bem sucedido da rota /pipes/simulate](../../../static/img/sprint-4/api/teste_rota_8.png)
+![Teste bem sucedido da rota /pipes/simulate](../../../../static/img/sprint-4/api/teste_rota_8.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -97,7 +97,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 9 - Testes automáticos da rota /post_reboiler_id</p>
 
-![Testes automáticos da rota /post_reboiler_id](../../../static/img/sprint-4/api/teste_rota_a1.png)
+![Testes automáticos da rota /post_reboiler_id](../../../../static/img/sprint-4/api/teste_rota_a1.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -105,7 +105,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 10 - Testes automáticos da rota /pipes</p>
 
-![Testes automáticos da rota /pipes/](../../../static/img/sprint-4/api/teste_rota_a2.png)
+![Testes automáticos da rota /pipes/](../../../../static/img/sprint-4/api/teste_rota_a2.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -113,7 +113,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 11 - Testes automáticos da rota /pipes/[pipe_id]</p>
 
-![Testes automáticos da rota /pipes/[pipe_id]](../../../static/img/sprint-4/api/teste_rota_a3.png)
+![Testes automáticos da rota /pipes/[pipe_id]](../../../../static/img/sprint-4/api/teste_rota_a3.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
@@ -121,7 +121,7 @@ sidebar_position: 3
 
 <p style={{textAlign: 'center'}}>Figura 12 - Testes automáticos da rota /pipes/simulate</p>
 
-![Testes automáticos da rota /pipes/simulate](../../../static/img/sprint-4/api/teste_rota_a4.png)
+![Testes automáticos da rota /pipes/simulate](../../../../static/img/sprint-4/api/teste_rota_a4.png)
 
 <p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
 
