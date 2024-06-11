@@ -9,7 +9,6 @@ import MoveBackward from '../components/movimentacao/tras';
 import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning';
 import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
-import EmergencyPopUp from '../components/emergencyPopUp/emergencyPopUp';
 import { Alert } from "@material-tailwind/react";
 
 export function AlertDefault() {
