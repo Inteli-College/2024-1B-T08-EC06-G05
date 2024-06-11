@@ -16,8 +16,8 @@ function TeleopScreen() {
     <TurtleBotController>
       {({ movementhandlers, collision }) => (
         <>
-          {collision && <div className="alert absolute top-1 items-center justify-center"> <ObstaclePopUp /> </div>}
-          <div className='relative' style={{width: "1280px", height: "720px"}}>
+          {collision && <div className="alert">OBSTÁCULO DETECTADO!</div>}
+          <div className='relative top-0' style={{width: "1280px", height: "720px"}}>
           <VideoStream />
           <div className='absolute top-16 left-32'>
           <TurnoffButton movementhandlers={movementhandlers} />

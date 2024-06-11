@@ -27,14 +27,14 @@ const VideoStream = () => {
       });
     }
 
-    // Subscribe to the video frames topic
+    // Inscrever-se no tópico de frames de vídeo
     const videoTopic = new ROSLIB.Topic({
       ros: ros.current,
       name: '/video_frames',
       messageType: 'sensor_msgs/CompressedImage'
     });
 
-    // Subscribe to the latency topic
+    // Inscrever-se no tópico de latência
     const latencyTopic = new ROSLIB.Topic({
       ros: ros.current,
       name: '/latency',
@@ -42,25 +42,29 @@ const VideoStream = () => {
     });
 
     latencyTopic.subscribe((message) => {
-      const sentTime = new Date(message.data);
-      setSentTime(sentTime);
+      const receivedSentTime = new Date(message.data);
+      setSentTime(receivedSentTime);
     });
 
     videoTopic.subscribe((message) => {
       if (videoRef.current) {
         videoRef.current.src = 'data:image/jpeg;base64,' + message.data;
       }
-      
+
       if (sentTime) {
         const currentTime = new Date();
-        const latency = currentTime - sentTime; // latency in milliseconds
-        setLatency(latency);
-        // Reset sentTime to null to avoid using the same sentTime for multiple images
+        const calculatedLatency = currentTime - sentTime; // latência em milissegundos
+        setLatency(calculatedLatency);
+        console.log('Current Time:', currentTime);
+        console.log('Sent Time:', sentTime);
+        console.log('Calculated Latency:', calculatedLatency);
+
+        // Resetar sentTime para null para evitar o uso do mesmo sentTime para múltiplas imagens
         setSentTime(null);
       }
     });
 
-    // Clean up the subscriptions when the component unmounts
+    // Limpar as inscrições quando o componente desmontar
     return () => {
       videoTopic.unsubscribe();
       latencyTopic.unsubscribe();
@@ -73,9 +77,9 @@ const VideoStream = () => {
         id="videoStream"
         ref={videoRef}
         alt="Video Stream"
-        style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50, marginTop: 0 }}
+        style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50 }}
       />
-      <div className="flex mt-4">
+      <div className="flex">
         <div className="h-5vh p-1 w-33 bg-opacity-70 bg-orange-400 flex items-center font-bold text-black text-xl font-sans absolute right-0">
           Latency: {latency} ms
         </div>
