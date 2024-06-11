@@ -41,28 +41,28 @@ const VideoStream = () => {
       messageType: 'std_msgs/String'
     });
 
-latencyTopic.subscribe((message) => {
-const receivedSentTime = new Date(message.data);
-setSentTime(receivedSentTime);
-});
+        latencyTopic.subscribe((message) => {
+            const receivedSentTime = new Date(message.data);
+            setSentTime(receivedSentTime);
+        });
 
-videoTopic.subscribe((message) => {
-if (videoRef.current) {
-videoRef.current.src = 'data:image/jpeg;base64,' + message.data;
-}
+        videoTopic.subscribe((message) => {
+            if (videoRef.current) {
+                videoRef.current.src = 'data:image/jpeg;base64,' + message.data;
+            }
 
-if (sentTime) {
-const currentTime = new Date();
-const calculatedLatency = currentTime - sentTime; // latência em milissegundos
-setLatency(calculatedLatency);
-console.log('Current Time:', currentTime);
-console.log('Sent Time:', sentTime);
-console.log('Calculated Latency:', calculatedLatency);
+            if (sentTime) {
+                const currentTime = new Date();
+                const calculatedLatency = currentTime - sentTime; // latência em milissegundos
+                setLatency(calculatedLatency);
+                console.log('Current Time:', currentTime);
+                console.log('Sent Time:', sentTime);
+                console.log('Calculated Latency:', calculatedLatency);
 
-// Resetar sentTime para null para evitar o uso do mesmo sentTime para múltiplas imagens
-setSentTime(null);
-}
-});
+                // Resetar sentTime para null para evitar o uso do mesmo sentTime para múltiplas imagens
+                setSentTime(null);
+            }
+        });
 
     // Limpar as inscrições quando o componente desmontar
     return () => {
@@ -71,21 +71,21 @@ setSentTime(null);
     };
   }, [sentTime]);
 
-return (
-<div>
-<img
-id="videoStream"
-ref={videoRef}
-alt="Video Stream"
-style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50 }}
-/>
-<div className="flex">
-<div className="h-5vh p-1 w-33 bg-opacity-70 bg-orange-400 flex items-center font-bold text-black text-xl font-sans absolute right-0">
-Latency: {latency} ms
-</div>
-</div>
-</div>
-);
+    return (
+        <div>
+            <img
+                id="videoStream"
+                ref={videoRef}
+                alt="Video Stream"
+                style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50 }}
+            />
+            <div className="flex">
+                <div className="h-5vh p-1 w-33 bg-opacity-70 bg-orange-400 flex items-center font-bold text-black text-xl font-sans absolute right-0">
+                    Latency: {latency} ms
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default VideoStream;
