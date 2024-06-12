@@ -6,8 +6,8 @@ import MoveRight from '../components/movimentacao/direita';
 import MoveLeft from '../components/movimentacao/esquerda';
 import MoveForward from '../components/movimentacao/frente';
 import MoveBackward from '../components/movimentacao/tras';
-import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning';
+import Modal from '../components/OverlayTurnOff/modal';  // Adjust the path as needed
 import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
 import { Alert } from "@material-tailwind/react";
 
@@ -26,6 +26,7 @@ function TeleopScreen() {
     setShowAlert(true);
   };
 
+
   return (
     <TurtleBotController>
       {({ movementhandlers, collision }) => (
@@ -38,7 +39,7 @@ function TeleopScreen() {
           <div className='relative' style={{ width: "1280px", height: "720px" }}>
             <VideoStream />
             <div className='absolute top-16 left-32'>
-              <TurnoffButton movementhandlers={movementhandlers} />
+            <Modal movementhandlers={movementhandlers} handleAlert={handleAlert} />
             </div>
             <div className='absolute bottom-64 right-64'>
               <WarningButton movementhandlers={movementhandlers} handleAlert={handleAlert} />
