@@ -1,10 +1,10 @@
 // src/components/MoveRight.js
 import React from 'react';
 
-const MoveRight = ({ movementhandlers, collision }) => {
+const MoveRight = ({ movementhandlers }) => {
   const handleMouseDown = () => {
     console.log('Right button pressed');
-    if (movementhandlers && movementhandlers.right && !collision) {
+    if (movementhandlers && movementhandlers.right) {
       movementhandlers.right();
     }
   };
@@ -21,7 +21,6 @@ const MoveRight = ({ movementhandlers, collision }) => {
       onMouseUp={handleMouseUp}
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseUp}
-      disabled={collision}
       className="bg-white border border-black rounded p-2 active:bg-slate-400"
     >
       <svg width="40" height="40" viewBox="0 0 20 20" fill="black">

@@ -6,7 +6,7 @@ const TurtleBotController = ({ children }) => {
   const ros = useRef(null);
   const cmdVel = useRef(null);
   const [lidarData, setLidarData] = useState('none');
-  const [collision, setCollision] = useState(false);
+  const [collision, setCollision] = useState(false)
 
   useEffect(() => {
     // Connect to the ROS bridge server
@@ -51,12 +51,13 @@ const TurtleBotController = ({ children }) => {
 
   const checkForObstacles = (data) => {
     const ranges = data.ranges;
-    const minDistance = 0.2; // Define a distância mínima segura
+    const minDistance = 0.3; // Define a distância mínima segura
 
     // Filtrar leituras inválidas
     const validRanges = ranges.filter(range => range > 0 && range < Infinity);
 
     if (validRanges.length === 0) {
+      setLidarData('none');
       return; // Sem leituras válidas, sair da função
     }
 
@@ -72,22 +73,27 @@ const TurtleBotController = ({ children }) => {
       if (valorA < minIndex && minIndex < valorB) {
         if (lidarData !== 'back') {
           console.log('Obstáculo detectado atrás');
+          handleStop()
+          setCollision(true)
           setLidarData('back');
           broadcastObstacle('back');
         }
       } else {
         if (lidarData !== 'front') {
           console.log('Obstáculo detectado à frente');
+          handleStop()
+          setCollision(true)
           setLidarData('front');
           broadcastObstacle('front');
+          
         }
       }
     } else {
-      if (lidarData !== 'none') {
         console.log('Nenhum obstáculo detectado');
         setLidarData('none');
+        setCollision(false);
         broadcastObstacle('none');
-      }
+      
     }
   };
 
@@ -99,10 +105,10 @@ const TurtleBotController = ({ children }) => {
 
   // Function to handle movements
   const move = (linear, angular) => {
-    if (collision && linear > 0) {
+    if ((lidarData === 'front' && linear > 0) || (lidarData === 'back' && linear < 0)) {
       console.log('Collision detected! Stopping movement.');
       handleStop();
-      linear = 0; // Stop forward movement if collision is detected
+      return; // Não enviar comandos de movimento na direção do obstáculo
     }
 
     console.log(`Moving: linear=${linear}, angular=${angular}`);
@@ -136,10 +142,10 @@ const TurtleBotController = ({ children }) => {
   return (
     <>
       {typeof children === 'function'
-        ? children({ movementhandlers, collision })
+        ? children({ movementhandlers, lidarData, collision })
         : React.Children.map(children, (child) =>
             React.isValidElement(child)
-              ? React.cloneElement(child, { movementhandlers, collision })
+              ? React.cloneElement(child, { movementhandlers, lidarData, collision })
               : child
           )}
     </>
