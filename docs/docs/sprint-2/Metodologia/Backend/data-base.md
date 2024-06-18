@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Banco de Dados em TinyDB
 
-&emsp;&emsp;Nesta seção, é explicado como o banco de dados TinyDB foi desenvolvido e é planejado utilizar essa base de dados nas próximas sprints de desenvolvimento. É importante mencionar que o TinyDB é uma base de dados NoSQL, não relacional, e que utiliza arquivos JSON para armazenar informações. Banco de dados foi escolhido pela simplicidade e fácil configuração, além de ser um projeto de prova de conceito, ou seja, um projeto de pequeno porte que não requer grandes armazenamentos de dados. No momento, é planejado utilizar apenas o arquivo `pipes.json`, mas pode surgir a necessidade de criar novos arquivos JSON para armazenar os dados devido à natureza não relacional do TinyDB. O arquivo `pipes.json` pode ser encontrado na pasta src/data-base.
+&emsp;&emsp;Nesta seção, é explicado como o banco de dados TinyDB foi desenvolvido e é planejado utilizar essa base de dados nas próximas sprints de desenvolvimento. É importante mencionar que o TinyDB é uma base de dados NoSQL, não relacional, e que utiliza arquivos JSON para armazenar informações. A escolha de um banco de dados não relacional se deve a fácil configuração, além de ser um projeto de prova de conceito, ou seja, um projeto de pequeno porte que não requer grandes armazenamentos de dados. No momento, é planejado utilizar apenas o arquivo `pipes.json`, mas pode surgir a necessidade de criar novos arquivos JSON para armazenar os dados devido à natureza não relacional do TinyDB. O arquivo `pipes.json` pode ser encontrado na pasta src/data-base.
 
 ## Arquivos
 
@@ -19,7 +19,7 @@ sidebar_position: 2
 
 O formato dos dados de um cano é o seguinte:
 
-```
+```bash
 {
     "id": <int>,
     "status": <boolean>,
