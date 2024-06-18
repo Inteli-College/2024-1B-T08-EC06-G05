@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ROSLIB from 'roslib';
 
-const VideoStream = () => {
+const VideoStream = ({ aiButtonState }) => {
   const videoRef = useRef(null);
   const [latency, setLatency] = useState(0);
   const [sentTime, setSentTime] = useState(null);
@@ -27,6 +27,7 @@ const VideoStream = () => {
       });
     }
 
+    
     // Subscribe to the video frames topic
     const videoTopic = new ROSLIB.Topic({
       ros: ros.current,
@@ -66,6 +67,13 @@ const VideoStream = () => {
       latencyTopic.unsubscribe();
     };
   }, [sentTime]);
+
+  useEffect(() => {
+    if (aiButtonState) {
+      console.log('oieeeeeeeeee')
+      // logica pra pegar frame
+    }
+  })
 
   return (
     <div>
