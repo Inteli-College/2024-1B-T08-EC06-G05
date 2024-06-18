@@ -1,3 +1,8 @@
+---
+title: Melhoria do sistema de segurança
+sidebar_position: 2
+---
+
 # Documentação do Sistema de Segurança - Versão Atualizada
 
 ## Introdução
