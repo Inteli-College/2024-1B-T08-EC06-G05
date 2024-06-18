@@ -55,7 +55,7 @@ function TeleopScreen() {
 
   return (
     <TurtleBotController>
-      {({ movementhandlers, collision }) => (
+      {({ movementhandlers, lidarData, collision }) => (
         <>
           {collision && (
             <div className="alert absolute top-1 items-center justify-center">
@@ -75,15 +75,15 @@ function TeleopScreen() {
               {showBackendAlert && <BackendAlert message={backendAlertMessage} />}
             </div>
             <div className='absolute bottom-32 right-32'>
-              <AiButton />
+            <AiButton />
             </div>
             <div className='absolute bottom-32 left-28'>
-              <div className='absolute bottom-16 left-14'><MoveForward movementhandlers={movementhandlers} collision={collision} /></div>
+              <div className='absolute bottom-16 left-14'><MoveForward movementhandlers={movementhandlers} lidarData={lidarData} /></div>
               <div className='flex'>
-                <div className='absolute bottom-1'><MoveLeft movementhandlers={movementhandlers} collision={collision} /></div>
-                <div className='absolute bottom-1 left-28'><MoveRight movementhandlers={movementhandlers} collision={collision} /></div>
+              <div className='absolute bottom-1'><MoveLeft movementhandlers={movementhandlers} /></div>
+              <div className='absolute bottom-1 left-28'><MoveRight movementhandlers={movementhandlers} /></div>
               </div>
-              <div className='absolute left-14'><MoveBackward movementhandlers={movementhandlers} collision={collision} /></div>
+              <div className='absolute left-14'><MoveBackward movementhandlers={movementhandlers} lidarData={lidarData} /></div>
             </div>
           </div>
         </>
