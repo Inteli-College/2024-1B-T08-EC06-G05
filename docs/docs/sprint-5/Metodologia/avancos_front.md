@@ -13,11 +13,17 @@ sidebar_position: 3
 
 &emsp;&emsp;Foi relatado nos testes que não era intuitivo algumas páginas do sistema conterem rolagem vertical, então com isso em mente foi desenvolvido outra barra de rolagem a fim de deixar mais intuitiva a navegabilidade no site. As figuras abaixo demonstram a barra de rolagem antes e depois da mudança (destacadas por um quadrado vermelho).
 
-<p style={{textAlign: 'center'}}>Figura 1 - Barra de rolagem depois da mudança</p>
+<p style={{textAlign: 'center'}}>Figura 1 - Barra de rolagem antes da mudança</p>
 
-![scroolbar atualizada](../../../static/img/sprint-5/scrool_doc.png)
+![scroolbar atualizada](../../../static/img/sprint-5/scroll_antigo.png)
 
-<p style={{textAlign: 'center'}}>Fonte:Elaborado pela equipe SugarZ3ro</p>
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+<p style={{textAlign: 'center'}}>Figura 2 - Barra de rolagem depois da mudança</p>
+
+![scroolbar atualizada](../../../static/img/sprint-5/scroll_doc.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 ## Aplicação em versão mobile para a tela TeleopScreen
 
@@ -26,6 +32,18 @@ sidebar_position: 3
 ## Mehora no feedback
 
 &emsp;&emsp;Nos testes realizados foram relatados problemas de falta de feedback em algumas features presentes, como nos botões de desligar e de parada de emergência. Com base em conceitos de UX que visam melhorar a usabilidade, foram adicionados pop-ups nos dois botões anteriormente mencionados. As figuras abaixo demonstram os pop-ups criados.
+
+<p style={{textAlign: 'center'}}>Figura 4 - pop-up de desligar</p>
+
+![scroolbar atualizada](../../../static/img/sprint-5/popup_desligar.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+<p style={{textAlign: 'center'}}>Figura 5 - pop-up do botão de emergência</p>
+
+![scroolbar atualizada](../../../static/img/sprint-5/popup_emergencia.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 ## Resposta da IA
 
