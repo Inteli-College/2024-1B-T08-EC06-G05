@@ -19,7 +19,7 @@ sidebar_position: 2
 
 O formato dos dados de um cano é o seguinte:
 
-```bash
+```json
 {
     "id": <int>,
     "status": <boolean>,
