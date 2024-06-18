@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MoveBackward = ({ movementhandlers }) => {
+const MoveBackward = ({ movementhandlers, lidarData }) => {
   const handleMouseDown = () => {
     console.log('Backward button pressed');
-    if (movementhandlers && movementhandlers.backward) {
+    if (movementhandlers && movementhandlers.backward && lidarData !== 'back') {
       movementhandlers.backward();
     }
   };
@@ -20,6 +20,7 @@ const MoveBackward = ({ movementhandlers }) => {
       onMouseUp={handleMouseUp}
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseUp}
+      disabled={lidarData == 'back'}
       className="bg-white border border-black rounded p-2 active:bg-slate-400"
     >
       <svg width="40" height="40" viewBox="0 0 20 20" fill="black" style={{ transform: 'rotate(90deg)' }}>
