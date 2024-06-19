@@ -1,6 +1,6 @@
 ---
 title: Instalação e execução
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Instalação e execução

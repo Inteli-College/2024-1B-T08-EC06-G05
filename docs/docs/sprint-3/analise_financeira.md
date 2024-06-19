@@ -1,11 +1,12 @@
 ---
 title: Análise Financeira do Projeto
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Análise Financeira da Prova de Conceito (PoC)
 
 ## Introdução
+
 &emsp;&emsp;Esta análise financeira detalha os custos e considerações econômicas para a Prova de Conceito (PoC) do robô customizado para inspeção de tubulações (reboilers). A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda.
 
 ## Custos de Desenvolvimento da PoC
@@ -70,6 +71,7 @@ sidebar_position: 3
 # Análise Financeira do Produto Final
 
 ## Introdução
+
 &emsp;&emsp;Esta análise financeira detalha os custos e considerações econômicas para o desenvolvimento e operação de um robô customizado para inspeção de tubulações (reboilers) em ambientes de alta temperatura, com um contrato de 12 meses. A análise cobre custos diretos e indiretos, possíveis reduções de custos, e estabelece um preço mínimo aceitável para venda. O objetivo é fornecer uma visão clara e detalhada dos custos envolvidos no projeto final.
 
 ## Custos de Desenvolvimento do Produto Final

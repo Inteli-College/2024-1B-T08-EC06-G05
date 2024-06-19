@@ -9,7 +9,7 @@ sidebar_position: 2
 
 <p style={{textAlign: 'center'}}>Tabela 1 - Testes usando o modelo SUS</p>
 
- Código do Teste | Título      | Detalhes   | Requisitos Testados |
+ **Código do Teste** | **Título**      | **Detalhes**   | **Requisitos Testados** |
 |-----------------|-------------|------------|---------------------|
 | T-01           | Mover o robô | A pessoa que testará deve entrar na aplicação WEB e conseguir mover o robô, sem sentir que suas ações estejam demorando para ser feita pelo robô e sentir que é intuitivo e simples de usar. | RF-01, RNF-02 , RNF-03, RNF-07, RNF-05      |
 | T-02           | Câmera para locomoção | A pessoa que testaŕa deve entrar na aplicação WEB e conseguir se locomover e ver onde o robô está indo pela cẫmera, sem sentir que está demorando para atualizar a imagem ou que a imagem esteja dessincronizada com  a realidade | RF-05, RNF-02, RNF-05, RNF-06, RNF-07          |
@@ -23,7 +23,7 @@ sidebar_position: 2
 
 <p style={{textAlign: 'center'}}>Tabela 2 - Testes de validação do tempo de funcionamento e resposta</p>
 
-| Código do Teste | Título      | Detalhes   | Requisitos Testados |
+| **Código do Teste** | **Título**      | **Detalhes**   | **Requisitos Testados** |
 |-----------------|-------------|------------|---------------------|
 | T-04           | Duração da bateria do robô | Por meio de uso contínuo, deve ser verificado se a bateria dura pelo menos 9 horas e consegue ser carregada em menos de 8 horas. Note que, para esse teste ser efetivo, o robô deve estar em constante uso durante o teste. Somente assim será verificado a durabilidade real da bateria | RF-01, RNF-01, RNF-05       |
 | T-05           | Tempo de resposta | Deve ser conduzido um teste por no mínimo 30 minutos para verificar o tempo de resposta (máximo de 200ms) e se a velocidade se mantém constante | RF-01, RF-05, RNF-02, RNF-03, RNF-05          |

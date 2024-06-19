@@ -89,3 +89,18 @@ Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-col
 - Aprimoramento do sistema de segurança
 - Interface de usuário gráfica (frontend)
 - Integração do frontend com a movimentação do robô e com o sistema de segurança
+
+### Sprint 4
+
+- Intregração do frontend com a câmera
+- Melhora no sistema de segurança
+- Revisão do banco de dados
+- Criação do backend
+- Realização e documentação de testes
+
+### Sprint 5
+
+- Melhoras no frontend
+- Integração do frontend com a Inteligência Artificial
+- Melhorias finais no sistema de segurança
+- Revisão geral da documentação
