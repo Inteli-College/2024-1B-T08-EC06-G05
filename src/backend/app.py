@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from tinydb import TinyDB, Query
 import os
 import random
@@ -12,14 +12,15 @@ db_path = os.path.join(os.path.dirname(__file__), 'pipes.json')
 db = TinyDB(db_path)
 pipes_table = db.table('pipes')
 Pipes = Query()
+imgStringBase64 = None
 
 updated_data = {
-        'id': None,
-        'status': None,
-        'id-boiler': None,
-        'dirty-grade': None,
-        'datetime': None
-    }
+    'id': None,
+    'status': None,
+    'id-boiler': None,
+    'dirty-grade': None,
+    'datetime': None
+}
 
 # rota apenas para receber o ID do reboiler atual inserido pelo usuário no frontend
 @app.route('/post_reboiler_id', methods=['POST', 'GET'])
@@ -29,6 +30,22 @@ def post_reboiler_id():
     updated_data['id-boiler'] = reboiler_id
     print(f"Id recebido para o reboiler atual: {updated_data['id-boiler']}")
     return jsonify({"reboilerID": reboiler_id}), 200
+
+# rota que recebe o frame atual capturado pelo usuário através do botão de IA
+# o frame chega na forma de string, convertido em base 64
+@app.route('/post_img_string', methods=['POST', 'GET'])
+@cross_origin()  # Adiciona CORS para esta rota específica
+def post_img_string():
+
+    global imgStringBase64
+
+    if request.method == 'POST':
+        data = request.get_json()
+        imgStringBase64 = data.get('currentFrame')
+        print(f"oiiiiiiiiiiiieee\n    {imgStringBase64}")
+        return jsonify({"message": "Imagem recebida com sucesso"}), 200
+    
+    return jsonify({"imgStringBase64": imgStringBase64})
 
 @app.route('/pipes', methods=['GET'])
 def get_pipes():
