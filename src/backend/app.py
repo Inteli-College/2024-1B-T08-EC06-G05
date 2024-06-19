@@ -5,6 +5,11 @@ import os
 import random
 from datetime import datetime
 
+import cv2
+import base64 
+import numpy as np
+from ultralytics import YOLO
+
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para todas as rotas
 
@@ -13,6 +18,7 @@ db = TinyDB(db_path)
 pipes_table = db.table('pipes')
 Pipes = Query()
 imgStringBase64 = None
+model = YOLO('./best.pt')
 
 updated_data = {
         'id': None,
@@ -42,7 +48,22 @@ def post_img_string():
     if request.method == 'POST':
         data = request.get_json()
         imgStringBase64 = data.get('currentFrame')
-        print(f"oiiiiiiiiiiiieee\n    {imgStringBase64}")
+        print(f"imagem convertida")
+
+        # converte a string da img em base64 p/ variável legível pro opencv
+        decoded_data = base64.b64decode(imgStringBase64)
+        np_data = np.fromstring(decoded_data,np.uint8)
+        img = cv2.imdecode(np_data,cv2.IMREAD_COLOR)
+        results = model(img)
+
+        for result in results:
+            print(result.boxes.cls)
+            img = result.plot()
+
+        nome_imagem = f"img{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}.jpg"
+
+        cv2.imwrite(nome_imagem, img)
+
         return jsonify({"message": "Imagem recebida com sucesso"}), 200
 
     return jsonify({"imgStringBase64": imgStringBase64})
