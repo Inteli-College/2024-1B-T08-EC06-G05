@@ -109,7 +109,7 @@ const HelpScreen = () => {
 
 ## Tela de Teleoperação
 
-&emsp;&emsp;A tela de teleoperação permite que o usuário controle a movimentação do robô remotamente. Nela, há a transmissão da imagem capturada pela câmera acoplada ao Turtlebot, o que permite uma melhor orientação de espaço ao usuário enquanto controla o movimento do robô pelos botões com setas indicativas de direção na parte inferior da tela. Vale citar que a movimentação por meio desses botões conta com **sistema de segurança**, cujo detalhamento pode ser visto na [respectiva seção da documentação](../backend/sistema-de-seguranca.md).
+&emsp;&emsp;A tela de teleoperação permite que o usuário controle a movimentação do robô remotamente. Nela, há a transmissão da imagem capturada pela câmera acoplada ao Turtlebot, o que permite uma melhor orientação de espaço ao usuário enquanto controla o movimento do robô pelos botões com setas indicativas de direção na parte inferior da tela. Vale citar que a movimentação por meio desses botões conta com **sistema de segurança**, cujo detalhamento pode ser visto na [respectiva seção da documentação](./movimentacao/seguranca.md).
 
 &emsp;&emsp;Além disso, há um botão de desligamento de emergência ao lado dos botões de movimentação e um botão que ativa funcionalidades de IA na parte superior da tela. Esse último ainda não se apresenta funcional, uma vez que sua implementação completa se dará na sprint 4 de desenvolvimento.
 
