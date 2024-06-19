@@ -1,13 +1,13 @@
 ---
 title: Interface
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Transformação do Wireframe em Interface
 
 ## Introdução
 
-&emsp;&emsp;Durante a terceira sprint do projeto, a equipe SugarZ3ro concentrou seus esforços no desenvolvimento da interface gráfica. Conforme descrito na proposta inicial de arquitetura do projeto, a equipe utilizou React para construir a interface do usuário, permitindo uma interação intuitiva e eficiente com o sistema. A estilização foi realizada utilizando Tailwind CSS, que oferece uma abordagem utilitária para a aplicação de estilos, facilitando a manutenção e escalabilidade do projeto.
+&emsp;&emsp;Durante o projeto, a equipe SugarZ3ro concentrou seus esforços no desenvolvimento da interface gráfica. Conforme descrito na proposta inicial de arquitetura do projeto, a equipe utilizou React para construir a interface do usuário, permitindo uma interação intuitiva e eficiente com o sistema. A estilização foi realizada utilizando Tailwind CSS, que oferece uma abordagem utilitária para a aplicação de estilos, facilitando a manutenção e escalabilidade do projeto. Nota-se que toda a interface foi feita responsiva, pensando para uso de celulares, como iphone 14, Sansung Galaxy S23 e OnePlus 10 Pro, com tamanho de tela 1280x720 em modo paisagem.
 
 ## Tecnologias Utilizadas
 
@@ -28,7 +28,7 @@ sidebar_position: 2
 <p style={{textAlign: 'center'}}>Figura 1 - Tela de início</p>
 
 <div style={{textAlign: 'center'}}>
-    ![Tela de início](../../../../static/img/sprint-3/telainicial.png)
+    ![Tela de início](../../../static/img/sprint-3/telainicial.png)
 </div>
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
@@ -36,21 +36,37 @@ sidebar_position: 2
 ### Implementação em React
 
 ```jsx
-const MainMenu = () => {
+function MainMenu() {
+  const navigate = useNavigate();
+
+  const infoPage = () => {
+    navigate("/helpScreen");
+  };
+
+  const handleStartClick = () => {
+    const reboilerElement = document.getElementById('reboiler-input');
+    if (reboilerElement) {
+      reboilerElement.style.display = 'block';
+    }
+  };
+
   return (
     <div className="bg-black h-screen flex flex-col items-center justify-center">
       <div className="mb-8">
         <img src={SugarZ3roLogo} alt="Logo SugarZ3ro" />
       </div>
-      <div className='flex flex-col items-center space-y-4 md:flex-row md:space-x-10 md:mt-28'>
-        <button className="bg-white text-black py-3 px-10 rounded-full font-bold hover:bg-gray-400 mt-2 md:mt-0">Start</button>
+      <div className='flex flex-col items-center space-y-4 md:flex-row md:space-x-10 md:mt-10' id='pop_up_div'>
+        <button onClick={handleStartClick} className="bg-white text-black py-3 px-10 rounded-full font-bold hover:bg-gray-400 mt-2 md:mt-0">Start</button>
         <button className="bg-transparent text-white border-none hover:text-slate-400 mt-4 md:mt-0" style={{ borderRadius: '100%', borderWidth: '2px'}}>
-            <FontAwesomeIcon icon={faCircleInfo} style={{ fontSize: '2.5rem'}}/>
+          <FontAwesomeIcon className='text-4xl mb-3' onClick={infoPage} icon={faCircleInfo} />
         </button>
+      </div>
+      <div id="reboiler-input" style={{ display: 'none' }}>
+        <ReboilerInput />
       </div>
     </div>
   );
-};
+}
 
 export default MainMenu;
 ```
@@ -59,23 +75,15 @@ export default MainMenu;
 
 &emsp;&emsp;A tela de informações descreve a função de cada um dos componentes existentes na tela de teleoperação. Cada um dos componentes em questão são exibidos em sequência vertical, havendo a possibilidade de navegação do usuário pela barra de rolagem existente na página — implementação pensada com base na escalabilidade para interfaces mobile. Por meio dessa tela, o usuário pode compreender como teleoperar o robô com a aplicação web.
 
-<p style={{textAlign: 'center'}}>Figura 2 - Tela de informações (topo)</p>
+<p style={{textAlign: 'center'}}>Figura 2 - Tela de informações</p>
 
 <div style={{textAlign: 'center'}}>
-    ![Tela de informações (topo)](../../../../static/img/sprint-3/teladeinformacoes1.png)
+    ![Tela de informações (topo)](../../../static/img/sprint-5/info.png)
 </div>
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 <br/><br/>
-
-<p style={{textAlign: 'center'}}>Figura 3 - Tela de informações (baixo)</p>
-
-<div style={{textAlign: 'center'}}>
-    ![Tela de informações (baixo)](../../../../static/img/sprint-3/teladeinformacoes2.png)
-</div>
-
-<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 ### Implementação em React
 
@@ -108,7 +116,7 @@ const HelpScreen = () => {
 <p style={{textAlign: 'center'}}>Figura 4 - Tela de teleoperação</p>
 
 <div style={{textAlign: 'center'}}>
-    ![Tela de teleoperação](../../../../static/img/sprint-3/teladecontrole.png)
+    ![Tela de teleoperação](../../../static/img/sprint-3/teladecontrole.png)
 </div>
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
