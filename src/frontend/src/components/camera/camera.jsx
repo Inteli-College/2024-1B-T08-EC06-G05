@@ -5,15 +5,13 @@ const VideoStream = ({ aiButtonState }) => {
   const videoRef = useRef(null);
   const [latency, setLatency] = useState(0);
   const [sentTime, setSentTime] = useState(null);
-  const [currentFrame, setCurrentFrame] = useState(null);
-  const [hasSentImageString, setHasSentImageString] = useState(false);
   const ros = useRef(null); // Use ref to store ros instance
 
   useEffect(() => {
     // Create and connect to the ROS server if not already connected
     if (!ros.current) {
       ros.current = new ROSLIB.Ros({
-        url: 'ws://localhost:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+        url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
       });
 
       ros.current.on('connection', () => {
@@ -29,6 +27,7 @@ const VideoStream = ({ aiButtonState }) => {
       });
     }
 
+    
     // Subscribe to the video frames topic
     const videoTopic = new ROSLIB.Topic({
       ros: ros.current,
@@ -51,9 +50,8 @@ const VideoStream = ({ aiButtonState }) => {
     videoTopic.subscribe((message) => {
       if (videoRef.current) {
         videoRef.current.src = 'data:image/jpeg;base64,' + message.data;
-        setCurrentFrame(message.data); // Update currentFrame using useState
       }
-
+      
       if (sentTime) {
         const currentTime = new Date();
         const latency = currentTime - sentTime; // latency in milliseconds
@@ -62,34 +60,20 @@ const VideoStream = ({ aiButtonState }) => {
         setSentTime(null);
       }
     });
-    
+
     // Clean up the subscriptions when the component unmounts
     return () => {
       videoTopic.unsubscribe();
       latencyTopic.unsubscribe();
     };
   }, [sentTime]);
-  
+
   useEffect(() => {
-    if (aiButtonState && currentFrame && !hasSentImageString) {
-      console.log('botao apertado'); // Log the currentFrame
-
-      fetch('http://127.0.0.1:5000/post_img_string', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ currentFrame: currentFrame }),
-      })
-
-      setHasSentImageString(true); // Mark that the frame has been logged
-
-    } else if (!aiButtonState) {
-
-      setHasSentImageString(false); // Reset the flag when the button is not pressed
-      
+    if (aiButtonState) {
+      console.log('oieeeeeeeeee')
+      // logica pra pegar frame
     }
-  }, [aiButtonState, currentFrame, hasSentImageString]);
+  })
 
   return (
     <div>

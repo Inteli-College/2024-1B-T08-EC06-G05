@@ -11,7 +11,7 @@ const TurtleBotController = ({ children }) => {
   useEffect(() => {
     // Connect to the ROS bridge server
     ros.current = new ROSLIB.Ros({
-      url: 'ws://localhost:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+      url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
     });
 
     ros.current.on('connection', () => {
