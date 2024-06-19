@@ -19,7 +19,7 @@ sidebar_position: 2
 
 &emsp;&emsp;Como dito anteriormente, esse componente foi criado para controlar a comunicação da movimentação do frontend para o robô. Assim, toda vez que a página é carregada, é estabelecida a comunicação com o turtlebot e os comandos já podem ser usados. Note que essa comunicação está sendo feita por rede. Sendo assim, o script usa o IP do robô dado pela rede para se comunicar com o robô. Portanto, no script abaixo (retirado do componente rosbridge_movement, na constante TurtleBotController) deve ser alterada a URL para o IP do robô na rede que está presente. Para mais informações sobre como achar o IP do robô, [clique aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G05/sprint-3/instalacao). Esse componente está encarregado de coletar todas as informações vindas dos botões e processar elas, assim mandando para o robô pelo tópico `/cmd_vel`. Para isso funcionar, esse componente leva para os componentes filhos o elemento `movementhandlers` que identifica a mensagem que os botões enviam e transforma ela no formato ideal de envio para o robô e publica essa informação no tópico, assim fazendo o robô se movimentar. Note que esse componente não é visível, é usado somente para coletar as informações dos botões e enviar elas ao turtlebot3.
 
-```
+```bash
     ros.current = new ROSLIB.Ros({
       url: 'ws://10.128.0.30:9090'
     });
@@ -27,7 +27,7 @@ sidebar_position: 2
 
 ## Botões
 
-Todos os botões foram construídos com o intuito de entender se o usuário está mantendo pressionado o botão ou não, e criado para funcionar tanto para celular, quanto para computador. O projeto é mobile-first, por isso foi implementado para funcionar em celular, e só foi implementado para funcionar por computador por questão de comodidade dos testes no período de desenvolvimento. Note que as funções que os botões enviam são mandadas para o componente rosbridge_movement, que processa as funções e re-estrutura a informação para mandar para o turtlebot3. Esse sistema funciona por meio do conceito de filhos do react, sendo o componente rosbridge_movement um componente pai dos demais botões.
+&emsp;&emsp;Todos os botões foram construídos com o intuito de entender se o usuário está mantendo pressionado o botão ou não, e criado para funcionar tanto para celular, quanto para computador. O projeto é mobile-first, por isso foi implementado para funcionar em celular, e só foi implementado para funcionar por computador por questão de comodidade dos testes no período de desenvolvimento. Note que as funções que os botões enviam são mandadas para o componente rosbridge_movement, que processa as funções e re-estrutura a informação para mandar para o turtlebot3. Esse sistema funciona por meio do conceito de filhos do react, sendo o componente rosbridge_movement um componente pai dos demais botões.
 
 ### Botões direcionais
 

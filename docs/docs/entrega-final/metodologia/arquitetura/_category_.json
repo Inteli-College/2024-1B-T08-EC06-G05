@@ -1,0 +1,8 @@
+{
+    "label": "Arquitetura da solução",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Aqui fica a documentação de tudo que foi produzido no projeto em relação a arquitetura e a definição de requisitos funcionais e não funcionais."
+    }
+  }

@@ -1,6 +1,6 @@
 ---
 title: Testes de Usabilidade
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Documentação de Testes do Projeto Turtlebot
