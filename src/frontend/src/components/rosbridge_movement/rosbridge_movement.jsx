@@ -5,8 +5,8 @@ import ROSLIB from 'roslib';
 const TurtleBotController = ({ children }) => {
   const ros = useRef(null);
   const cmdVel = useRef(null);
-  const lidarData = useRef(null);
-  const [collision, setCollision] = useState(false);
+  const [lidarData, setLidarData] = useState('none');
+  const [collision, setCollision] = useState(false)
 
   useEffect(() => {
     // Connect to the ROS bridge server
@@ -36,13 +36,13 @@ const TurtleBotController = ({ children }) => {
     });
 
     // Initialize the scan topic (LiDAR data)
-    lidarData.current = new ROSLIB.Topic({
+    const lidarTopic = new ROSLIB.Topic({
       ros: ros.current,
       name: '/scan',
       messageType: 'sensor_msgs/LaserScan'
     });
 
-    lidarData.current.subscribe((message) => {
+    lidarTopic.subscribe((message) => {
       checkForObstacles(message);
     });
 
@@ -51,33 +51,66 @@ const TurtleBotController = ({ children }) => {
     };
   }, []);
 
-  const checkForObstacles = (message) => {
-    const ranges = message.ranges;
-    const minDistance = 0.3; // Increase this value if necessary
+  const checkForObstacles = (data) => {
+    const ranges = data.ranges;
+    const minDistance = 0.3; // Define a distância mínima segura
 
-    let isObstacleDetected = false;
-    let validReadings = 0;
+    // Filtrar leituras inválidas
+    const validRanges = ranges.filter(range => range > 0 && range < Infinity);
 
-    for (let i = 0; i < ranges.length; i++) {
-      if (ranges[i] < minDistance && ranges[i] > 0) { // Ignore invalid readings (e.g., 0 values)
-        validReadings++;
-        if (validReadings > 5) { // Only consider it an obstacle if multiple valid readings are detected
-          isObstacleDetected = true;
-          console.log("OBSTÁCULO DETECTADO!");
-          break;
-        }
-      }
+    if (validRanges.length === 0) {
+      setLidarData('none');
+      return; // Sem leituras válidas, sair da função
     }
 
-    setCollision(isObstacleDetected);
+    const minRange = Math.min(...validRanges);
+
+    if (minRange <= minDistance) {
+      const minIndex = ranges.indexOf(minRange);
+      const numberOfIndices = ranges.length;
+
+      const valorA = Math.floor(numberOfIndices / 4);
+      const valorB = valorA * 3;
+
+      if (valorA < minIndex && minIndex < valorB) {
+        if (lidarData !== 'back') {
+          console.log('Obstáculo detectado atrás');
+          handleStop()
+          setCollision(true)
+          setLidarData('back');
+          broadcastObstacle('back');
+        }
+      } else {
+        if (lidarData !== 'front') {
+          console.log('Obstáculo detectado à frente');
+          handleStop()
+          setCollision(true)
+          setLidarData('front');
+          broadcastObstacle('front');
+          
+        }
+      }
+    } else {
+        console.log('Nenhum obstáculo detectado');
+        setLidarData('none');
+        setCollision(false);
+        broadcastObstacle('none');
+      
+    }
+  };
+
+  const broadcastObstacle = (position) => {
+    const message = JSON.stringify({ obstacle: position });
+    // Implementar a função de broadcast para enviar a mensagem para onde for necessário
+    console.log('Broadcast:', message);
   };
 
   // Function to handle movements
   const move = (linear, angular) => {
-    if (collision && linear > 0) {
+    if ((lidarData === 'front' && linear > 0) || (lidarData === 'back' && linear < 0)) {
       console.log('Collision detected! Stopping movement.');
-      handleStop()
-      linear = 0; // Stop forward movement if collision is detected
+      handleStop();
+      return; // Não enviar comandos de movimento na direção do obstáculo
     }
 
     console.log(`Moving: linear=${linear}, angular=${angular}`);
@@ -111,10 +144,10 @@ const TurtleBotController = ({ children }) => {
   return (
     <>
       {typeof children === 'function'
-        ? children({ movementhandlers, collision })
+        ? children({ movementhandlers, lidarData, collision })
         : React.Children.map(children, (child) =>
             React.isValidElement(child)
-              ? React.cloneElement(child, { movementhandlers, collision })
+              ? React.cloneElement(child, { movementhandlers, lidarData, collision })
               : child
           )}
     </>

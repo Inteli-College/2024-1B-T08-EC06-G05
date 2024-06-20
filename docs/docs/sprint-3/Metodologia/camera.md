@@ -4,6 +4,7 @@ sidebar_position: 3
 ---
 
 ## Introdução
+
 &emsp;&emsp;Durante a terceira sprint do projeto, a equipe SugarZ3ro focou na implementação de uma webcam no robô que transmitisse imagens em tempo real para monitoramento do ambiente de movimentação do robô, além da implementação do cálculo da latência na transmissão das imagens. Para isso, foi utilizada uma webcam do modelo DOBOT Magician, acoplada ao Turtlebot3 por meio de um cabo USB.
 
 ## Setup da Webcam
@@ -12,7 +13,8 @@ sidebar_position: 3
 ***sender.py***
 
 &emsp;&emsp;A classe a seguir é usada para capturar frames da webcam, comprimir esses frames como imagens JPEG e publicá-los no tópico ROS (Robot Operating System) `/video_frames`.
-```
+
+```python
 class WebcamPublisher(Node):
     def __init__(self):
         super().__init__('webcam_publisher')
@@ -52,7 +54,6 @@ class WebcamPublisher(Node):
             prev_tick = new_tick
         self.cap.release()
         cv2.destroyAllWindows()
-
 ```
 
 &emsp;&emsp;As imagens são publicadas a partir do seguinte comando:
@@ -61,7 +62,7 @@ class WebcamPublisher(Node):
 &emsp;&emsp;O método `latencia` tem a função de medir a latência entre frames e imprime no terminal os valores calculados.
 
 &emsp;&emsp;A função `def main`  inicializa e mantem o nó ROS que captura e publica frames de vídeo da webcam.
-```
+```python
 def main(args=None):
     rclpy.init(args=args)
     webcam_publisher = WebcamPublisher()
@@ -87,7 +88,7 @@ if __name__ == '__main__':
 
 &emsp;&emsp;Essa funcionalidade foi implemetada no arquivo `sender.py` por meio do método `latencia` presente na classe `WebcamPublisher`. Como foi explicado anteriormente, o metodo calcula a latência entre frames e imprime no terminal os valores obtidos. 
 
-```
+```python
 def latencia(self):
         if self.cap is None or not self.cap.isOpened():
             print('\n\n')
@@ -117,8 +118,7 @@ def latencia(self):
 
 &emsp;&emsp;Para reproduzir o vídeo da webcam, foi desenvolvido um componente para o frontend em React, encontrado no arquivo `camera.jsx`. Esse componente contém um script que recebe as imagens da câmera por meio da comunicação do ROSBridge via WebSocket executada no arquivo `sender.py`. Utilizar o ROSBridge permite que as imagens sejam enviadas em tempo real e que seja possível acompanhar a movimentação do robô por meio do vídeo na interface do usuário.
 
-```
-
+```jsx
 const VideoStream = () => {
   const videoRef = useRef(null);
 

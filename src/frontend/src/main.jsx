@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: '/helpScreen',
     element: <HelpScreen />
-  }
+  },
 ]);
 
 // Renderização do aplicativo com o provedor de roteador

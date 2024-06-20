@@ -7,7 +7,7 @@ sidebar_position: 1
 
 &emsp;&emsp;Nesta seção, é explicado como o banco de dados da solução foi desenvolvido e como é planejado utilizá-lo no desenvolvimento do projeto. É importante mencionar que o banco de dados é TinyDB, que se trata de um tipo de banco de dados NoSQL, não relacional, e que utiliza arquivos JSON para armazenar informações. Esse tipo de banco de dados foi escolhido pela simplicidade e fácil configuração que ele apresenta, o que o torna ideal para uma prova de conceito, ou seja, um projeto de pequeno porte que não requer grandes armazenamentos de dados.
 
-&emsp;&emsp;No momento, planeja-se utilizar apenas o arquivo `pipes.json` para armazenamento dos dados, mas pode surgir a necessidade de criar novos arquivos JSON para armazenar os dados devido à natureza não relacional do TinyDB. O arquivo `pipes.json` pode ser encontrado na pasta ~/src/data-base.
+&emsp;&emsp;No momento, planeja-se utilizar apenas o arquivo `pipes.json` para armazenamento dos dados, mas pode surgir a necessidade de criar novos arquivos JSON para armazenar os dados devido à natureza não relacional do TinyDB. O arquivo `pipes.json` pode ser encontrado na pasta `~/src/data-base`.
 
 ## Arquivos
 

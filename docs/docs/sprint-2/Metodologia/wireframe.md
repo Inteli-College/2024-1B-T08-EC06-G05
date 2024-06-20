@@ -6,10 +6,19 @@ sidebar_position: 2
 ## Introdução
 &emsp;&emsp;Wireframes são cruciais no desenvolvimento de interfaces de usuário, servindo como um esboço visual preliminar. Eles ajudam a planejar a disposição dos elementos interativos antes da implementação final, permitindo a identificação e correção de problemas de usabilidade de forma eficaz. Essa prática melhora a comunicação dentro das equipes de desenvolvimento e com os stakeholders.
 
-
 ## Wireframe Detalhado
+<p style={{textAlign: 'center'}}>Figura 1 - Página inicial</p>
+
 ![Página Inicial](../../../static/img/sprint-2/paginainicial.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+<p style={{textAlign: 'center'}}>Figura 2 - Página de informações</p>
+
 ![Página de Informações](../../../static/img/sprint-2/info.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
 ### Tela 1: Página Inicial
 
 - **Elementos**:
@@ -29,8 +38,18 @@ sidebar_position: 2
   - A caixa de instruções contém os botões exibidos na tela durante o controle do robô e tem o objetivo de esclarecer o devido funcionamento de cada botão.
 
 ### Tela 3: Tela de Controle
+
+<p style={{textAlign: 'center'}}>Figura 3 - Central de controle</p>
+
 ![Central de Controle](../../../static/img/sprint-2/centraldecontrole.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+<p style={{textAlign: 'center'}}>Figura 4 - Central de controle com ruído</p>
+
 ![Central de Controle com ruído](../../../static/img/sprint-2/controle-com-ruido.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 &emsp;&emsp;Acima, temos duas imagens da tela de controle, uma com um fundo em branco e a outra com uma imagem de fundo. Neste caso, optamos por adicionar essa imagem para ver como nosso design interage com ruídos, buscando aprimorar a experiência do usuário.
 
@@ -48,7 +67,11 @@ sidebar_position: 2
 
 ### PopUp: Confirmação de Desligamento
 
+<p style={{textAlign: 'center'}}>Figura 4 - Imagem de desligamento</p>
+
 ![Desligamento](../../../static/img/sprint-2/turnoff.png)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 - **Descrição**:
   - Mensagem de confirmação ao tentar desligar o robô.

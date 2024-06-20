@@ -29,20 +29,24 @@ sidebar-position: 2
 
 &emsp;&emsp;Nessa seção, será abordada a comparação dos diferentes modelos de Inteligência Artificial desenvolvidos, destacando os detalhes do modo de treinamento e seus resultados. Esta comparação é fundamental para escolher o modelo mais adequado para nosso projeto, que tem como objetivo a identificação de sujeira dentro de canos. A seguir, será inserida uma subseção que explicará em detalhes o que cada métrica representa, para que qualquer pessoa, mesmo sem background técnico, consiga entender a sua importância na avaliação do desempenho dos modelos.
 
-
 ### Métricas do Modelo
+
 &emsp;&emsp;As métricas são indicadores utilizados para avaliar a performance do modelo de IA. A seguir, apresentamos as principais métricas: **Precisão**, **Recall**, **mAP50**, **mAP50-95**, e **Fitness**, explicando o que cada uma representa e sua importância para nosso projeto.
 
 #### Precisão
+
 &emsp;&emsp;A precisão indica a porcentagem de verdadeiros positivos (detecções corretas) em relação ao total de detecções feitas pelo modelo. Uma alta precisão é importante porque demonstra a confiabilidade do modelo em identificar objetos sem muitos falsos alarmes. Para a identificação de sujeira dentro de canos, isso significa menos detecções erradas de sujeira onde não há.
 
 #### Recall
+
 &emsp;&emsp;O recall mede a capacidade do modelo de identificar todos os objetos relevantes em uma imagem. Uma alta taxa de recall é crucial para garantir que o modelo não perca objetos importantes, ou seja, todas as áreas sujas dentro dos canos serão identificadas.
 
 #### mAP50
+
 &emsp;&emsp;O mAP50 (mean Average Precision at 50% IoU) é a média das precisões para diferentes classes de objetos, considerando uma sobreposição mínima de 50% entre a detecção e o objeto real. Essa métrica é útil para avaliar a eficácia do modelo em detectar sujeira de forma geral, com uma exigência de sobreposição moderada.
 
 #### mAP50-95
+
 &emsp;&emsp;O mAP50-95 é uma métrica mais rigorosa que calcula a média das precisões considerando sobreposições de 50% até 95%. Essa métrica oferece uma avaliação mais completa do desempenho do modelo, especialmente em situações que exigem alta precisão na localização da sujeira dentro dos canos.
 
 ##### Diferença entre mAP50 e mAP50-95
@@ -63,7 +67,7 @@ sidebar-position: 2
 
 &emsp;&emsp;Para realizar o treinamento da IA, foi utilizada a biblioteca YOLO em um código que realiza tanto o treinamento quanto a validação da qualidade desse treinamento por meio das imagens de validação encontradas no banco de dados. No código encontrado no arquivo `yolo.py`, o modelo YOLO é inicializado usando os pesos pré-treinados do arquivo `yolov8n.pt` e treinado utilizando o conjunto de dados especificado no arquivo `data.yaml`. O treinamento ocorre pela quantidade de épocas escolhidas.
 
-```
+```python
 from ultralytics import YOLO
 import cv2
 
@@ -95,7 +99,7 @@ if __name__ == "__main__":
 
 &emsp;&emsp;O código encontrado no arquivo `yoloImagem.py` processa uma imagem usando um modelo YOLO para detecção de objetos, visualiza os resultados e salva a imagem processada em um diretório de saída. Para o processamento de imagem foi utilizada a função `process_image` usando o modelo YOLO e salva a imagem processada em um diretório de saída.
 
-```
+```python
 def process_image(image_path, output_dir="../data-base/imgs_results"):
     
     image_path = "../data-base/imgs/img2.png"

@@ -1,11 +1,11 @@
 ---
 title: Instalação e execução
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Instalação e execução
 
-Nesta seção, você pode conferir as instruções para instalar e executar cada uma das partes do sistema da solução desenvolvidas até a sprint 3.
+&emsp;&emsp;Nesta seção, você pode conferir as instruções para instalar e executar cada uma das partes do sistema da solução desenvolvidas até a sprint 3.
 
 ## Movimentação do robô via aplicação WEB
 

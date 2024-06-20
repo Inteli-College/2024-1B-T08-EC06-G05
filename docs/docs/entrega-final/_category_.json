@@ -1,0 +1,8 @@
+{
+  "label": "Entrega final",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Aqui fica a documentação de tudo que foi produzido no projeto que se manteve na versão final."
+  }
+}

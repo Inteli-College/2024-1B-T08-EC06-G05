@@ -32,9 +32,11 @@ sidebar_position: 3
 
 ---
 
+<p style={{textAlign: 'center'}}>Figura 1 - Diagrama de sequência</p>
 
 ![Diagrama de Sequência SugarZ3ro](../../../static/img/sprint-1/diagrama_de_sequencia.jpeg)
 
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 ## Descrição das Interações
 
@@ -69,5 +71,5 @@ sidebar_position: 3
 
 ---
 
-Este documento foi desenvolvido em um periodo inicial e essa arquitetura pode sofrer alterações conforme o desenvolvimento do projeto.
+&emsp;&emsp;Este documento foi desenvolvido em um periodo inicial e essa arquitetura pode sofrer alterações conforme o desenvolvimento do projeto.
 

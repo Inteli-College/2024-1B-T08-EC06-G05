@@ -103,7 +103,7 @@ const VideoStream = ({ aiButtonState }) => {
         alt="Video Stream"
         style={{ width: '1280px', height: '720px', position: 'fixed', zIndex: -50, marginTop: 0 }}
       />
-      <div className="flex mt-4">
+      <div className="flex">
         <div className="h-5vh p-1 w-33 bg-opacity-70 bg-orange-400 flex items-center font-bold text-black text-xl font-sans absolute right-0">
           Latency: {latency} ms
         </div>
