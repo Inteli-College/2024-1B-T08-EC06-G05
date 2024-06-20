@@ -1,17 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ROSLIB from 'roslib';
 
-const VideoStream = () => {
+const VideoStream = ({ aiButtonState }) => {
   const videoRef = useRef(null);
   const [latency, setLatency] = useState(0);
   const [sentTime, setSentTime] = useState(null);
   const ros = useRef(null); // Use ref to store ros instance
+  const [currentFrame, setCurrentFrame] = useState(null);
+  const [hasSentImageString, setHasSentImageString] = useState(false);
 
   useEffect(() => {
     // Create and connect to the ROS server if not already connected
     if (!ros.current) {
       ros.current = new ROSLIB.Ros({
-        url: 'ws://10.128.0.50:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+        url: 'ws://localhost:9090'
+        // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+        // TROCAR POR 'ws://10.128.0.50:9090' PARA TESTES COM O ROBÔ
       });
 
       ros.current.on('connection', () => {
@@ -27,6 +31,7 @@ const VideoStream = () => {
       });
     }
 
+    
     // Subscribe to the video frames topic
     const videoTopic = new ROSLIB.Topic({
       ros: ros.current,
@@ -49,6 +54,7 @@ const VideoStream = () => {
     videoTopic.subscribe((message) => {
       if (videoRef.current) {
         videoRef.current.src = 'data:image/jpeg;base64,' + message.data;
+        setCurrentFrame(message.data); // Update currentFrame using useState
       }
       
       if (sentTime) {
@@ -66,6 +72,28 @@ const VideoStream = () => {
       latencyTopic.unsubscribe();
     };
   }, [sentTime]);
+
+  useEffect(() => {
+    if (aiButtonState && currentFrame && !hasSentImageString) {
+      console.log('botao apertado'); // Log the currentFrame
+
+      fetch('http://127.0.0.1:5000/post_img_string', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ currentFrame: currentFrame }),
+      })
+
+      setHasSentImageString(true); // Mark that the frame has been logged
+
+    } else if (!aiButtonState) {
+
+      setHasSentImageString(false); // Reset the flag when the button is not pressed
+
+    }
+  }, [aiButtonState, currentFrame, hasSentImageString]);
+  
 
   return (
     <div>
