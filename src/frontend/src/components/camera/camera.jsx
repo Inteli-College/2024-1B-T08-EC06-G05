@@ -13,7 +13,9 @@ const VideoStream = ({ aiButtonState }) => {
     // Create and connect to the ROS server if not already connected
     if (!ros.current) {
       ros.current = new ROSLIB.Ros({
-        url: 'ws://localhost:9090' // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+        url: 'ws://localhost:9090'
+        // TROCAR POR 'ws://localhost:9090' PARA TESTES LOCAIS
+        // TROCAR POR 'ws://10.128.0.50:9090' PARA TESTES COM O ROBÔ
       });
 
       ros.current.on('connection', () => {
