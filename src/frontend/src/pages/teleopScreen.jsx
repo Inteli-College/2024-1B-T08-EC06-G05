@@ -65,10 +65,10 @@ function TeleopScreen() {
           <div className='relative w-full h-auto max-w-screen-xl mx-auto'>
             <VideoStream />
             <div className='fixed top-4 left-4 lg:top-16 lg:left-32'>
-              <TurnoffButton movementhandlers={movementhandlers} />
+              <Modal movementhandlers={movementhandlers} handleAlert={handleAlert} />
             </div>
             <div className='fixed bottom-16 mr-28 mb-28 right-16 lg:bottom-36 lg:right-36 lg:mr-32 lg:mb-28'>
-              <WarningButton movementhandlers={movementhandlers} />
+              <WarningButton movementhandlers={movementhandlers} handleAlert={handleAlert}/>
             </div>
             <div className="flex items-center justify-center h-full">
               {showAlert && <AlertDefault />}
