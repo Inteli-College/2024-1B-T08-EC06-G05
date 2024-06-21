@@ -162,6 +162,19 @@ setHasSentImageString(true); // Mark that the frame has been logged
 
 &emsp;&emsp;A rota Flask `/post_img_string` recebe a imagem enviada pelo frontend e a processa utilizando o modelo YOLO. A interação entre o frontend (React) e o backend (Flask) é facilitada pelo componente `aiButton`, que controla quando as imagens são enviadas.
 
+
+## Demonstração
+
+&emsp;&emsp;A seguir, na figura 1, pode-se verificar uma imagem de exemplo capturada com a câmera acoplada ao robô e analisada a partir do modelo desenvolvido pela equipe.
+
+<p style={{textAlign: 'center'}}>Figura 1 - Detecção de impurezas em simulação do cano</p>
+
+![Detecção de impurezas em simulação do cano](../../../../static/img/sprint-5/deteccao.jpg)
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+&emsp;&emsp;Tal imagem refere-se à fotografia de uma lata de lixo preta com bolas papel coladas em seu interior, de forma a simular um cano de um reboiler. Na figura, é possível notar quadrados coloridos com palavras e números inscritos em seus cantos superiores direitos. Cada um desses nomes representa um elemento de sujeira diferente detectado, o que também se relaciona com o número registrado em cada quadrado, que representa a precisão de cada detecção destes elementos.
+
 ## Conclusão
 
 &emsp;&emsp;Esta integração assegura que as imagens capturadas sejam enviadas de forma controlada e eficiente, acionando a lógica de backend para processamento de imagens apenas quando necessário.
