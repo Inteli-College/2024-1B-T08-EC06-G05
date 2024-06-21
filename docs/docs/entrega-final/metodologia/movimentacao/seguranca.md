@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Introdução
 
-&emsp;&emsp;Na sprint 2, foram apresentados dois sistemas de segurança pelo grupo SugarZ3ro atrelados ao controle do Turtlebot, através dos quais o usuário teria mais precisão na movimentação e a opção de acionar uma parada de emergência ao pressionar a tecla `Q`. Durante a sprint 3, o sistema de segurança passou por significativas melhorias para aprimorar a detecção de obstáculos e a prevenção de colisões, utilizando dados de um LiDAR (Laser Imaging Detection and Ranging). Na sprint 4, o sistema de segurança usando um LiDAR foi aprimorado para que a movimentação do robô continuasse possível apenas nas direções onde objetos não foram identificados, o que torna a usabilidade do sistema de segurança de maior qualidade e facilita a utilização pelo usuário.
+&emsp;&emsp;Na sprint 2, foram apresentados dois sistemas de segurança pelo grupo SugarZ3ro atrelados ao controle do Turtlebot, através dos quais o usuário teria mais precisão na movimentação e a opção de acionar uma parada de emergência ao pressionar a tecla `Q`. Durante a sprint 3, o sistema de segurança passou por significativas melhorias para aprimorar a detecção de obstáculos e a prevenção de colisões, utilizando dados de um LiDAR (Laser Imaging Detection and Ranging). Na sprint 5, o sistema de segurança usando um LiDAR foi aprimorado para que a movimentação do robô continuasse possível apenas nas direções onde objetos não foram identificados, o que torna a usabilidade do sistema de segurança de maior qualidade e facilita a utilização pelo usuário.
 
 ## Sistema de Segurança
 
@@ -16,55 +16,94 @@ sidebar_position: 1
 1.  **Inicialização do tópico de verificação (dados LiDAR)**
     ```javascript
     // Initialize the scan topic (LiDAR data)
-        lidarData.current = new ROSLIB.Topic({
-        ros: ros.current,
-        name: '/scan',
-        messageType: 'sensor_msgs/LaserScan'
-        });
+    const lidarTopic = new ROSLIB.Topic({
+      ros: ros.current,
+      name: '/scan',
+      messageType: 'sensor_msgs/LaserScan'
+    });
 
-        lidarData.current.subscribe((message) => {
-        checkForObstacles(message);
-        });
+    lidarTopic.subscribe((message) => {
+      checkForObstacles(message);
+    });
+
+    return () => {
+      ros.current.close();
+    };
     ```
     - **Descrição**: Este trecho de código cria um subscription para o tópico `scan`, que recebe dados do sistema LiDAR.
     - **Função**: Permite que o nó receba continuamente dados de distância do sistema LiDAR, necessários para detectar obstáculos.
 
 2. **Callback do LiDAR (LaserScan)** 
     ```javascript
-    for (let i = 0; i < ranges.length; i++){
-        if (ranges[i] < minDistance && ranges[i] > 0) { // Ignore invalid readings (e.g., 0 values)
-        validReadings++;
-        if (validReadings > 5) { // Only consider it an obstacle if multiple valid readings are detected
-            isObstacleDetected = true;
-            console.log("OBSTÁCULO DETECTADO!");
-            break;
-            }
-        }
+    const checkForObstacles = (data) => {
+    const ranges = data.ranges;
+    const minDistance = 0.3; // Define a distância mínima segura
+
+    // Filtrar leituras inválidas
+    const validRanges = ranges.filter(range => range > 0 && range < Infinity);
+
+    if (validRanges.length === 0) {
+        setLidarData('none');
+        return; // Sem leituras válidas, sair da função
     }
+
+    const minRange = Math.min(...validRanges);
+
+    if (minRange <= minDistance) {
+        const minIndex = ranges.indexOf(minRange);
+        const numberOfIndices = ranges.length;
+
+        const valorA = Math.floor(numberOfIndices / 4);
+        const valorB = valorA * 3;
+
+        if (valorA < minIndex && minIndex < valorB) {
+        if (lidarData !== 'back') {
+            console.log('Obstáculo detectado atrás');
+            handleStop()
+            setCollision(true)
+            setLidarData('back');
+            broadcastObstacle('back');
+        }
+        } else {
+        if (lidarData !== 'front') {
+            console.log('Obstáculo detectado à frente');
+            handleStop()
+            setCollision(true)
+            setLidarData('front');
+            broadcastObstacle('front');
+        }
+        }
+    } else {
+        console.log('Nenhum obstáculo detectado');
+        setLidarData('none');
+        setCollision(false);
+        broadcastObstacle('none');
+    }
+    };
+
     ```
-    - Descrição: Esta função é chamada sempre que uma nova mensagem é publicada no tópico scan.
+    - Descrição: Esta função é chamada sempre que uma nova mensagem é publicada no tópico `scan`.
     - Função: Verifica se há obstáculos usando os dados do LiDAR. Se múltiplas leituras válidas indicarem a presença de um obstáculo a uma distância menor que 0.3 metros, o estado collision é atualizado para true.
 
 3. **Função de Movimento**
     ```javascript
         const move = (linear, angular) => {
-    if (collision && linear > 0) {
-        console.log('Collision detected! Stopping movement.');
-        handleStop();
-        linear = 0; // Stop forward movement if collision is detected
-    }
+            if ((lidarData === 'front' && linear > 0) || (lidarData === 'back' && linear < 0)) {
+                console.log('Collision detected! Stopping movement.');
+                handleStop();
+                return; // Não enviar comandos de movimento na direção do obstáculo
+            }
 
-    console.log(`Moving: linear=${linear}, angular=${angular}`);
-    const twist = new ROSLIB.Message({
-        linear: { x: linear, y: 0, z: 0 },
-        angular: { x: 0, y: 0, z: angular }
-    });
-    cmdVel.current.publish(twist);
-        };
-
+            console.log(`Moving: linear=${linear}, angular=${angular}`);
+            const twist = new ROSLIB.Message({
+                linear: { x: linear, y: 0, z: 0 },
+                angular: { x: 0, y: 0, z: angular }
+            });
+            cmdVel.current.publish(twist);
+            };
     ```
     - Descrição: Esta função publica uma mensagem no tópico /cmd_vel para controlar o movimento do TurtleBot.
-    - Função: Se uma colisão é detectada, impede o movimento para frente. Caso contrário, permite o movimento com as velocidades linear e angular especificadas.
+    - Função: Se uma colisão é detectada, impede o movimento para frente ou para trás, conforme a direção do obstáculo. Caso contrário, permite o movimento com as velocidades linear e angular especificadas.
 
 4. **Manipuladores de Movimento**
     ```javascript
@@ -77,6 +116,7 @@ sidebar_position: 1
     handleStop();
     ros.current.close();
     };
+
     ```
     - Descrição: Funções específicas para controlar os movimentos do TurtleBot (avançar, virar à esquerda, virar à direita, mover para trás, parar e desligar).
     - Função: Permitem controlar o TurtleBot através de comandos específicos.
@@ -88,7 +128,7 @@ sidebar_position: 1
 
     `collision`:
         - Descrição: Estado que indica se uma colisão foi detectada.
-        - Valores possíveis: true ou false.
+        - Valores possíveis: True ou False.
 
 ## Conclusão
 
