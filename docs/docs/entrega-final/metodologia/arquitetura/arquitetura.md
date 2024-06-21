@@ -10,7 +10,7 @@ sidebar_position: 2
 
 <p style={{textAlign: 'center'}}>Figura 1 - Arquitetura da solução</p>
 
-![Proposta inicial de arquitetura da solução](../../../../static/img/sprint-1/proposta_arquitetura.png)
+![Proposta inicial de arquitetura da solução](../../../../static/img/sprint-5/arquitetura.png)
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
@@ -31,6 +31,6 @@ sidebar_position: 2
 | ROS                          | Comunicação entre módulos  | Estrutura desenvolvida com foco em sistema robóticos                  |
 | Flask                        | Backend                    | Simplicidade de uso e fácil extensibilidade                           |
 | Frontend                     | React                      | Simplicidade de uso e reusabilidade de componentes                    |
-| PostgreSQL                   | Banco de dados             | Suporte para vários tipos de dados e alta extensibilidade             |
+| TinyDb                   | Banco de dados             | Suporte para armazenamento de dados essenciais para POC (Prova de Conceito)             |
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
