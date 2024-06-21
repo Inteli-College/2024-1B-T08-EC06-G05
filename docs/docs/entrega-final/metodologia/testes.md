@@ -61,7 +61,7 @@ sidebar_position: 6
 
 ### Resultados dos Testes de Usabilidade
 
-Para a realização dos testes de usabilidade, foram convidadas quatro pessoas de faixas etárias diferentes e com contextos de estudo e trabalho diversos. É importante notar que todos têm boas habilidades tecnológicas e contato constante com tecnologias semelhantes às utilizadas no projeto desenvolvido pela SugarZ3ro. Os convidados para a realização dos testes foram: Gabriel Coletto, André Leal, Ana Luiza e André Hutzler.
+&emsp;&emsp;Para a realização dos testes de usabilidade, foram convidadas quatro pessoas de faixas etárias diferentes e com contextos de estudo e trabalho diversos. É importante notar que todos têm boas habilidades tecnológicas e contato constante com tecnologias semelhantes às utilizadas no projeto desenvolvido pela SugarZ3ro. Os convidados para a realização dos testes foram: Gabriel Coletto, André Leal, Ana Luiza e André Hutzler.
 
 [Link para planilha de testes](https://docs.google.com/spreadsheets/d/1-YfRXwlAJLJ60PEgnCPHU68fz5dvZ41Y/edit?usp=sharing&ouid=105392408613944484717&rtpof=true&sd=true)
 
@@ -80,7 +80,7 @@ Para a realização dos testes de usabilidade, foram convidadas quatro pessoas d
 - **Parada de Emergência:** O botão de parada de emergência foi testado com sucesso em várias situações de movimentação, demonstrando ser acessível e funcional. No entanto, a necessidade de recarregar a página para retomar a movimentação não favorece um fluxo de utilização eficiente. Aperfeiçoamentos que eliminem a necessidade de recarregar a página são recomendados para melhorar a experiência do usuário.
 
 **Conclusão:**
-Enquanto várias áreas da interface demonstram alta funcionalidade e usabilidade, há espaço para melhorias, especialmente na Tela de Informações e na funcionalidade de análise de imagem. Focar em aprimorar essas áreas ajudará a criar uma experiência de usuário mais fluida e intuitiva.
+&emsp;&emsp;Enquanto várias áreas da interface demonstram alta funcionalidade e usabilidade, há espaço para melhorias, especialmente na Tela de Informações e na funcionalidade de análise de imagem. Focar em aprimorar essas áreas ajudará a criar uma experiência de usuário mais fluida e intuitiva.
 
 ---
 
@@ -131,7 +131,7 @@ Foram realizados 10 testes para medir o tempo de resposta dos comandos de locomo
 **Média de Tempo de Resposta da Câmera:** 0.33 s
 
 #### Análise
-Os resultados indicam que o tempo médio de resposta para os comandos de locomoção e câmera está dentro dos limites aceitáveis (<500ms), sugerindo que o sistema é responsivo e adequado para operação em tempo real.
+Os resultados indicam que o tempo médio de resposta para os comandos de locomoção e câmera está dentro dos limites aceitáveis ( < 500ms), sugerindo que o sistema é responsivo e adequado para operação em tempo real.
 
 ---
 
