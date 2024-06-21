@@ -65,6 +65,7 @@ export default WarningButton;
 - Loga uma mensagem no console indicando que o botão de desligamento foi pressionado.
 - Chama a função handleAlert.
 - Verifica se movementhandlers está definido e se contém a função turnoff. Se essas condições forem verdadeiras, a função turnoff é chamada.
+
 ## Conclusão
-&emsp;&emsp;O código de movimentação foi migrado completamente para componentes em react. Há um componente principal, o rosbridge_movement que processa as informações que os botões enviam e re-estrutura elas para enviar ao robô. Note que essa comunicação é feita pelo IP do robô dado pela rede, então é importante que o usuário e o robô estejam na mesma rede. É importante notar que a movimentação é diretamente impactada pelo sistema de segurança, explicado em [Documentação do Sistema de Segurança](./seguranca.md).
+&emsp;&emsp;O código de movimentação desenvolvido completamente em componentes react. Há um componente principal, o rosbridge_movement que processa as informações que os botões enviam e re-estrutura elas para enviar ao robô. Note que essa comunicação é feita pelo IP do robô dado pela rede, então é importante que o usuário e o robô estejam na mesma rede. É importante notar que a movimentação é diretamente impactada pelo sistema de segurança, explicado em [Documentação do Sistema de Segurança](./seguranca.md).
 
