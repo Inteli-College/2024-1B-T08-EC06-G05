@@ -7,11 +7,90 @@ sidebar_position: 3
 
 ## Introdução
 
-&emsp;&emsp;API (Application Programming Interface) refere-se a um conjunto de funções e comandos padronizados que permitem a comunicação e integração entre diferentes sistemas de maneira facilitada através da programação. Em paráfrase, com APIs, é possível receber e enviar dados entre sistemas sem a necessidade de criar um meio de comunicação entre estes a partir do zero.
-
 &emsp;&emsp;Como forma de atender aos interesses da Atvos, empresa parceira do projeto, a equipe SugarZ3ro desenvolveu uma API integrada à aplicação web existente na solução para que seja possível manipular com mais facilidade os dados referentes ao nível de sujeira dos canos de reboilers. Desse modo, a empresa poderá, de maneira prática, obter tais dados e exibí-los em forma de gráficos em sua plataforma interna própria para tal.
 
 &emsp;&emsp;A API do projeto foi construída em Python com base no micro-framework Flask. Ela faz parte do backend da aplicação web do sistema e interage com o frontend desta, com o banco de dados e com a inteligência artificial utilizada para analisar os canos dos reboilers.
+
+## Documentação dos itens importados
+
+```
+from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
+from tinydb import TinyDB, Query
+import os
+import random
+from datetime import datetime
+import cv2
+import base64 
+import numpy as np
+from ultralytics import YOLO
+```
+
+### Flask
+- **Flask**: Um microframework web para Python, utilizado para criar aplicações web de forma rápida e simples.
+  - **Flask**: Classe principal do Flask usada para inicializar a aplicação.
+  - **request**: Objeto que contém todos os dados da solicitação HTTP, permitindo acessar dados enviados pelo cliente.
+  - **jsonify**: Função que converte um dicionário Python em uma resposta JSON adequada para uma aplicação web.
+
+### Flask-CORS
+- **Flask-CORS**: Extensão do Flask que permite a configuração de Cross-Origin Resource Sharing (CORS), essencial para permitir que recursos de uma página sejam requisitados de outro domínio.
+  - **CORS**: Função que inicializa o CORS na aplicação Flask.
+  - **cross_origin**: Decorador que permite configurar CORS em rotas específicas.
+
+### TinyDB
+- **TinyDB**: Um banco de dados NoSQL simples e leve, ideal para pequenos projetos e prototipagem.
+  - **TinyDB**: Classe principal do TinyDB usada para inicializar e interagir com o banco de dados.
+  - **Query**: Classe usada para criar consultas no TinyDB.
+
+### os
+- **os**: Módulo da biblioteca padrão do Python que fornece funções para interagir com o sistema operacional, como manipulação de arquivos e diretórios, variáveis de ambiente e execução de comandos do sistema.
+
+### random
+- **random**: Módulo da biblioteca padrão do Python que implementa geradores de números pseudo-aleatórios, usados para diversas operações que envolvem aleatoriedade.
+
+### datetime
+- **datetime**: Módulo da biblioteca padrão do Python que fornece classes para manipulação de datas e horas, permitindo operações como obtenção da data e hora atual, formatação e manipulação de datas.
+
+### cv2
+- **cv2**: Módulo da biblioteca OpenCV (Open Source Computer Vision Library) para Python, usado para processamento de imagens e visão computacional.
+
+### base64
+- **base64**: Módulo da biblioteca padrão do Python que fornece funções para codificação e decodificação de dados em base64, um esquema de codificação binária-to-text usado para representar dados binários em formato ASCII.
+
+### numpy
+- **numpy**: Biblioteca fundamental para computação numérica em Python, fornecendo suporte para arrays multidimensionais e diversas operações matemáticas eficientes.
+
+### ultralytics
+- **ultralytics**: Biblioteca que contém implementações de modelos de visão computacional, como o YOLO (You Only Look Once), usados para detecção de objetos em imagens.
+  - **YOLO**: Classe usada para inicializar e utilizar modelos YOLO para tarefas de detecção de objetos.    
+
+## Conexão com o Database
+```python
+db_path = os.path.join(os.path.dirname(__file__), '../data-base/pipes.json')
+db = TinyDB(db_path)
+pipes_table = db.table('pipes')
+Pipes = Query()
+
+updated_data = {
+    'id': 0,
+    'status': None,
+    'id-reboiler': None,
+    'datetime': None
+}
+```
+### Inicialização do Banco de Dados
+```python
+db_path = os.path.join(os.path.dirname(__file__), '../data-base/pipes.json')
+db = TinyDB(db_path)
+pipes_table = db.table('pipes')
+Pipes = Query()
+```
+- **db_path**: Define o caminho para o arquivo de banco de dados `pipes.json`.
+- **db**: Inicializa o banco de dados TinyDB com o caminho especificado.
+- **pipes_table**: Acessa a tabela `pipes` dentro do banco de dados.
+- **Pipes**: Instância de `Query` para realizar consultas na tabela `pipes`.
+- **updated_data**: Definição de uma variável global para receber os padrões do database.
+
 
 ## Documentação das rotas
 

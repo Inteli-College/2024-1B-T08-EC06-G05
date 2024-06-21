@@ -57,7 +57,7 @@ sidebar_position: 1
 
 ## Tela de Teleoperação
 
-&emsp;&emsp;A tela de teleoperação permite que o usuário controle a movimentação do robô remotamente. Nela, há a transmissão da imagem capturada pela câmera acoplada ao Turtlebot, o que permite uma melhor orientação de espaço ao usuário enquanto controla o movimento do robô pelos botões com setas indicativas de direção na parte inferior da tela. Vale citar que a movimentação por meio desses botões conta com **sistema de segurança**, cujo detalhamento pode ser visto na [respectiva seção da documentação](./movimentacao/seguranca.md).
+&emsp;&emsp;A tela de teleoperação permite que o usuário controle a movimentação do robô remotamente. Nela, há a transmissão da imagem capturada pela câmera acoplada ao Turtlebot, o que permite uma melhor orientação de espaço ao usuário enquanto controla o movimento do robô pelos botões com setas indicativas de direção na parte inferior da tela. Vale citar que a movimentação por meio desses botões conta com **sistema de segurança**, cujo detalhamento pode ser visto na [respectiva seção da documentação](./seguranca.md).
 
 <p style={{textAlign: 'center'}}>Figura 4 - Tela de teleoperação</p>
 
@@ -67,7 +67,7 @@ sidebar_position: 1
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
-&emsp;&emsp;Além disso, há um botão de desligamento, um botão de emergência e um botão que ativa funcionalidades de IA. Como pode ser observado na figura 4, na qual estão marcados os botões. O botão de desligamento abre um pop-up demonstrado na figura 5 e, ao pressionar o botão de desligar, desfaz a conexão com o robô e volta a página inicial. O botão de emergência interrompe toda a comunicação atual com o robô e mostra um pop-up (como demonstrado na figura 6) informando ao usuário que a conexão foi interrompida.
+&emsp;&emsp;Além disso, há um botão de desligamento, um botão de emergência e um botão que ativa funcionalidades de IA. Como pode ser observado na figura 4, na qual estão marcados os botões. O botão de desligamento abre um pop-up demonstrado na figura 6 e, ao pressionar o botão de desligar, desfaz a conexão com o robô e volta a página inicial. O botão de emergência interrompe toda a comunicação atual com o robô e mostra um pop-up (como demonstrado na figura 7) informando ao usuário que a conexão foi interrompida.
 
 <p style={{textAlign: 'center'}}>Figura 5 - Botões da tela de teleoperação</p>
 
@@ -94,15 +94,64 @@ sidebar_position: 1
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 
-*Descrição dos Componentes:*
-- AiButton:      Permite ao usuário ativar funcionalidades de inteligência artificial para análise da imagem capturada pelo câmera acoplada ao Turtlebot.
+# Descrição dos Componentes:
+
+- AiButton:      Permite ao usuário ativar funcionalidades de inteligência artificial para análise da imagem capturada pelo câmera acoplada ao Turtlebot
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_ai.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
 - VideoStream:   Transmite a imagem capturada pela câmera acoplada ao Turtlebot
 - MoveForward:   Botão para movimentar o Turtlebot para frente
-- MoveLeft:      Botão para movimentar o Turtlebot para esquerda
-- MoveRight:     Botão para movimentar o Turtlebot para direita
-- MoveBackward:  Botão para movimentar o Turtlebot para trás
-- TurnOffButton: Responsável pela parada de emergência que encerra a movimentação do robô e desliga a comunicação com ele, encerrando as operações e retornando à tela inicial.
 
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_frente.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+- MoveLeft:      Botão para movimentar o Turtlebot para esquerda
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_esquerda.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+- MoveRight:     Botão para movimentar o Turtlebot para direita
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_direita.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+- MoveBackward:  Botão para movimentar o Turtlebot para trás
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_tras.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+- TurnOffButton: Responsável pelo desligamento do robô, encerrando toda a comunicação com ele e voltando a tela inicial
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_desligar.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
+
+- WarningButton: Responsável pela parada de emergência que encerra a movimentação do robô e desliga a comunicação com ele, encerrando as operações e retornando à tela inicial
+
+<div style={{textAlign: 'center'}}>
+    ![Tela de informações](../../../../static/img/sprint-5/botao_warning.png)
+</div>
+
+<p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
 ## Conclusão
 
