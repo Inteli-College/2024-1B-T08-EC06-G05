@@ -1,0 +1,16 @@
+---
+title: Proposta de inovação
+sidebar_position: 5
+---
+
+# Proposta de inovação
+
+&emsp;&emsp;A empresa Atvos apresentou um problema relacionado à verificação da limpeza dos canos dos reboilers. Embora as limpezas sejam realizadas constantemente, há dificuldade em verificar a necessidade e a qualidade da limpeza de cada cano. Foi notado que limpezas mais frequentes do que o necessário resultam em desperdício significativo de água, já que o processo utiliza uma grande quantidade deste recurso. Também foi identificado que, se os canos não estiverem devidamente limpos ao final do processo, isso pode antecipar o acúmulo de sujeira. Para enfrentar esses desafios, foi proposta a criação de uma prova de conceito utilizando o robô TurtleBot e visão computacional.
+
+&emsp;&emsp;A solução desenvolvida pelos alunos de Engenharia da Computação do Inteli apresenta pontos inovadores, incluindo a utilização de um robô simples, mas eficiente, que atende aos requisitos do projeto e permite adaptações para futuras funcionalidades. Para garantir a inovação neste projeto, os desenvolvedores optaram por criar um sistema de machine learning e inteligência artificial específico para o problema apresentado pelo cliente. Essa implementação contou com a busca por uma base de dados com as mesmas características do problema (identificação de sujeira ou obstrução em canos), treinamento de um modelo ideal para o projeto, diversos testes de validação da qualidade da identificação dos objetos e integração desse modelo com a interface utilizada pelo usuário. Além disso, todos os dados, como identificador do cano e se anomalias foram identificadas, ficam salvos em uma base de dados integrada com todo o projeto.
+
+&emsp;&emsp;Além da implementação do sistema de inteligência artificial, os desenvolvedores também se preocuparam em criar uma interface intuitiva e de fácil utilização, para que tanto pessoas com alto conhecimento tecnológico quanto aquelas com conhecimento básico pudessem usar a solução sem grandes dificuldades. Isso reduz a necessidade da presença humana em todas as atividades do processo de limpeza dos canos dos reboilers. Minimizar a presença humana garante a redução de erros e permite maior coleta de dados, por meio de sensores e da câmera, dados que podem ser utilizados para otimizar diversos aspectos desse processo. Isso só foi possível pela escolha de permitir que o robô seja teleoperável, não sendo necessário visualizar o robô em si, mas sim visualizar onde ele se encontra e qual caminho deve seguir a partir dos vídeos obtidos pela câmera. Outro ponto que permitiu isso foi a implementação de um sistema de segurança utilizando os sensores do LiDAR, que impedem colisões do robô com objetos a menos de 30 centímetros de distância.
+
+&emsp;&emsp;Nenhuma dessas tecnologias é utilizada atualmente no processo de verificação de limpeza dos canos dos reboilers, e a implementação deste sistema pode transformar os padrões da empresa. O projeto permite captar dados que ajudam a chegar a conclusões mais precisas sobre a frequência de limpeza ideal e se a qualidade do trabalho realizado atualmente está dentro das expectativas da empresa. Todas as funcionalidades implementadas no projeto foram pensadas para garantir que ele tenha robustez suficiente para enfrentar os desafios da sua implementação e que de fato agregue valor à Atvos.
+
+

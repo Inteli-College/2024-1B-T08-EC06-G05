@@ -3,18 +3,16 @@ title: Business Model Canvas
 sidebar_position: 1
 ---
 
-# Business Model Canvas: Uma Visão Abrangente
+# Por que o Business Model Canvas foi feito?
 
-&emsp;&emsp;O Business Model Canvas (BMC) é uma ferramenta de gestão estratégica que permite a empresas de todos os tamanhos desenvolver e esboçar modelos de negócios novos ou existentes. Criado por Alexander Osterwalder, o BMC é visual e intuitivo, proporcionando uma visão clara e concisa de como uma organização cria, entrega e captura valor.
-
-## Por que o Business Model Canvas é importante?
-
-&emsp;&emsp;O BMC é crucial porque simplifica a complexidade de estratégias e operações em um layout facilmente compreensível. Ele auxilia empreendedores e gestores a:
+&emsp;&emsp;O Business Model Canvas (BMC) é crucial porque simplifica a complexidade de estratégias e operações em um layout facilmente compreensível. Ele auxiliou a equipe desenvolvedora a:
 
 - Identificar os principais componentes do seu negócio.
 - Analisar e testar hipóteses sobre o modelo operacional.
 - Facilitar a comunicação e o entendimento entre diferentes partes interessadas.
 - Permitir uma abordagem modular ao planejamento de negócios, com a capacidade de ajustar e pivotar com facilidade.
+
+Assim, com a ajuda do BMC, foi possivel definir melhor o escopo do projeto, pois sabe-se melhor os pontos de foco do modelo de negócios da equipe SugarZ3ro, logo definiu melhor o modo de trabalho e ajudou a definir a solução em si. 
 
 ## Componentes do Business Model Canvas
 

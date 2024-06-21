@@ -1,16 +1,16 @@
 ---
-title: Proposta de arquitetura
+title: Arquitetura da solução
 sidebar_position: 2
 ---
 
-# Proposta de arquitetura
+# Arquitetura
 
-&emsp;&emsp;Para iniciar o desenvolvimento da solução de acordo com os requisitos funcionais e não-funcionais definidos previamente, a equipe SugarZ3ro fez uma proposta inicial de arquitetura do sistema envolvido na solução. Tal proposta é apresentada na figura 1 e já conta com as tecnologias que a equipe pretende utilizar no momento.
+&emsp;&emsp;Para iniciar o desenvolvimento da solução de acordo com os requisitos funcionais e não-funcionais definidos previamente, a equipe SugarZ3ro fez uma arquitetura do sistema envolvido na solução. Tal proposta é apresentada na figura 1 e já conta com as tecnologias que a equipe utilizou.
 
 
-<p style={{textAlign: 'center'}}>Figura 1 - Proposta inicial de arquitetura da solução</p>
+<p style={{textAlign: 'center'}}>Figura 1 - Arquitetura da solução</p>
 
-![Proposta inicial de arquitetura da solução](../../../../static/img/sprint-1/proposta_arquitetura.png)
+![Proposta inicial de arquitetura da solução](../../../../static/img/sprint-5/arquitetura.png)
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>
 
@@ -22,7 +22,7 @@ sidebar_position: 2
 
 &emsp;&emsp;À vista dessa estrutura básica, como percebe-se na figura 1, a equipe SugarZ3ro pré-definiu quais tecnologias serão utilizadas em cada parte da arquitetura. O nome de cada tecnologia, bem como em qual parte pretende-se implementá-la e o porquê da escolha de seu uso podem ser vistos na tabela 1, a seguir:
 
-<p style={{textAlign: 'center'}}>Tabela 1 - Proposta inicial de arquitetura da solução</p>
+<p style={{textAlign: 'center'}}>Tabela 1 - Arquitetura da solução</p>
 
 | **Tecnologia**               | **Parte de implementação** | **Motivo da escolha**                                                 |
 |------------------------------|----------------------------|-----------------------------------------------------------------------|
@@ -31,6 +31,6 @@ sidebar_position: 2
 | ROS                          | Comunicação entre módulos  | Estrutura desenvolvida com foco em sistema robóticos                  |
 | Flask                        | Backend                    | Simplicidade de uso e fácil extensibilidade                           |
 | Frontend                     | React                      | Simplicidade de uso e reusabilidade de componentes                    |
-| PostgreSQL                   | Banco de dados             | Suporte para vários tipos de dados e alta extensibilidade             |
+| TinyDb                   | Banco de dados             | Suporte para armazenamento de dados essenciais para POC (Prova de Conceito)             |
 
 <p style={{textAlign: 'center'}}>Fonte: Elaborado pela equipe SugarZ3ro</p>

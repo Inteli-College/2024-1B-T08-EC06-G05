@@ -6,6 +6,7 @@ import MoveRight from '../components/movimentacao/direita';
 import MoveLeft from '../components/movimentacao/esquerda';
 import MoveForward from '../components/movimentacao/frente';
 import MoveBackward from '../components/movimentacao/tras';
+import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning';
 import Modal from '../components/modal/modal';  // Adjust the path as needed
 import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
@@ -21,6 +22,7 @@ export function AlertDefault() {
 }
 
 function TeleopScreen() {
+  const [aiButtonState, setAiButtonState] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [showBackendAlert, setShowBackendAlert] = useState(false);
   const [backendAlertMessage, setBackendAlertMessage] = useState('');
@@ -58,32 +60,34 @@ function TeleopScreen() {
       {({ movementhandlers, lidarData, collision }) => (
         <>
           {collision && (
-            <div className="alert absolute top-1 items-center justify-center">
+            <div className="fixed inset-0 flex items-center justify-center z-50">
               <ObstaclePopUp />
             </div>
           )}
-          <div className='relative' style={{ width: "1280px", height: "720px" }}>
-            <VideoStream />
-            <div className='absolute top-16 left-32'>
-              <Modal movementhandlers={movementhandlers} handleAlert={handleAlert} />
+          <div className='relative w-full h-auto max-w-screen-xl mx-auto'>
+            <VideoStream aiButtonState={aiButtonState} />
+            <div className='fixed top-4 left-4 lg:top-16 lg:left-32'>
+              <Modal movementhandlers={movementhandlers} />
             </div>
-            <div className='absolute bottom-64 right-64'>
-              <WarningButton movementhandlers={movementhandlers} handleAlert={handleAlert} />
+            <div className='fixed bottom-16 mr-28 mb-28 right-16 lg:bottom-36 lg:right-36 lg:mr-32 lg:mb-28'>
+              <WarningButton movementhandlers={movementhandlers} handleAlert={handleAlert}/>
             </div>
             <div className="flex items-center justify-center h-full">
               {showAlert && <AlertDefault />}
               {showBackendAlert && <BackendAlert message={backendAlertMessage} />}
             </div>
-            <div className='absolute bottom-32 right-32'>
-            <AiButton />
+            <div className='fixed bottom-16 right-16 lg:bottom-32 lg:right-32'>
+              <AiButton onButtonStateChange={setAiButtonState} />
             </div>
-            <div className='absolute bottom-32 left-28'>
-              <div className='absolute bottom-16 left-14'><MoveForward movementhandlers={movementhandlers} lidarData={lidarData} /></div>
-              <div className='flex'>
-              <div className='absolute bottom-1'><MoveLeft movementhandlers={movementhandlers} /></div>
-              <div className='absolute bottom-1 left-28'><MoveRight movementhandlers={movementhandlers} /></div>
+            <div className='fixed bottom-32 left-60 transform -translate-x-1/2'>
+              <div className='flex flex-col items-center space-y-2'>
+                <MoveForward movementhandlers={movementhandlers} collision={collision} lidarData={lidarData}/>
+                <div className='flex space-x-2'>
+                  <MoveLeft movementhandlers={movementhandlers} collision={collision} />
+                  <MoveBackward movementhandlers={movementhandlers} collision={collision} lidarData={lidarData}/>
+                  <MoveRight movementhandlers={movementhandlers} collision={collision} />
+                </div>
               </div>
-              <div className='absolute left-14'><MoveBackward movementhandlers={movementhandlers} lidarData={lidarData} /></div>
             </div>
           </div>
         </>
@@ -91,5 +95,4 @@ function TeleopScreen() {
     </TurtleBotController>
   );
 }
-
 export default TeleopScreen;

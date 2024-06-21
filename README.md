@@ -6,6 +6,12 @@
 
 # Grupo: SugarZ3ro
 
+## Vídeo de demonstração da solução final
+
+[![Demonstração da Solução Final](https://img.youtube.com/vi/HurPIrh6QYY/0.jpg)](https://www.youtube.com/watch?v=HurPIrh6QYY)
+
+Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G05/). 
+
 ## :student: Integrantes:
 
 - <a href="https://www.linkedin.com/in/gustavo-machado-esteves-453b81248/">Gustavo Machado Esteves</a>
@@ -47,7 +53,7 @@ O projeto visa implementar um sistema de robô teleoperado capaz de identificar 
 
 ## Inicialização
 
-Para acessar a documentação do projeto, basta clicar [aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G05/). Para inicializar a documentação do projeto localmente, siga os passos abaixo:
+Para inicializar a documentação do projeto localmente, siga os passos abaixo:
 
 ### Pré-requisitos
 
