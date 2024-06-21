@@ -68,7 +68,7 @@ sidebar_position: 6
 ### Observações e Resultados 
 
 #### Navegação
-- **Tela Inicial:** As instruções na Tela Inicial são claras, e os botões são intuitivos, permitindo aos usuários iniciar ou acessar informações com facilidade. No entanto, a novidade da tela inicial gerou uma leve preocupação entre os usuários, indicando que pequenos ajustes na familiarização com a interface podem ser benéficos.
+- **Tela Inicial:** As instruções na Tela Inicial são claras, e os botões são intuitivos, permitindo aos usuários iniciar ou acessar informações com facilidade. No entanto, a interação com o pop-up da tela inicial gerou uma leve preocupação entre os usuários sobre o que deveria ser feito, indicando que pequenos ajustes na familiarização com a interface podem ser benéficos.
 
 - **Tela de Informações:**  Houve algumas dificuldades na compreensão da Tela de Informações, principalmente na funcionalidade de scroll. Isso indica a necessidade de melhorias na visibilidade ou no design dessa interação. Apesar dessas dificuldades, os usuários reconheceram que a Tela de Informações fornece explicações detalhadas e úteis sobre a tela de controle.
 
