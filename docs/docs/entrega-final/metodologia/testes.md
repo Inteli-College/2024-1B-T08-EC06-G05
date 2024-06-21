@@ -79,8 +79,7 @@ sidebar_position: 6
 
 - **Parada de Emergência:** O botão de parada de emergência foi testado com sucesso em várias situações de movimentação, demonstrando ser acessível e funcional. No entanto, a necessidade de recarregar a página para retomar a movimentação não favorece um fluxo de utilização eficiente. Aperfeiçoamentos que eliminem a necessidade de recarregar a página são recomendados para melhorar a experiência do usuário.
 
-**Conclusão:**
-&emsp;&emsp;Enquanto várias áreas da interface demonstram alta funcionalidade e usabilidade, há espaço para melhorias, especialmente na Tela de Informações e na funcionalidade de análise de imagem. Focar em aprimorar essas áreas ajudará a criar uma experiência de usuário mais fluida e intuitiva.
+**Conclusão:** Enquanto várias áreas da interface demonstram alta funcionalidade e usabilidade, há espaço para melhorias, especialmente na Tela de Informações e na funcionalidade de análise de imagem. Focar em aprimorar essas áreas ajudará a criar uma experiência de usuário mais fluida e intuitiva.
 
 ---
 
@@ -117,21 +116,21 @@ Foram realizados 10 testes para medir o tempo de resposta dos comandos de locomo
 
 | Execução | Tempo de Resposta (s) |
 |----------|-----------------------|
-| 1        | 0.32                  |
-| 2        | 0.35                  |
-| 3        | 0.31                  |
-| 4        | 0.33                  |
-| 5        | 0.34                  |
-| 6        | 0.36                  |
-| 7        | 0.30                  |
-| 8        | 0.31                  |
-| 9        | 0.33                  |
-| 10       | 0.34                  |
+| 1        | 0.72                  |
+| 2        | 0.95                  |
+| 3        | 1.31                  |
+| 4        | 0.73                  |
+| 5        | 1.4                   |
+| 6        | 0.96                  |
+| 7        | 0.90                  |
+| 8        | 1.31                  |
+| 9        | 0.53                  |
+| 10       | 0.74                  |
 
-**Média de Tempo de Resposta da Câmera:** 0.33 s
+**Média de Tempo de Resposta da Câmera:** A média do tempo de resposta é aproximadamente 0,955 segundos.
 
 #### Análise
-Os resultados indicam que o tempo médio de resposta para os comandos de locomoção e câmera está dentro dos limites aceitáveis ( < 500ms), sugerindo que o sistema é responsivo e adequado para operação em tempo real.
+Os resultados indicam que o tempo médio de resposta para os comandos de locomoção e câmera está fora dos limites aceitáveis ( < 500ms), sugerindo que o sistema não atende a responsividade adequada para operação em tempo real.
 
 ---
 
@@ -148,10 +147,10 @@ Foi realizada uma autoavaliação da interface de usuário da aplicação WEB, c
 | Aspecto         | Comentários                                |
 |-----------------|--------------------------------------------|
 | Navegação       | As instruções na Tela Inicial são claras e os botões são intuitivos. A Tela de Informações fornece uma explicação detalhada e útil sobre a tela de controle. |
-| Funções         | O controle do robô através das setas é responsivo e fácil de usar. A função de análise de imagem é direta e fornece feedback claro. O botão de parada de emergência é facilmente acessível e funcional. |
+| Funções         | O controle do robô através das setas é responsivo e fácil de usar. A função de análise de imagem é direta, mas não fornece feedback claro. O botão de parada de emergência é facilmente acessível e funcional. |
 
 #### Conclusão
-A usabilidade da aplicação WEB é satisfatória, com navegação intuitiva e funções facilmente utilizáveis. 
+A usabilidade da aplicação WEB é funcional, com navegação intuitiva, mas precisa de melhoras para melhor usabilidade. 
 
 ---
 
@@ -181,7 +180,7 @@ Foram realizados 5 testes para medir a aceleração e a velocidade máxima do Tu
 
 | Execução | Distância Percorrida (m) | Tempo (s) | Velocidade (m/s) |
 |----------|---------------------------|-----------|------------------|
-| 1        | 5                         | 22        | 0.23             |
+| 1        | 5                         | 22D        | 0.23             |
 | 2        | 5                         | 21        | 0.24             |
 | 3        | 5                         | 22        | 0.23             |
 | 4        | 5                         | 21        | 0.24             |
@@ -196,6 +195,6 @@ Os resultados mostram que o Turtlebot atinge a velocidade máxima em um tempo m�
 
 ## Conclusão
 
-Os testes realizados validaram os Requisitos Não Funcionais do sistema de controle do Turtlebot 3 Hamburger. O tempo de resposta, usabilidade e velocidade de locomoção atenderam aos critérios estabelecidos, indicando que o sistema é eficaz e adequado para a operação planejada.
+Os testes realizados validaram os Requisitos Não Funcionais do sistema de controle do Turtlebot 3 Hamburger. O tempo de resposta, usabilidade e velocidade de locomoção atenderam aos critérios estabelecidos, indicando que o sistema é eficaz e adequado para a operação planejada. Por outro lado o tempo de resposta da câmera não atendeu o requisito e dese sobre correções em desenvolvimentos futuros pensando na melhora da usabilidade.  
 
 ---
