@@ -9,6 +9,8 @@ sidebar_position: 6
 
 &emsp;&emsp;Este relatório documenta os testes de usabilidade e a validação dos Requisitos Não Funcionais (RNFs) do sistema de controle do Turtlebot 3 Hamburger. Os testes de usabilidade foram realizados para avaliar a experiência do usuário, enquanto os testes de RNFs verificaram aspectos técnicos críticos como tempo de resposta, usabilidade e velocidade de locomoção.
 
+&emsp;&emsp;Outros testes foram realizados previamente e forneceram feedbacks importantes, que nos levaram a criar pop-ups e novas funcionalidades visando melhorar a usabilidade. Após a realização desses testes prévios, foi decidido conduzir mais testes para verificar se as novas funcionalidades estavam de acordo com as expectativas dos usuários e os requisitos do projeto.
+
 ## 1. Testes de Usabilidade
 
 ### Objetivo
