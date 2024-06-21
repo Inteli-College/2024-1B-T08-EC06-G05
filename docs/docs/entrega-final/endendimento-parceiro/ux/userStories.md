@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **User stories elaboradas a partir do processo de UX Research do projeto.**
 
-&emsp;&emsp;User stories são tarefas de desenvolvimento expressas, em geral, como “persona + necessidade + propósito” . Em resumo, uma história do usuário é uma descrição geral sobre um recurso de software escrita a partir da perspectiva do usuário final. Seu objetivo é articular como um recurso de software pode gerar valor para o cliente.
+&emsp;&emsp;Com as personas mapeadas, as user stories vieram a seguir para aprimorar o entendimento do comportamento dos usuários do proejto. User stories são tarefas de desenvolvimento expressas, em geral, como “persona + necessidade + propósito” . Em resumo, uma história do usuário é uma descrição geral sobre um recurso de software escrita a partir da perspectiva do usuário final. Seu objetivo é articular como um recurso de software pode gerar valor para o cliente.
 
 ## User stories referentes ao Carlos (operário)
 
