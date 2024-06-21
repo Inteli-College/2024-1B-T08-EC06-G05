@@ -162,6 +162,6 @@ setHasSentImageString(true); // Mark that the frame has been logged
 
 &emsp;&emsp;A rota Flask `/post_img_string` recebe a imagem enviada pelo frontend e a processa utilizando o modelo YOLO. A interação entre o frontend (React) e o backend (Flask) é facilitada pelo componente `aiButton`, que controla quando as imagens são enviadas.
 
-## Concluão
+## Conclusão
 
 &emsp;&emsp;Esta integração assegura que as imagens capturadas sejam enviadas de forma controlada e eficiente, acionando a lógica de backend para processamento de imagens apenas quando necessário.
