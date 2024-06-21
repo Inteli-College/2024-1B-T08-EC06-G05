@@ -53,7 +53,47 @@ Os testes de usabilidade foram conduzidos seguindo um roteiro estruturado. Cada 
 
 ### Resultados dos Testes de Usabilidade
 
-[Link para panilha de testes]()
+### Participante: Gabriel Coletto
+- **Tela Inicial**: Explorou visualmente os elementos e interagiu com o botão de informações, demonstrando uma abordagem metódica ao enfrentar uma nova interface.
+- **Tela de Informações**: Leu e compreendeu as informações apresentadas sem dificuldades aparentes, absorvendo o conteúdo de forma eficiente.
+- **Iniciar Operação**: Digitou rapidamente o reboiler que queria testar, mostrando familiaridade com o teclado e rapidez na decisão.
+- **Tela de Controle**: Inicialmente ativou a parada de emergência e depois testou outras funcionalidades, como movimentar o robô e utilizar comandos adicionais.
+- **Movimentação do Robô**: Comandou o robô com precisão e confiança, ajustando-se rapidamente ao sistema de controle.
+- **Análise de Imagem**: Conduziu o robô até o ponto de análise e executou o processo de inspeção sem problemas, mostrando eficácia na realização de tarefas específicas.
+- **Parada de Emergência**: Testou imediatamente a funcionalidade crítica para verificar a resposta do sistema.
+- **Retorno ao Menu Inicial**: Navegou de volta ao menu inicial com facilidade, refletindo uma experiência de usuário fluida e intuitiva.
+
+### Participante: André Leal
+- **Tela Inicial**: Identificou rapidamente as funções disponíveis, indicando uma rápida adaptação ao layout do software.
+- **Tela de Informações**: Acessou a tela após já ter controlado o robô, compreendendo as instruções e o contexto geral do teste.
+- **Iniciar Operação**: Digitou o reboiler que desejava testar, mostrando decisão e clareza no processo.
+- **Tela de Controle**: Movimentou o robô em várias direções, explorando ativamente todas as capacidades do dispositivo e testando os limites operacionais.
+- **Movimentação do Robô**: Demonstrou competência e adaptabilidade ao controlar o robô sob diversas condições.
+- **Análise de Imagem**: Não identificou inicialmente que o botão de análise era reativo, o que aponta uma área potencial para melhoria na sinalização das interfaces.
+- **Parada de Emergência**: Engajou o mecanismo de segurança após uma série de testes, avaliando a robustez da resposta em diferentes estados operacionais.
+- **Retorno ao Menu Inicial**: Retornou ao menu principal facilmente, indicando que a navegação do sistema é compreensível e eficiente.
+
+### Participante: Ana Luiza
+- **Tela Inicial**: Optou por interagir inicialmente com o botão de informações, investindo tempo para compreender totalmente a interface antes de proceder.
+- **Tela de Informações**: Absorveu as informações detalhadamente, garantindo uma base sólida de conhecimento antes de iniciar a operação prática.
+- **Iniciar Operação**: Efetuou a seleção do reboiler com clareza e propósito, indicativo de um planejamento consciente.
+- **Tela de Controle**: Utilizou com eficácia os controles do robô, demonstrando competência técnica e uma abordagem sistemática ao explorar funcionalidades.
+- **Movimentação do Robô**: Controlou o robô de maneira habilidosa, ajustando-se bem às características do sistema de controle.
+- **Análise de Imagem**: Inicialmente encontrou dificuldades em entender a funcionalidade de análise, mas adaptou-se e completou a tarefa efetivamente.
+- **Parada de Emergência**: Testou o botão de parada emergencial após explorar todas as funcionalidades, verificando a eficácia deste em diferentes contextos operacionais.
+- **Retorno ao Menu Inicial**: Navegou de volta ao menu inicial sem complicações, mostrando que a estrutura do menu era lógica e fácil de seguir.
+
+### Participante: André Hutzler
+- **Tela Inicial**: Procedeu rapidamente para a opção de iniciar a operação, possivelmente indicando familiaridade ou um desejo de explorar imediatamente as funcionalidades do sistema.
+- **Tela de Informações**: Experimentou alguma dificuldade inicial com a funcionalidade de scroll, sugerindo uma área de melhoria na visibilidade ou no design da interação.
+- **Iniciar Operação**: Selecionou o reboiler de forma decidida e ágil, preparando-se para a fase de teste.
+- **Tela de Controle**: Inicialmente focou em movimentar o robô lateralmente antes de expandir para outras direções, abordando gradualmente a gama completa de controles.
+- **Movimentação do Robô**: Encarou desafios iniciais com o controle, mas adaptou-se progressivamente à dinâmica do robô.
+- **Análise de Imagem**: Não percebeu imediatamente a resposta visual ao ativar o botão de análise, indicando a necessidade de feedback mais direto ou evidente na interface do usuário.
+- **Parada de Emergência**: Testou o botão de emergência tanto em repouso quanto em movimento, avaliando a resposta do sistema sob várias condições.
+- **Retorno ao Menu Inicial**: Completou a avaliação das funcionalidades e retornou ao menu inicial, demonstrando facilidade de transição entre as diferentes seções do software.
+
+[Link para planilha de testes](https://docs.google.com/spreadsheets/d/1-YfRXwlAJLJ60PEgnCPHU68fz5dvZ41Y/edit?usp=sharing&ouid=105392408613944484717&rtpof=true&sd=true)
 
 ### Observações e Resultados 
 
