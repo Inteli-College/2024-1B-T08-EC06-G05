@@ -7,107 +7,80 @@ sidebar_position: 6
 
 ## Introdução
 
-Este relatório documenta os testes de usabilidade e a validação dos Requisitos Não Funcionais (RNFs) do sistema de controle do Turtlebot 3 Hamburger. Os testes de usabilidade foram realizados para avaliar a experiência do usuário, enquanto os testes de RNFs verificaram aspectos técnicos críticos como tempo de resposta, usabilidade e velocidade de locomoção.
+&emsp;&emsp;Este relatório documenta os testes de usabilidade e a validação dos Requisitos Não Funcionais (RNFs) do sistema de controle do Turtlebot 3 Hamburger. Os testes de usabilidade foram realizados para avaliar a experiência do usuário, enquanto os testes de RNFs verificaram aspectos técnicos críticos como tempo de resposta, usabilidade e velocidade de locomoção.
 
 ## 1. Testes de Usabilidade
 
 ### Objetivo
-Avaliar a facilidade de uso da aplicação WEB pelos usuários.
+&emsp;&emsp;Avaliar a facilidade de uso da aplicação WEB pelos usuários.
 
 ### Metodologia
-Os testes de usabilidade foram conduzidos seguindo um roteiro estruturado. Cada etapa do processo foi analisada e observações foram registradas.
+&emsp;&emsp;Os testes de usabilidade foram conduzidos seguindo um roteiro estruturado. Cada etapa do processo foi analisada e as observações foram registradas. Os testes foram realizados no laboratório da faculdade Inteli, em meio a diversos membros desenvolvedores do projeto, barulhos externos e grande movimentação no ambiente. Os usuários foram brevemente contextualizados sobre os objetivos do projeto, de forma a não influenciar suas ações e pensamentos durante o teste.
 
 ### Roteiro do Teste de Usabilidade
 
 #### 1. Tela Inicial
 - **Tarefa:** O participante deve observar a tela inicial e identificar as opções disponíveis (Iniciar e Informações).
+- **Objetivo:** O objetivo é entender qual vai ser a primeira ação do usuario ao se deparar com a primeira tela da solução.
 - **Pergunta:** O que você faria nesta tela? Para onde você clicaria primeiro?
 
 #### 2. Tela de Informações
 - **Tarefa:** Se o participante clicar em Informações, peça para que leia e compreenda as informações fornecidas sobre a tela de controle.
+- **Objetivo:** O objetivo é entender a facilidade de entendimento do usuário sobre a aplicação por meio dessa tela.
 - **Pergunta:** As informações fornecidas são claras e compreensíveis?
 
 #### 3. Iniciar Operação
 - **Tarefa:** O participante deve clicar em Iniciar, digitar um nome de reboiler e clicar em Continuar.
+- **Objetivo:** Verificar o fluxo de início de operação do robô.
 - **Pergunta:** Houve alguma dificuldade em entender ou completar esta etapa?
 
 #### 4. Tela de Controle
 - **Tarefa:** O participante deve explorar a tela de controle, identificando os elementos (visão da câmera, setas de controle, botão de análise, botão de parada de emergência, botão de retorno ao menu).
+- **Objetivo:** O objetivo é verificar o qual intuitiva a tela é, dados que os usuários podem não ter muitas habilidades com tecnologia.
 - **Pergunta:** Descreva o que você vê nesta tela e o que você acha que cada elemento faz.
 
 #### 5. Movimentação do Robô
 - **Tarefa:** Utilize as setas de controle para movimentar o robô para frente, direita, esquerda e trás.
+- **Objetivo:** Verificar a qualidade das funcionalidades da tela e se o tempo re resposta é aceitavel pelo usuário. 
 - **Pergunta:** Os controles são responsivos e intuitivos?
 
 #### 6. Análise de Imagem
 - **Tarefa:** Clique no botão de Análise para tirar uma foto e enviar para a IA.
+- **Objetivo:** A análise computacionar funciona de forma eficiente para o usuário.
 - **Pergunta:** O processo de análise foi claro? A resposta da IA foi compreensível?
 
 #### 7. Parada de Emergência
 - **Tarefa:** Utilize o botão de Parada de Emergência.
+- **Objetivo:** Verificar se o botão funciona de forma eficiente.
 - **Pergunta:** A função de parada de emergência está bem posicionada e é fácil de acessar?
 
 #### 8. Retorno ao Menu Inicial
 - **Tarefa:** Clique no botão de Retorno ao Menu Inicial.
+- **Objetivo:** Verificar fluxo de utilização da solução.
 - **Pergunta:** Foi fácil retornar ao menu inicial? Você encontraria facilmente essa opção em caso de necessidade?
 
 ### Resultados dos Testes de Usabilidade
 
-### Participante: Gabriel Coletto
-- **Tela Inicial**: Explorou visualmente os elementos e interagiu com o botão de informações, demonstrando uma abordagem metódica ao enfrentar uma nova interface.
-- **Tela de Informações**: Leu e compreendeu as informações apresentadas sem dificuldades aparentes, absorvendo o conteúdo de forma eficiente.
-- **Iniciar Operação**: Digitou rapidamente o reboiler que queria testar, mostrando familiaridade com o teclado e rapidez na decisão.
-- **Tela de Controle**: Inicialmente ativou a parada de emergência e depois testou outras funcionalidades, como movimentar o robô e utilizar comandos adicionais.
-- **Movimentação do Robô**: Comandou o robô com precisão e confiança, ajustando-se rapidamente ao sistema de controle.
-- **Análise de Imagem**: Conduziu o robô até o ponto de análise e executou o processo de inspeção sem problemas, mostrando eficácia na realização de tarefas específicas.
-- **Parada de Emergência**: Testou imediatamente a funcionalidade crítica para verificar a resposta do sistema.
-- **Retorno ao Menu Inicial**: Navegou de volta ao menu inicial com facilidade, refletindo uma experiência de usuário fluida e intuitiva.
-
-### Participante: André Leal
-- **Tela Inicial**: Identificou rapidamente as funções disponíveis, indicando uma rápida adaptação ao layout do software.
-- **Tela de Informações**: Acessou a tela após já ter controlado o robô, compreendendo as instruções e o contexto geral do teste.
-- **Iniciar Operação**: Digitou o reboiler que desejava testar, mostrando decisão e clareza no processo.
-- **Tela de Controle**: Movimentou o robô em várias direções, explorando ativamente todas as capacidades do dispositivo e testando os limites operacionais.
-- **Movimentação do Robô**: Demonstrou competência e adaptabilidade ao controlar o robô sob diversas condições.
-- **Análise de Imagem**: Não identificou inicialmente que o botão de análise era reativo, o que aponta uma área potencial para melhoria na sinalização das interfaces.
-- **Parada de Emergência**: Engajou o mecanismo de segurança após uma série de testes, avaliando a robustez da resposta em diferentes estados operacionais.
-- **Retorno ao Menu Inicial**: Retornou ao menu principal facilmente, indicando que a navegação do sistema é compreensível e eficiente.
-
-### Participante: Ana Luiza
-- **Tela Inicial**: Optou por interagir inicialmente com o botão de informações, investindo tempo para compreender totalmente a interface antes de proceder.
-- **Tela de Informações**: Absorveu as informações detalhadamente, garantindo uma base sólida de conhecimento antes de iniciar a operação prática.
-- **Iniciar Operação**: Efetuou a seleção do reboiler com clareza e propósito, indicativo de um planejamento consciente.
-- **Tela de Controle**: Utilizou com eficácia os controles do robô, demonstrando competência técnica e uma abordagem sistemática ao explorar funcionalidades.
-- **Movimentação do Robô**: Controlou o robô de maneira habilidosa, ajustando-se bem às características do sistema de controle.
-- **Análise de Imagem**: Inicialmente encontrou dificuldades em entender a funcionalidade de análise, mas adaptou-se e completou a tarefa efetivamente.
-- **Parada de Emergência**: Testou o botão de parada emergencial após explorar todas as funcionalidades, verificando a eficácia deste em diferentes contextos operacionais.
-- **Retorno ao Menu Inicial**: Navegou de volta ao menu inicial sem complicações, mostrando que a estrutura do menu era lógica e fácil de seguir.
-
-### Participante: André Hutzler
-- **Tela Inicial**: Procedeu rapidamente para a opção de iniciar a operação, possivelmente indicando familiaridade ou um desejo de explorar imediatamente as funcionalidades do sistema.
-- **Tela de Informações**: Experimentou alguma dificuldade inicial com a funcionalidade de scroll, sugerindo uma área de melhoria na visibilidade ou no design da interação.
-- **Iniciar Operação**: Selecionou o reboiler de forma decidida e ágil, preparando-se para a fase de teste.
-- **Tela de Controle**: Inicialmente focou em movimentar o robô lateralmente antes de expandir para outras direções, abordando gradualmente a gama completa de controles.
-- **Movimentação do Robô**: Encarou desafios iniciais com o controle, mas adaptou-se progressivamente à dinâmica do robô.
-- **Análise de Imagem**: Não percebeu imediatamente a resposta visual ao ativar o botão de análise, indicando a necessidade de feedback mais direto ou evidente na interface do usuário.
-- **Parada de Emergência**: Testou o botão de emergência tanto em repouso quanto em movimento, avaliando a resposta do sistema sob várias condições.
-- **Retorno ao Menu Inicial**: Completou a avaliação das funcionalidades e retornou ao menu inicial, demonstrando facilidade de transição entre as diferentes seções do software.
+Para a realização dos testes de usabilidade, foram convidadas quatro pessoas de faixas etárias diferentes e com contextos de estudo e trabalho diversos. É importante notar que todos têm boas habilidades tecnológicas e contato constante com tecnologias semelhantes às utilizadas no projeto desenvolvido pela SugarZ3ro. Os convidados para a realização dos testes foram: Gabriel Coletto, André Leal, Ana Luiza e André Hutzler.
 
 [Link para planilha de testes](https://docs.google.com/spreadsheets/d/1-YfRXwlAJLJ60PEgnCPHU68fz5dvZ41Y/edit?usp=sharing&ouid=105392408613944484717&rtpof=true&sd=true)
 
 ### Observações e Resultados 
 
 #### Navegação
-- **Tela Inicial:** As instruções na Tela Inicial são claras, com botões intuitivos para iniciar ou acessar informações.
-- **Tela de Informações:** A Tela de Informações fornece explicações detalhadas e úteis sobre a tela de controle.
+- **Tela Inicial:** As instruções na Tela Inicial são claras, e os botões são intuitivos, permitindo aos usuários iniciar ou acessar informações com facilidade. No entanto, a novidade da tela inicial gerou uma leve preocupação entre os usuários, indicando que pequenos ajustes na familiarização com a interface podem ser benéficos.
+
+- **Tela de Informações:**  Houve algumas dificuldades na compreensão da Tela de Informações, principalmente na funcionalidade de scroll. Isso indica a necessidade de melhorias na visibilidade ou no design dessa interação. Apesar dessas dificuldades, os usuários reconheceram que a Tela de Informações fornece explicações detalhadas e úteis sobre a tela de controle.
 
 #### Funções
-- **Controle do Robô:** O controle do robô através das setas é responsivo e fácil de usar.
-- **Análise de Imagem:** A função de análise de imagem é direta e fornece feedback claro sobre a condição do tubo.
-- **Parada de Emergência:** O botão de parada de emergência é facilmente acessível e funcional.
+- **Controle do Robô:** O controle do robô foi considerado responsivo e fácil de usar. Todos os usuários demonstraram facilidade na movimentação do robô, incluindo a mudança de direção e a parada, sem apresentar dificuldades significativas. Isso confirma que o sistema de controle por setas está bem implementado e intuitivo.
+
+- **Análise de Imagem:** A funcionalidade do botão de análise de imagem não foi bem compreendida pelos usuários devido à sua resposta ser apresentada apenas no banco de dados e backend. Apesar do bom funcionamento técnico, essa funcionalidade não atende plenamente aos requisitos de uma boa experiência do usuário. Melhorias na representação visual e feedback imediato são necessárias para tornar esta função mais intuitiva.
+
+- **Parada de Emergência:** O botão de parada de emergência foi testado com sucesso em várias situações de movimentação, demonstrando ser acessível e funcional. No entanto, a necessidade de recarregar a página para retomar a movimentação não favorece um fluxo de utilização eficiente. Aperfeiçoamentos que eliminem a necessidade de recarregar a página são recomendados para melhorar a experiência do usuário.
 
 **Conclusão:**
-A aplicação WEB é intuitiva e fácil de usar, com navegação clara e funções bem implementadas. Não foram encontradas dificuldades significativas durante a autoavaliação.
+Enquanto várias áreas da interface demonstram alta funcionalidade e usabilidade, há espaço para melhorias, especialmente na Tela de Informações e na funcionalidade de análise de imagem. Focar em aprimorar essas áreas ajudará a criar uma experiência de usuário mais fluida e intuitiva.
 
 ---
 
