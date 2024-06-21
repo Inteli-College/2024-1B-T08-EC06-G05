@@ -19,9 +19,6 @@ Pipes = Query()
 imgStringBase64 = None
 model = YOLO('./best.pt')
 
-# Inicializa o modelo YOLO
-model = YOLO("src/backend/home/grupo-05-t08/2024-1B-T08-EC06-G05/src/backend/runs/detect/train4/weights/best.pt")
-
 updated_data = {
     'id': 0,
     'status': None,
@@ -29,6 +26,7 @@ updated_data = {
     'datetime': None
 }
 
+# rota apenas para receber o ID do reboiler atual inserido pelo usuário no frontend
 @app.route('/post_reboiler_id', methods=['POST', 'GET'])
 def post_reboiler_id():
     data = request.get_json()
@@ -139,43 +137,6 @@ def simulate_pipe():
     }
     pipes_table.insert(new_pipe)
     return jsonify(new_pipe), 201
-
-@app.route('/process_image', methods=['GET'])
-def process_image():
-    imagem = 2
-    print("imagem")
-
-    # if 'image' not in request.files:
-    #    return jsonify({'error': 'No image provided'}), 400
-
-    # file = request.files['image']
-    # video = cv2.imdecode(np.frombuffer(file.read(), np.uint8), cv2.IMREAD_COLOR)
-
-    # if image is None:
-    #   return jsonify({'error': 'Unable to load image'}), 400
-
-    # img = "src/data-base/imgs/img1.jpeg"
-    # print (img)
-    # # Processa a imagem com o modelo YOLO
-    # results = model(img)
-    # is_dirty = False
-
-    # for result in results:
-    #     img = result.plot()
-    #     # Verifique se há detecção de sujeira
-    #     for box in result.boxes:
-    #         if box.cls == "sujeira":  
-    #             is_dirty = True
-
-    # # Define o diretório de saída para salvar as imagens processadas
-    # output_dir = "src/data-base/imgs-results"
-    # os.makedirs(output_dir, exist_ok=True)
-    # output_path = os.path.join(output_dir, "processed_frame.png")
-    # cv2.imwrite(output_path, video)
-
-    # status = "sujo" if is_dirty else "limpo"
-    # return jsonify({'status': status, 'image_path': output_path})
-
 
 if __name__ == '__main__':
     app.run(debug=True)
