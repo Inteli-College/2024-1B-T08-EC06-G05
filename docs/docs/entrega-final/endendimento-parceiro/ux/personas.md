@@ -5,9 +5,9 @@ sidebar_position: 1
 
 # Personas
 
-&emsp;&emsp;No contexto do design centrado no usuário, as personas emergem como uma ferramenta crucial para compreender as complexidades do público-alvo e informar o processo de desenvolvimento de produtos e serviços. Visando a criação da persona ideal para o projeto proposto pela Atvos, a equipe analisou informações fornecidas pelo parceiro, juntamente com pesquisas realizadas em busca de dados reais que ajudassem a alcançar um melhor entendimento dos futuros usuários e das pessoas impactadas pela solução desenvolvida.
+&emsp;&emsp;A criação de personas é fundamental para o design centrado no usuário, pois permite uma compreensão profunda das complexidades e necessidades do público-alvo. No contexto do projeto desenvolvido pela Atvos, a análise detalhada das personas Carlos e Liz, realizada pela equipe de alunos de Engenharia da Computação do Inteli, exemplifica essa importância. Com base em informações fornecidas pelo parceiro e pesquisas adicionais, foram identificadas as dores, desejos, e habilidades tecnológicas dessas personas, utilizando referências como o DigComp 2.1 para avaliar suas competências digitais. 
 
-&emsp;&emsp;Como parte do projeto desenvolvido pelos alunos de Engenharia da Computação no Inteli, foram criadas duas personas principais que serão as mais impactadas pela solução. Foram analisadas as necessidades, dores, desejos e tecnologias conhecidas de cada uma dessas personas para uma melhor representação visual do público-alvo durante o desenvolvimento do projeto. Essas personas são Carlos e Liz, cujas representações visuais podem ser encontradas nas imagens a seguir:
+&emsp;&emsp;Essa abordagem não só facilita uma representação visual mais precisa dos usuários finais, mas também promove uma conexão empática e profunda com o público. Consequentemente, o processo de desenvolvimento se torna mais direcionado e eficaz, garantindo que as soluções criadas atendam de maneira personalizada às expectativas e necessidades dos clientes, resultando em produtos e serviços mais alinhados com a realidade dos usuários.
 
 <p style={{textAlign: 'center'}}>Figura 1 - Persona Carlos</p>
 
