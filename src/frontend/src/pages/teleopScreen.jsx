@@ -6,6 +6,7 @@ import MoveRight from '../components/movimentacao/direita';
 import MoveLeft from '../components/movimentacao/esquerda';
 import MoveForward from '../components/movimentacao/frente';
 import MoveBackward from '../components/movimentacao/tras';
+import TurnoffButton from '../components/turnoffbutton/turnoff';
 import WarningButton from '../components/warningButton/warning';
 import Modal from '../components/modal/modal';  // Adjust the path as needed
 import ObstaclePopUp from '../components/obstaclePopUp/obstaclePopUp';
@@ -21,6 +22,7 @@ export function AlertDefault() {
 }
 
 function TeleopScreen() {
+  const [aiButtonState, setAiButtonState] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [showBackendAlert, setShowBackendAlert] = useState(false);
   const [backendAlertMessage, setBackendAlertMessage] = useState('');
@@ -63,7 +65,7 @@ function TeleopScreen() {
             </div>
           )}
           <div className='relative' style={{ width: "1280px", height: "720px" }}>
-            <VideoStream />
+            <VideoStream aiButtonState={aiButtonState} />
             <div className='absolute top-16 left-32'>
               <Modal movementhandlers={movementhandlers} handleAlert={handleAlert} />
             </div>
@@ -75,7 +77,7 @@ function TeleopScreen() {
               {showBackendAlert && <BackendAlert message={backendAlertMessage} />}
             </div>
             <div className='absolute bottom-32 right-32'>
-            <AiButton />
+              <AiButton onButtonStateChange={setAiButtonState} />
             </div>
             <div className='absolute bottom-32 left-28'>
               <div className='absolute bottom-16 left-14'><MoveForward movementhandlers={movementhandlers} lidarData={lidarData} /></div>

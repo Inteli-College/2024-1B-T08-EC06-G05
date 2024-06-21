@@ -7,20 +7,19 @@ sidebar_position: 2
 
 A Matriz de Riscos é uma ferramenta essencial para o gerenciamento proativo de riscos do projeto. Ela permite a identificação, análise e priorização dos riscos com base em sua probabilidade de ocorrência e impacto no projeto.
 
+# Porque a matriz de riscos foi feita?
 
 Aqui estão alguns motivos pelos quais é importante utilizar essa ferramenta:
 
-- **Identificação de Riscos:**  A matriz de riscos ajuda a identificar os riscos potenciais em um projeto ou operação. Isso envolve considerar tudo que pode dar errado, o que é fundamental para a preparação e planejamento eficazes.
+- **Identificação de Riscos:**  A matriz de riscos ajudou a identificar os riscos potenciais no projeto. Isso envolve considerar tudo que pode dar errado, o que é fundamental para a preparação e planejamento eficazes, assim minimizando impacto dos riscos no projeto.
 
-- **Avaliação de Riscos:** Após identificar os riscos, a matriz permite avaliá-los em termos de probabilidade de ocorrência e impacto potencial caso ocorram. Esta avaliação ajuda a entender quais riscos precisam de mais atenção e recursos para sua mitigação.
-
-- **Priorização de Riscos:** Nem todos os riscos são iguais; alguns terão um impacto maior e mais provável do que outros. A matriz de riscos ajuda a classificar esses riscos para que as equipes possam focar nos mais críticos, garantindo um uso mais eficiente de recursos.
+- **Avaliação de Riscos:** Após identificar os riscos, a matriz permite avaliá-los em termos de probabilidade de ocorrência e impacto potencial caso ocorram. Esta avaliação ajuda a entender quais riscos precisam de mais atenção e recursos para sua mitigação, assim conseguindo priorizar os riscos mais impactantes.
 
 - **Planejamento de Mitigação:** Com uma clara compreensão dos riscos mais importantes, é possível desenvolver estratégias específicas para mitigá-los. Isso pode incluir ações preventivas ou planos de contingência para lidar com os riscos caso eles se materializem.
 
-- **Comunicação:** A matriz de riscos serve como uma ferramenta de comunicação eficaz para informar stakeholders internos e externos sobre os riscos identificados, suas prioridades e as medidas de controle planejadas. Isso é crucial para garantir transparência e suporte na gestão de riscos.
+- **Comunicação:** A matriz de riscos serviu como uma ferramenta fundamental de comunicação para informar os desenvolvedores sobre os riscos identificados, suas prioridades e as medidas de controle planejadas. Isso é crucial para garantir transparência e suporte na gestão de riscos no projeto.
 
-- **Monitoramento e Revisão:** A matriz de riscos não é uma ferramenta estática; ela deve ser revisada e atualizada regularmente à medida que novas informações surgem e o ambiente muda. Isso ajuda a manter o gerenciamento de riscos relevante e eficaz ao longo do tempo.
+- **Monitoramento e Revisão:** A matriz de riscos não é uma ferramenta estática; ela foi revisada e atualizada regularmente à medida que novas informações surgem e o ambiente muda. Isso ajuda a manter o gerenciamento de riscos relevante e eficaz ao longo do tempo.
 
 <p style={{textAlign: 'center'}}>Figura 1 - Matriz de riscos</p>
 
