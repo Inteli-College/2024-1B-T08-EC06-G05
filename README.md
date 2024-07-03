@@ -76,6 +76,23 @@ Para inicializar a documentação do projeto localmente, siga os passos abaixo:
 
 3. Acesse a URL que será exibida na janela do terminal.
 
+
+## 📁 Estrutura de pastas
+
+```
+├── docs
+│   ├── docs
+│   ├── src
+│   ├── static
+├── src
+│   ├── backend
+│   ├── data-base
+|   ├── workspace
+│   ├── frontend
+├── README.md
+```
+
+
 ## Histórico de lançamentos
 
 ### Sprint 1
@@ -110,3 +127,7 @@ Para inicializar a documentação do projeto localmente, siga os passos abaixo:
 - Integração do frontend com a Inteligência Artificial
 - Melhorias finais no sistema de segurança
 - Revisão geral da documentação
+
+
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">SugarZ3ro</span> by <span property="cc:attributionName">Inteli - Gustavo Machado, Lucas de Luccas, Isabelle Vasquez, Mario Ventura, Rai Oliveira, Gustavo Gouveia</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
